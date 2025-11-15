@@ -1,8 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Code, Briefcase, FileCode, Users } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Services = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const services = [
     {
       icon: <Code className="h-8 w-8" />,
@@ -119,8 +121,8 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 relative">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-20 relative" ref={ref}>
+      <div className={`container mx-auto px-4 fade-in-up ${isVisible ? 'visible' : ''}`}>
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
           <p className="text-xl text-muted-foreground">Premium Solutions Tailored for Your Success</p>

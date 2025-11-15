@@ -1,8 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Palette, PenTool } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Career = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const roles = [
     {
       icon: <Palette className="h-8 w-8" />,
@@ -17,8 +19,8 @@ const Career = () => {
   ];
 
   return (
-    <section id="career" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="career" className="py-20" ref={ref}>
+      <div className={`container mx-auto px-4 fade-in-up ${isVisible ? 'visible' : ''}`}>
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Career Opportunities</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const About = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const stats = [
     { value: "4+", label: "Projects Completed" },
     { value: "100%", label: "Client Satisfaction" },
@@ -10,8 +12,8 @@ const About = () => {
   const techStack = ["HTML5", "CSS", "Javascript", "Lovable", "Rocket", "Bolt"];
 
   return (
-    <section id="about" className="py-20 relative">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-20 relative" ref={ref}>
+      <div className={`container mx-auto px-4 fade-in-up ${isVisible ? 'visible' : ''}`}>
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">About Us</h2>
           <p className="text-xl text-muted-foreground">Pioneering the Future of Web Development</p>

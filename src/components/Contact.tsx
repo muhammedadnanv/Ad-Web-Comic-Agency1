@@ -6,8 +6,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Phone, Mail, Clock } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Contact = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -34,8 +36,8 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 bg-secondary/30" ref={ref}>
+      <div className={`container mx-auto px-4 fade-in-up ${isVisible ? 'visible' : ''}`}>
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
           <p className="text-xl text-muted-foreground">Ready to Transform Your Digital Presence?</p>
