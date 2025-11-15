@@ -1,7 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Projects = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const projects = [
     {
       title: "GlobalBestUae",
@@ -36,8 +38,8 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="py-20 bg-secondary/30" ref={ref}>
+      <div className={`container mx-auto px-4 fade-in-up ${isVisible ? 'visible' : ''}`}>
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Projects</h2>
           <p className="text-xl text-muted-foreground">Showcasing Innovation and Excellence</p>
