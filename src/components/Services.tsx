@@ -77,6 +77,44 @@ const Services = () => {
       link: "https://wa.link/59d8d4",
       featured: true,
       note: "Agencies should ensure minimum 8 clients/month for cost efficiency"
+    },
+    {
+      icon: <Code className="h-8 w-8" />,
+      title: "Android Mobile App Development",
+      description: "Custom Android applications built with modern technologies for optimal performance",
+      price: "Based on",
+      period: "Your Requirements",
+      features: [
+        "Native Android Development",
+        "Custom UI/UX Design",
+        "API Integration",
+        "Google Play Store Deployment",
+        "Performance Optimization",
+        "Security Implementation",
+        "3 months Post-Launch Support",
+        "App Maintenance Available"
+      ],
+      link: "https://wa.link/7s1649",
+      featured: false
+    },
+    {
+      icon: <Briefcase className="h-8 w-8" />,
+      title: "Website Care Kit",
+      description: "Comprehensive maintenance and support package to keep your website running smoothly",
+      price: "₹5,000",
+      period: "per month",
+      features: [
+        "Regular Security Updates",
+        "Content Updates (up to 5 per month)",
+        "Performance Monitoring",
+        "Backup & Recovery",
+        "Technical Support",
+        "Bug Fixes & Troubleshooting",
+        "Uptime Monitoring",
+        "Monthly Reports"
+      ],
+      link: "https://wa.link/7s1649",
+      featured: false
     }
   ];
 
@@ -88,7 +126,7 @@ const Services = () => {
           <p className="text-xl text-muted-foreground">Premium Solutions Tailored for Your Success</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <Card
               key={index}
