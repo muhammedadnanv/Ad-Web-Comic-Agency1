@@ -7,6 +7,7 @@ import Career from "@/components/Career";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import LeadCaptureWidget from "@/components/LeadCaptureWidget";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <FAQ />
       <Contact />
       <Footer />
+      <LeadCaptureWidget />
     </div>
   );
 };
