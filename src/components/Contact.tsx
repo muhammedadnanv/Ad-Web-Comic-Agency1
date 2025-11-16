@@ -7,6 +7,14 @@ import { Phone, Mail, Clock } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { z } from "zod";
+
+const contactFormSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  service: z.string().min(1, "Please select a service"),
+  details: z.string().trim().min(1, "Project details are required").max(1000, "Details must be less than 1000 characters")
+});
 
 const Contact = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -20,13 +28,30 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const message = `Hey, I am ${formData.name}, my email is ${formData.email}, I am interested in the service: ${formData.service}. Here are the project details: ${formData.details}`;
-    const whatsappUrl = `https://wa.me/919656778508?text=${encodeURIComponent(message)}`;
-    
-    window.open(whatsappUrl, '_blank');
-    toast.success("Redirecting to WhatsApp...");
-    
-    setFormData({ name: "", email: "", service: "", details: "" });
+    // Validate form data
+    try {
+      const validatedData = contactFormSchema.parse(formData);
+      
+      // Create WhatsApp message with validated and encoded data
+      const message = `Hey, I am ${validatedData.name}, my email is ${validatedData.email}, I am interested in the service: ${validatedData.service}. Here are the project details: ${validatedData.details}`;
+      const whatsappUrl = `https://wa.me/919656778508?text=${encodeURIComponent(message)}`;
+      
+      // Open WhatsApp
+      window.open(whatsappUrl, '_blank');
+      toast.success("Redirecting to WhatsApp...");
+      
+      // Reset form
+      setFormData({ name: "", email: "", service: "", details: "" });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        // Show validation errors
+        error.errors.forEach((err) => {
+          toast.error(err.message);
+        });
+      } else {
+        toast.error("Failed to send message. Please try again.");
+      }
+    }
   };
 
   const contactInfo = [
