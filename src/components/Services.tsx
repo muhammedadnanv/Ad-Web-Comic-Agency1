@@ -2,9 +2,20 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Code, Briefcase, FileCode, Users } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { useState } from "react";
 
 const Services = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const [openDialog, setOpenDialog] = useState<number | null>(null);
+  
   const services = [
     {
       icon: <Code className="h-8 w-8" />,
@@ -21,7 +32,16 @@ const Services = () => {
         "Technical Support: 5 months included"
       ],
       link: "https://wa.link/7s1649",
-      featured: false
+      featured: false,
+      idealFor: "Small businesses, startups, and freelancers looking for an affordable online presence",
+      deliverables: [
+        "Fully functional 1-3 page website",
+        "Mobile-responsive design",
+        "1-year domain registration",
+        "10-year hosting setup",
+        "5 months technical support",
+        "Basic SEO optimization"
+      ]
     },
     {
       icon: <FileCode className="h-8 w-8" />,
@@ -40,7 +60,18 @@ const Services = () => {
         "6 months free maintenance"
       ],
       link: "https://wa.link/7s1649",
-      featured: false
+      featured: false,
+      idealFor: "Businesses seeking unique, high-performance websites with custom designs and advanced features",
+      deliverables: [
+        "Custom-designed website (1-3 pages)",
+        "Fully responsive across all devices",
+        "AI-optimized structure for SEO",
+        "1-year domain registration",
+        "10-year hosting setup",
+        "6-12 months technical support",
+        "6 months free maintenance",
+        "Source code and documentation"
+      ]
     },
     {
       icon: <Briefcase className="h-8 w-8" />,
@@ -58,7 +89,18 @@ const Services = () => {
         "18% GST Applicable"
       ],
       link: "https://wa.link/xg1dgw",
-      featured: true
+      featured: true,
+      idealFor: "Small to medium businesses needing comprehensive management tools for daily operations",
+      deliverables: [
+        "Vyapar software setup and configuration",
+        "Custom workflow integration",
+        "Staff training sessions",
+        "GST compliance setup",
+        "POS system integration",
+        "OCR setup for document scanning",
+        "Ongoing technical support",
+        "Documentation and guides"
+      ]
     },
     {
       icon: <Users className="h-8 w-8" />,
@@ -78,7 +120,19 @@ const Services = () => {
       ],
       link: "https://wa.link/59d8d4",
       featured: true,
-      note: "Agencies should ensure minimum 8 clients/month for cost efficiency"
+      note: "Agencies should ensure minimum 8 clients/month for cost efficiency",
+      idealFor: "Digital agencies, freelancers, and resellers who want to offer web services under their own brand",
+      deliverables: [
+        "5-page fully designed website",
+        "Custom UI/UX tailored to end-client",
+        "Complete white-label branding",
+        "Domain registration and setup",
+        "SSL-secured hosting",
+        "Full testing and quality assurance",
+        "Deployment to production",
+        "1 month post-launch support",
+        "Complete project handover"
+      ]
     },
     {
       icon: <Code className="h-8 w-8" />,
@@ -97,7 +151,19 @@ const Services = () => {
         "App Maintenance Available"
       ],
       link: "https://wa.link/7s1649",
-      featured: false
+      featured: false,
+      idealFor: "Businesses wanting to reach customers through mobile platforms with custom Android applications",
+      deliverables: [
+        "Fully functional Android app",
+        "Custom UI/UX design",
+        "Backend API integration",
+        "Google Play Store listing",
+        "App optimization for performance",
+        "Security features implementation",
+        "3 months technical support",
+        "Source code and documentation",
+        "App maintenance package options"
+      ]
     },
     {
       icon: <Briefcase className="h-8 w-8" />,
@@ -116,7 +182,19 @@ const Services = () => {
         "Monthly Reports"
       ],
       link: "https://wa.link/7s1649",
-      featured: false
+      featured: false,
+      idealFor: "Website owners who want peace of mind with ongoing maintenance and support",
+      deliverables: [
+        "Monthly security patches",
+        "Up to 5 content updates per month",
+        "24/7 uptime monitoring",
+        "Weekly automated backups",
+        "Priority technical support",
+        "Bug fixes within 24 hours",
+        "Performance optimization reports",
+        "Monthly analytics report",
+        "Emergency support access"
+      ]
     }
   ];
 
@@ -162,15 +240,94 @@ const Services = () => {
                 <p className="text-xs text-destructive">{service.note}</p>
               )}
 
-              <Button
-                className="w-full"
-                variant={service.featured ? "default" : "outline"}
-                asChild
-              >
-                <a href={service.link} target="_blank" rel="noopener noreferrer">
-                  Get Started
-                </a>
-              </Button>
+              <div className="flex gap-2">
+                <Dialog open={openDialog === index} onOpenChange={(open) => setOpenDialog(open ? index : null)}>
+                  <DialogTrigger asChild>
+                    <Button variant="outline" className="flex-1">
+                      Learn More
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+                    <DialogHeader>
+                      <DialogTitle className="text-2xl flex items-center gap-3">
+                        <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                          {service.icon}
+                        </div>
+                        {service.title}
+                      </DialogTitle>
+                      <DialogDescription className="text-base">
+                        {service.description}
+                      </DialogDescription>
+                    </DialogHeader>
+                    
+                    <div className="space-y-6 mt-6">
+                      <div>
+                        <h4 className="font-semibold text-lg mb-3">What's Included</h4>
+                        <ul className="space-y-2">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="text-primary mt-1">✓</span>
+                              <span className="text-sm">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-lg mb-3">Ideal For</h4>
+                        <p className="text-sm text-muted-foreground">{service.idealFor}</p>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-lg mb-3">Process Overview</h4>
+                        <div className="space-y-3">
+                          {["Discovery", "Wireframing", "Design Draft", "Development", "Testing", "Launch", "Post-launch support"].map((step, idx) => (
+                            <div key={idx} className="flex items-center gap-3">
+                              <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold text-sm">
+                                {idx + 1}
+                              </div>
+                              <span className="text-sm">{step}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-lg mb-3">Deliverables</h4>
+                        <ul className="space-y-2">
+                          {service.deliverables.map((deliverable, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="text-primary mt-1">•</span>
+                              <span className="text-sm">{deliverable}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="pt-4 border-t">
+                        <div className="text-2xl font-bold mb-4">
+                          {service.price} <span className="text-base text-muted-foreground font-normal">/ {service.period}</span>
+                        </div>
+                        <Button className="w-full" asChild>
+                          <a href={service.link} target="_blank" rel="noopener noreferrer">
+                            Get Started Now
+                          </a>
+                        </Button>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+                
+                <Button
+                  className="flex-1"
+                  variant={service.featured ? "default" : "outline"}
+                  asChild
+                >
+                  <a href={service.link} target="_blank" rel="noopener noreferrer">
+                    Get Started
+                  </a>
+                </Button>
+              </div>
             </Card>
           ))}
         </div>
