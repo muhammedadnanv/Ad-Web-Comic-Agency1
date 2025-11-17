@@ -8,10 +8,8 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import LeadCaptureWidget from "@/components/LeadCaptureWidget";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navbar />
       <Hero />
       <About />
@@ -21,9 +19,7 @@ const Index = () => {
       <FAQ />
       <Contact />
       <Footer />
-      <LeadCaptureWidget />
-    </div>
-  );
+      
+    </div>;
 };
-
 export default Index;
