@@ -1,4 +1,5 @@
 import { Instagram, Linkedin, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -38,6 +39,21 @@ const Footer = () => {
               <Mail className="h-6 w-6" />
             </a>
           </div>
+          
+          <div className="flex justify-center gap-4 my-4 text-sm">
+            <Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">
+              Privacy Policy
+            </Link>
+            <span className="text-muted-foreground">|</span>
+            <Link to="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors">
+              Terms of Service
+            </Link>
+            <span className="text-muted-foreground">|</span>
+            <Link to="/refund-policy" className="text-muted-foreground hover:text-primary transition-colors">
+              Refund Policy
+            </Link>
+          </div>
+          
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Ad Web Comic Agency. All rights reserved.
           </p>
