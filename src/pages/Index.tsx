@@ -9,7 +9,6 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import LeadCaptureWidget from "@/components/LeadCaptureWidget";
 import AIChatWidget from "@/components/AIChatWidget";
-
 const Index = () => {
   return <div className="min-h-screen bg-background">
       <Navbar />
@@ -21,8 +20,8 @@ const Index = () => {
       <FAQ />
       <Contact />
       <Footer />
-      <LeadCaptureWidget />
-      <AIChatWidget />
+      
+      
     </div>;
 };
 export default Index;
