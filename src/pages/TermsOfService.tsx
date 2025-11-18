@@ -1,9 +1,15 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 
 const TermsOfService = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Terms of Service - Ad Web Comic Agency"
+        description="Review Ad Web Comic Agency's terms and conditions. Understand our service scope, intellectual property rights, and policies."
+        canonical="https://adwebcomicagency.vercel.app/terms-of-service"
+      />
       <Navbar />
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">

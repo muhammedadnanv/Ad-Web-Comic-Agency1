@@ -1,9 +1,15 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 
 const RefundPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Payment & Refund Policy - Ad Web Comic Agency"
+        description="Understand Ad Web Comic Agency's payment structure and refund policy. Milestone-based payments with 30-30-40 structure."
+        canonical="https://adwebcomicagency.vercel.app/refund-policy"
+      />
       <Navbar />
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">

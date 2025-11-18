@@ -63,10 +63,10 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-secondary/30" ref={ref}>
       <div className={`container mx-auto px-4 fade-in-up ${isVisible ? 'visible' : ''}`}>
-        <div className="text-center mb-16">
+        <header className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
           <p className="text-xl text-muted-foreground">Ready to Transform Your Digital Presence?</p>
-        </div>
+        </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
           {contactInfo.map((info, index) => (

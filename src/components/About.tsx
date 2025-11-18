@@ -9,7 +9,21 @@ const About = () => {
     { value: "24/7", label: "Support Available" },
   ];
 
-  const techStack = ["HTML5", "CSS", "Javascript", "Lovable", "Rocket", "Bolt"];
+  const techStack = [
+    "HTML5", 
+    "CSS3", 
+    "JavaScript", 
+    "React", 
+    "Next.js", 
+    "TypeScript", 
+    "Vue.js", 
+    "Tailwind CSS", 
+    "Node.js", 
+    "Vite", 
+    "Lovable", 
+    "Rocket", 
+    "Bolt"
+  ];
 
   return (
     <section id="about" className="py-20 relative" ref={ref}>
