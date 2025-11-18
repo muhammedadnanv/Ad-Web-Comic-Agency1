@@ -21,8 +21,8 @@ const Services = () => {
       icon: <Code className="h-8 w-8" />,
       title: "Basic Website",
       description: "A professionally built website that's ready to launch and tailored to your brand",
-      price: "Get Started",
-      period: "Today",
+      urgency: "8 Slots Left This Month",
+      urgencyColor: "text-orange-500",
       features: [
         "Pages: 1–3 (Home, About, Services, Contact)",
         "Template-based responsive design",
@@ -47,8 +47,8 @@ const Services = () => {
       icon: <FileCode className="h-8 w-8" />,
       title: "Custom Static Website",
       description: "Bespoke websites built with modern technologies and optimized for performance",
-      price: "Based on",
-      period: "Your Project",
+      urgency: "Limited Slots Available",
+      urgencyColor: "text-red-500",
       features: [
         "Pages: 1–3 (Home, About, Services, Contact)",
         "Custom static website design",
@@ -77,8 +77,8 @@ const Services = () => {
       icon: <Briefcase className="h-8 w-8" />,
       title: "Business Management Solutions",
       description: "Streamline operations with integrated tools for accounting, inventory, and invoicing",
-      price: "Vyapar fee",
-      period: "+ Service fee",
+      urgency: "5 Projects Left This Month",
+      urgencyColor: "text-red-600",
       features: [
         "Accounting made simple",
         "Real-time Inventory management",
@@ -106,8 +106,8 @@ const Services = () => {
       icon: <Users className="h-8 w-8" />,
       title: "White-Label Website Plan",
       description: "All-in-one solution for agencies. Fully white-labeled and ready to deliver",
-      price: "₹22,000",
-      period: "per project",
+      urgency: "3 Agency Slots Left",
+      urgencyColor: "text-red-600",
       features: [
         "Custom UI/UX Design",
         "5-page Static Website",
@@ -138,8 +138,8 @@ const Services = () => {
       icon: <Code className="h-8 w-8" />,
       title: "Android Mobile App Development",
       description: "Custom Android applications built with modern technologies for optimal performance",
-      price: "Based on",
-      period: "Your Requirements",
+      urgency: "Book Your Spot Now",
+      urgencyColor: "text-orange-500",
       features: [
         "Native Android Development",
         "Custom UI/UX Design",
@@ -169,8 +169,8 @@ const Services = () => {
       icon: <Briefcase className="h-8 w-8" />,
       title: "Website Care Kit",
       description: "Comprehensive maintenance and support package to keep your website running smoothly",
-      price: "₹5,000",
-      period: "per month",
+      urgency: "Only 7 Spots Available",
+      urgencyColor: "text-orange-600",
       features: [
         "Regular Security Updates",
         "Content Updates (up to 5 per month)",
@@ -214,17 +214,20 @@ const Services = () => {
                 service.featured ? "border-primary border-2 bg-card/70" : "bg-card/50"
               } backdrop-blur`}
             >
-              <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                {service.icon}
+              <div className="flex items-start justify-between">
+                <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  {service.icon}
+                </div>
+                {service.urgency && (
+                  <div className={`px-3 py-1 rounded-full text-xs font-semibold ${service.urgencyColor} bg-background border border-current animate-pulse`}>
+                    🔥 {service.urgency}
+                  </div>
+                )}
               </div>
               
               <div>
                 <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
                 <p className="text-muted-foreground">{service.description}</p>
-              </div>
-
-              <div className="text-3xl font-bold">
-                {service.price} <span className="text-base text-muted-foreground">/ {service.period}</span>
               </div>
 
               <ul className="space-y-2">
@@ -305,9 +308,11 @@ const Services = () => {
                       </div>
 
                       <div className="pt-4 border-t">
-                        <div className="text-2xl font-bold mb-4">
-                          {service.price} <span className="text-base text-muted-foreground font-normal">/ {service.period}</span>
-                        </div>
+                        {service.urgency && (
+                          <div className={`mb-4 px-4 py-2 rounded-lg text-sm font-semibold ${service.urgencyColor} bg-background/50 border border-current text-center`}>
+                            🔥 {service.urgency} - Act Fast!
+                          </div>
+                        )}
                         <Button className="w-full" asChild>
                           <a href={service.link} target="_blank" rel="noopener noreferrer">
                             Get Started Now
