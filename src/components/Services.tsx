@@ -21,8 +21,8 @@ const Services = () => {
       icon: <Code className="h-8 w-8" />,
       title: "Basic Website",
       description: "A professionally built website that's ready to launch and tailored to your brand",
-      price: "₹37,281",
-      period: "Lifetime",
+      price: "Get Started",
+      period: "Today",
       features: [
         "Pages: 1–3 (Home, About, Services, Contact)",
         "Template-based responsive design",
