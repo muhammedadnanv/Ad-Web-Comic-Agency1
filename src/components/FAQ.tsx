@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useEffect } from "react";
 
 const FAQ = () => {
   const faqs = [
@@ -48,6 +49,38 @@ const FAQ = () => {
       answer: "Getting started is easy! Simply click on 'Get Started' for any service, or contact us via WhatsApp, email, or our contact form. We'll schedule a free consultation to understand your needs, provide a detailed quote, and outline the project timeline. We respond within 24 hours to all inquiries."
     }
   ];
+
+  useEffect(() => {
+    // Add FAQ Schema
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+
+    let script = document.querySelector('script#faq-schema') as HTMLScriptElement;
+    if (!script) {
+      script = document.createElement('script');
+      script.id = 'faq-schema';
+      script.type = 'application/ld+json';
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify(faqSchema);
+
+    return () => {
+      const existingScript = document.querySelector('script#faq-schema');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
 
   return (
     <section id="faq" className="py-20 relative">

@@ -1,9 +1,15 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Privacy Policy - Ad Web Comic Agency"
+        description="Read Ad Web Comic Agency's privacy policy. Learn how we collect, use, and protect your personal information."
+        canonical="https://adwebcomicagency.vercel.app/privacy-policy"
+      />
       <Navbar />
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">

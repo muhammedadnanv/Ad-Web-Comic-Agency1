@@ -7,32 +7,32 @@ const Projects = () => {
   const projects = [
     {
       title: "GlobalBestUae",
-      tech: ["HTML5", "CSS", "Javascript"],
+      tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
       link: "https://globalbestuae.com/"
     },
     {
       title: "ACEC Saudi",
-      tech: ["HTML5", "CSS", "Javascript"],
+      tech: ["React", "Tailwind CSS", "TypeScript"],
       link: "https://acecsaudi.com/"
     },
     {
       title: "Welcome Properties",
-      tech: ["HTML5", "CSS", "Javascript"],
+      tech: ["Next.js", "React", "Sass", "Node.js"],
       link: "https://www.welcomeproperties.in/"
     },
     {
       title: "IDC Interior Studio",
-      tech: ["HTML5", "CSS", "Javascript"],
+      tech: ["Vue.js", "Vuex", "JavaScript", "Webpack"],
       link: "https://www.idcinteriorstudio.com/"
     },
     {
       title: "Nyla Interiors",
-      tech: ["HTML5", "CSS", "Javascript"],
+      tech: ["React", "Styled Components", "Framer Motion"],
       link: "https://www.nylainteriors.in/"
     },
     {
       title: "Welcome Mart",
-      tech: ["Vue.js", "Modern CSS", "Javascript"],
+      tech: ["Vue.js", "Pinia", "TypeScript", "Vite"],
       link: "https://welcomemart.shop/"
     }
   ];
