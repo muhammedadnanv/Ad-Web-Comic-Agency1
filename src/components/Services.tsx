@@ -165,38 +165,7 @@ const Services = () => {
         "App maintenance package options"
       ]
     },
-    {
-  icon: <QrCode className="h-8 w-8" />,
-  title: "Digi Card – QR-Enabled Business Card",
-  description: "A smart, modern digital business card with a scannable QR code for instant sharing and connection.",
-  urgency: "Get Your Digi Card Now",
-  urgencyColor: "text-green-500",
-  features: [
-    "Personalized Digital Business Card",
-    "High-Quality QR Code",
-    "Mobile-Responsive Design",
-    "Name, Contact & Social Links",
-    "Clickable Call, WhatsApp & Email Buttons",
-    "Services / About Section",
-    "Portfolio or Showcase Section",
-    "Lifetime Access Link",
-    "1 Free Update Included"
-  ],
-  link: "https://wa.link/9c9809",
-  featured: true,
-  idealFor: "Professionals, freelancers, founders, and businesses who want a modern, scannable digital identity.",
-  deliverables: [
-    "Fully designed digital business card",
-    "Custom QR code (print-ready)",
-    "Brand-aligned layout & colors",
-    "Contact, services & social integrations",
-    "Portfolio or gallery section",
-    "One-time free update",
-    "Lifetime hosting link",
-    "Exportable QR file for printing"
-  ]
-},
-
+ 
     {
       icon: <Briefcase className="h-8 w-8" />,
       title: "Website Care Kit",
