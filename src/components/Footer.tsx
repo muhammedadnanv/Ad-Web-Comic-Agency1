@@ -52,6 +52,10 @@ const Footer = () => {
             <Link to="/refund-policy" className="text-muted-foreground hover:text-primary transition-colors">
               Refund Policy
             </Link>
+             <span className="text-muted-foreground">|</span>
+             <Link to="https://forms.gle/Yzirg3dPYVqnnyLK7" className="text-muted-foreground hover:text-primary transition-colors">
+             White Label Partner
+            </Link>
           </div>
           
           <p className="text-sm text-muted-foreground">
