@@ -4,9 +4,7 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import Process from "@/components/Process";
 import Projects from "@/components/Projects";
-import Collaborator from "@/components/Collaborator";
-import HireAgency from "@/components/HireAgency";
-import FreelancerOS from "@/components/FreelancerOS";
+import ModalSections from "@/components/ModalSections";
 import Career from "@/components/Career";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
@@ -78,9 +76,7 @@ const Index = () => {
       <Services />
       <Process />
       <Projects />
-      <Collaborator />
-      <HireAgency />
-      <FreelancerOS />
+      <ModalSections />
       <Career />
       <FAQ />
       <Contact />
