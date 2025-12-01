@@ -21,9 +21,21 @@ const Navbar = () => {
     { href: "#about", label: "About" },
     { href: "#services", label: "Services" },
     { href: "#projects", label: "Projects" },
+    { href: "#collaborator", label: "Collaborator" },
+    { href: "#hire-agency", label: "Hire Agency" },
+    { href: "#freelancer-os", label: "Freelancer OS" },
     { href: "#faq", label: "FAQ" },
     { href: "#contact", label: "Contact" },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      setIsOpen(false);
+    }
+  };
 
   return (
     <nav
@@ -44,7 +56,8 @@ const Navbar = () => {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-foreground hover:text-primary transition-colors"
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className="text-foreground hover:text-primary transition-colors cursor-pointer"
                   >
                     {link.label}
                   </a>
@@ -92,8 +105,8 @@ const Navbar = () => {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="block text-foreground hover:text-primary transition-colors"
-                    onClick={() => setIsOpen(false)}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className="block text-foreground hover:text-primary transition-colors cursor-pointer"
                   >
                     {link.label}
                   </a>
