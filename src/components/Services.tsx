@@ -11,6 +11,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useState } from "react";
+import InstagramEmbed from "./InstagramEmbed";
 
 const Services = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -205,6 +206,7 @@ const Services = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
           <p className="text-xl text-muted-foreground">Premium Solutions Tailored for Your Success</p>
+          <InstagramEmbed />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
