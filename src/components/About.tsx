@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
+import InstagramEmbed from "./InstagramEmbed";
 const About = () => {
   const { ref, isVisible } = useScrollAnimation();
   const stats = [
@@ -31,6 +31,7 @@ const About = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">About Us</h2>
           <p className="text-xl text-muted-foreground">Pioneering the Future of Web Development</p>
+          <InstagramEmbed />
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
