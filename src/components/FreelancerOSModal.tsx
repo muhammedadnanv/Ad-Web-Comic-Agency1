@@ -80,7 +80,7 @@ export const FreelancerOSModal = () => {
           Join Freelancer OS
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="w-[95vw] max-w-3xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl">Join Freelancer OS</DialogTitle>
           <DialogDescription>

@@ -81,14 +81,14 @@ const Services = () => {
   }];
   return <section id="services" className="py-20 relative" ref={ref}>
       <div className={`container mx-auto px-4 fade-in-up ${isVisible ? 'visible' : ''}`}>
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
-          <p className="text-xl text-muted-foreground">Premium Solutions Tailored for Your Success</p>
+        <div className="text-center mb-8 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
+          <p className="text-base sm:text-xl text-muted-foreground px-2">Premium Solutions Tailored for Your Success</p>
           
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {services.map((service, index) => <Card key={index} className={`p-8 space-y-6 hover:scale-105 transition-transform duration-300 ${service.featured ? "border-primary border-2 bg-card/70" : "bg-card/50"} backdrop-blur`}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          {services.map((service, index) => <Card key={index} className={`p-4 sm:p-8 space-y-4 sm:space-y-6 hover:scale-[1.02] sm:hover:scale-105 transition-transform duration-300 ${service.featured ? "border-primary border-2 bg-card/70" : "bg-card/50"} backdrop-blur`}>
               <div className="flex items-start justify-between">
                 <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                   {service.icon}

@@ -45,29 +45,29 @@ const Process = () => {
   return (
     <section id="process" className="py-20 bg-secondary/20" ref={ref}>
       <div className={`container mx-auto px-4 fade-in-up ${isVisible ? 'visible' : ''}`}>
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Process</h2>
-          <p className="text-xl text-muted-foreground">A proven approach to deliver exceptional results</p>
+        <div className="text-center mb-8 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Our Process</h2>
+          <p className="text-base sm:text-xl text-muted-foreground px-2">A proven approach to deliver exceptional results</p>
         </div>
 
-        <div className="max-w-5xl mx-auto space-y-8">
+        <div className="max-w-5xl mx-auto space-y-4 sm:space-y-8">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="flex flex-col md:flex-row items-start gap-6 p-6 rounded-lg bg-card/50 backdrop-blur hover:bg-card/70 transition-all duration-300"
+              className="flex flex-col md:flex-row items-start gap-4 sm:gap-6 p-4 sm:p-6 rounded-lg bg-card/50 backdrop-blur hover:bg-card/70 transition-all duration-300"
             >
               <div className="flex-shrink-0">
-                <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                <div className="h-12 w-12 sm:h-16 sm:w-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                   {step.icon}
                 </div>
               </div>
               
               <div className="flex-1">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="text-primary font-bold text-lg">Step {index + 1}</span>
-                  <h3 className="text-2xl font-bold">{step.title}</h3>
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
+                  <span className="text-primary font-bold text-sm sm:text-lg">Step {index + 1}</span>
+                  <h3 className="text-xl sm:text-2xl font-bold">{step.title}</h3>
                 </div>
-                <p className="text-muted-foreground">{step.description}</p>
+                <p className="text-sm sm:text-base text-muted-foreground">{step.description}</p>
               </div>
             </div>
           ))}

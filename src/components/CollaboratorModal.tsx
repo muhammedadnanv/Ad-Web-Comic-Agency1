@@ -61,7 +61,7 @@ export const CollaboratorModal = () => {
           Become a Collaborator
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="w-[95vw] max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl">Become a Collaborator</DialogTitle>
           <DialogDescription>

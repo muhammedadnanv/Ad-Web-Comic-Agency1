@@ -63,27 +63,27 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-secondary/30" ref={ref}>
       <div className={`container mx-auto px-4 fade-in-up ${isVisible ? 'visible' : ''}`}>
-        <header className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-xl text-muted-foreground">Ready to Transform Your Digital Presence?</p>
+        <header className="text-center mb-8 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
+          <p className="text-base sm:text-xl text-muted-foreground px-2">Ready to Transform Your Digital Presence?</p>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-8 sm:mb-12">
           {contactInfo.map((info, index) => (
-            <Card key={index} className="p-6 flex items-center gap-4 bg-card/50 backdrop-blur">
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+            <Card key={index} className="p-4 sm:p-6 flex items-center gap-3 sm:gap-4 bg-card/50 backdrop-blur">
+              <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                 {info.icon}
               </div>
-              <div>
-                <h3 className="font-semibold text-lg">{info.title}</h3>
-                <p className="text-muted-foreground">{info.value}</p>
+              <div className="min-w-0">
+                <h3 className="font-semibold text-base sm:text-lg">{info.title}</h3>
+                <p className="text-muted-foreground text-sm sm:text-base truncate">{info.value}</p>
               </div>
             </Card>
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <Card className="p-8 bg-card/50 backdrop-blur">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 max-w-6xl mx-auto">
+          <Card className="p-4 sm:p-8 bg-card/50 backdrop-blur">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Input
@@ -135,7 +135,7 @@ const Contact = () => {
             </form>
           </Card>
 
-          <div className="w-full h-full min-h-[450px] rounded-lg overflow-hidden">
+          <div className="w-full h-full min-h-[300px] sm:min-h-[450px] rounded-lg overflow-hidden">
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.4244761395867!2d75.78701!3d11.4492569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6636db34204c5%3A0xc2fa9d054e3a60af!2sAD%20WEB%20COMIC%20Agency!5e0!3m2!1sen!2sin!4v1763237997426!5m2!1sen!2sin"
               width="100%" 

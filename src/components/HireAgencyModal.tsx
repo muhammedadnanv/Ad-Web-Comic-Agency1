@@ -64,7 +64,7 @@ export const HireAgencyModal = () => {
           Hire Our Agency
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="w-[95vw] max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl">Hire Our Agency</DialogTitle>
           <DialogDescription>
