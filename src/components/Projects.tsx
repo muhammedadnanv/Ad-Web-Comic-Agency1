@@ -40,12 +40,12 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-secondary/30" ref={ref}>
       <div className={`container mx-auto px-4 fade-in-up ${isVisible ? 'visible' : ''}`}>
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Projects</h2>
-          <p className="text-xl text-muted-foreground">Showcasing Innovation and Excellence</p>
+        <div className="text-center mb-8 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Our Projects</h2>
+          <p className="text-base sm:text-xl text-muted-foreground px-2">Showcasing Innovation and Excellence</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
           {projects.map((project, index) => (
             <a
               key={index}
