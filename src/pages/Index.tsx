@@ -17,7 +17,7 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Ad Web Comic Agency",
-    "image": "https://adwebcomicagency.vercel.app/img.png",
+    "image": "https://adwebcomicagency.vercel.app/og-image.png",
     "url": "https://adwebcomicagency.vercel.app/",
     "telephone": "+919656778508",
     "email": "adwebcomicagency@gmail.com",

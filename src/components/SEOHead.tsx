@@ -13,7 +13,7 @@ export const SEOHead = ({
   title,
   description,
   keywords,
-  ogImage = "https://adwebcomicagency.vercel.app/img.png",
+  ogImage = "https://adwebcomicagency.vercel.app/og-image.png",
   canonical,
   structuredData
 }: SEOHeadProps) => {
