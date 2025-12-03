@@ -187,4 +187,79 @@ All colors MUST be HSL.
   .animate-pulse-slow {
     animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
+
+  /* Theme transition classes */
+  .theme-transition,
+  .theme-transition *,
+  .theme-transition *::before,
+  .theme-transition *::after {
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                fill 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                stroke 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  /* Respect prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    .theme-transition,
+    .theme-transition *,
+    .theme-transition *::before,
+    .theme-transition *::after {
+      transition: none !important;
+    }
+
+    .fade-in-up,
+    .fade-in-left,
+    .fade-in-right,
+    .scale-in {
+      opacity: 1;
+      transform: none;
+      transition: none !important;
+    }
+
+    .animate-float,
+    .animate-pulse-slow {
+      animation: none !important;
+    }
+
+    .slide-panel {
+      transition: none !important;
+    }
+  }
+
+  /* Sliding panel animations */
+  .slide-panel {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .slide-panel-enter {
+    transform: translateX(100%);
+  }
+
+  .slide-panel-enter-active {
+    transform: translateX(0);
+  }
+
+  .slide-panel-exit {
+    transform: translateX(0);
+  }
+
+  .slide-panel-exit-active {
+    transform: translateX(100%);
+  }
+
+  /* Panel backdrop */
+  .panel-backdrop {
+    transition: opacity 0.3s ease-out;
+  }
+
+  .panel-backdrop-enter {
+    opacity: 0;
+  }
+
+  .panel-backdrop-enter-active {
+    opacity: 1;
+  }
 }
