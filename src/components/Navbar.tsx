@@ -1,12 +1,27 @@
-import { useState, useEffect } from "react";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import { Menu, X, Sun, Moon, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
+import ToolsPanel from "./ToolsPanel";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isToolsPanelOpen, setIsToolsPanelOpen] = useState(false);
+  const [isThemeTransitioning, setIsThemeTransitioning] = useState(false);
   const { theme, setTheme } = useTheme();
+
+  const handleThemeToggle = useCallback(() => {
+    setIsThemeTransitioning(true);
+    document.documentElement.classList.add("theme-transition");
+    setTheme(theme === "dark" ? "light" : "dark");
+    
+    // Remove transition class after animation completes
+    setTimeout(() => {
+      document.documentElement.classList.remove("theme-transition");
+      setIsThemeTransitioning(false);
+    }, 300);
+  }, [theme, setTheme]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,47 +65,70 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <ul className="flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-4 lg:gap-8">
+            <ul className="flex items-center space-x-4 lg:space-x-6">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className="text-foreground hover:text-primary transition-colors cursor-pointer"
+                    className="text-sm text-foreground hover:text-primary transition-colors cursor-pointer"
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
             </ul>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="hover:bg-primary/10"
-              aria-label="Toggle theme"
-            >
-              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsToolsPanelOpen(true)}
+                className="hover:bg-primary/10"
+                aria-label="Open Vibe Coding Tools"
+              >
+                <Wrench className="h-5 w-5" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={handleThemeToggle}
+                disabled={isThemeTransitioning}
+                className="hover:bg-primary/10 relative overflow-hidden"
+                aria-label="Toggle theme"
+              >
+                <Sun className="h-5 w-5 rotate-0 scale-100 transition-transform duration-300 dark:-rotate-90 dark:scale-0" />
+                <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-transform duration-300 dark:rotate-0 dark:scale-100" />
+              </Button>
+            </div>
           </div>
 
           {/* Mobile Menu Button & Theme Toggle */}
-          <div className="md:hidden flex items-center gap-2">
+          <div className="md:hidden flex items-center gap-1">
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() => setIsToolsPanelOpen(true)}
               className="hover:bg-primary/10"
+              aria-label="Open Vibe Coding Tools"
+            >
+              <Wrench className="h-5 w-5" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={handleThemeToggle}
+              disabled={isThemeTransitioning}
+              className="hover:bg-primary/10 relative overflow-hidden"
               aria-label="Toggle theme"
             >
-              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <Sun className="h-5 w-5 rotate-0 scale-100 transition-transform duration-300 dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-transform duration-300 dark:rotate-0 dark:scale-100" />
             </Button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
+              className="p-2"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -116,6 +154,9 @@ const Navbar = () => {
           </div>
         )}
       </div>
+
+      {/* Tools Panel */}
+      <ToolsPanel isOpen={isToolsPanelOpen} onClose={() => setIsToolsPanelOpen(false)} />
     </nav>
   );
 };
