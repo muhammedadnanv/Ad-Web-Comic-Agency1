@@ -14,7 +14,116 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      marketing_subscribers: {
+        Row: {
+          company: string | null
+          email: string
+          id: string
+          is_active: boolean
+          name: string
+          source: string | null
+          subscribed_at: string
+        }
+        Insert: {
+          company?: string | null
+          email: string
+          id?: string
+          is_active?: boolean
+          name: string
+          source?: string | null
+          subscribed_at?: string
+        }
+        Update: {
+          company?: string | null
+          email?: string
+          id?: string
+          is_active?: boolean
+          name?: string
+          source?: string | null
+          subscribed_at?: string
+        }
+        Relationships: []
+      }
+      referral_conversions: {
+        Row: {
+          converted_at: string
+          discount_applied: number
+          id: string
+          project_details: string | null
+          referral_id: string
+          referred_company: string | null
+          referred_email: string
+          referred_name: string
+          referred_phone: string | null
+          status: string
+        }
+        Insert: {
+          converted_at?: string
+          discount_applied: number
+          id?: string
+          project_details?: string | null
+          referral_id: string
+          referred_company?: string | null
+          referred_email: string
+          referred_name: string
+          referred_phone?: string | null
+          status?: string
+        }
+        Update: {
+          converted_at?: string
+          discount_applied?: number
+          id?: string
+          project_details?: string | null
+          referral_id?: string
+          referred_company?: string | null
+          referred_email?: string
+          referred_name?: string
+          referred_phone?: string | null
+          status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "referral_conversions_referral_id_fkey"
+            columns: ["referral_id"]
+            isOneToOne: false
+            referencedRelation: "referrals"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      referrals: {
+        Row: {
+          created_at: string
+          discount_percentage: number
+          id: string
+          is_active: boolean
+          referral_code: string
+          referrer_company: string | null
+          referrer_email: string
+          referrer_name: string
+        }
+        Insert: {
+          created_at?: string
+          discount_percentage?: number
+          id?: string
+          is_active?: boolean
+          referral_code: string
+          referrer_company?: string | null
+          referrer_email: string
+          referrer_name: string
+        }
+        Update: {
+          created_at?: string
+          discount_percentage?: number
+          id?: string
+          is_active?: boolean
+          referral_code?: string
+          referrer_company?: string | null
+          referrer_email?: string
+          referrer_name?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
