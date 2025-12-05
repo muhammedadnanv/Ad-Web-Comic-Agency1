@@ -64,8 +64,13 @@ export const ReferralSignupModal = () => {
 
       if (error) throw error;
 
-      // Send welcome email
-      await supabase.functions.invoke("send-referral-email", {
+      setGeneratedCode(referralCode);
+      setGeneratedLink(referralLink);
+      setSuccess(true);
+      toast.success("Welcome to our referral program!");
+
+      // Send welcome email (non-blocking)
+      supabase.functions.invoke("send-referral-email", {
         body: {
           type: "welcome_referrer",
           to: formData.email,
@@ -76,12 +81,9 @@ export const ReferralSignupModal = () => {
             discountPercentage: 10,
           },
         },
+      }).catch((emailError) => {
+        console.log("Email notification skipped:", emailError);
       });
-
-      setGeneratedCode(referralCode);
-      setGeneratedLink(referralLink);
-      setSuccess(true);
-      toast.success("Welcome to our referral program!");
     } catch (error) {
       if (error instanceof z.ZodError) {
         toast.error(error.errors[0].message);
@@ -265,8 +267,11 @@ export const ReferralForm = ({ referralCode, referrerName, discountPercentage }:
         source: "referral",
       }, { onConflict: "email" });
 
-      // Send emails
-      await Promise.all([
+      setSuccess(true);
+      toast.success("Thank you! We'll be in touch soon.");
+
+      // Send emails (non-blocking)
+      Promise.all([
         supabase.functions.invoke("send-referral-email", {
           body: {
             type: "welcome_referred",
@@ -289,10 +294,9 @@ export const ReferralForm = ({ referralCode, referrerName, discountPercentage }:
             },
           },
         }),
-      ]);
-
-      setSuccess(true);
-      toast.success("Thank you! We'll be in touch soon.");
+      ]).catch((emailError) => {
+        console.log("Email notifications skipped:", emailError);
+      });
     } catch (error) {
       if (error instanceof z.ZodError) {
         toast.error(error.errors[0].message);
