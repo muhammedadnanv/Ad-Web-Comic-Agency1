@@ -11,6 +11,8 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import AIChatWidget from "@/components/AIChatWidget";
 import { SEOHead } from "@/components/SEOHead";
+import { ReferralSection } from "@/components/ReferralSection";
+import { ReferralLandingHandler } from "@/components/ReferralSystem";
 
 const Index = () => {
   const structuredData = {
@@ -70,6 +72,7 @@ const Index = () => {
         canonical="https://adwebcomicagency.vercel.app/"
         structuredData={structuredData}
       />
+      <ReferralLandingHandler />
       <Navbar />
       <Hero />
       <About />
@@ -77,6 +80,7 @@ const Index = () => {
       <Process />
       <Projects />
       <ModalSections />
+      <ReferralSection />
       <Career />
       <FAQ />
       <Contact />
