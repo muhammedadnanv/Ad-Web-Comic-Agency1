@@ -57,10 +57,23 @@ const Footer = () => {
               White Label Partner
             </a>
           </div>
-          
+
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Ad Web Comic Agency. All rights reserved.
-          </p>
+  © {new Date().getFullYear()} Ad Web Comic Agency. All rights reserved. <br />
+  MSME (UDYAM) registered service provider. UDYAM Registration No:{" "}
+  <a 
+    href="https://udyamassist.gov.in/verification-urn" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="text-sm text-muted-foreground underline"
+  >
+    UDYAM-KL-08-0101744
+  </a>
+</p>
+
+          
+
+          
         </div>
       </div>
     </footer>
