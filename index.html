@@ -1,930 +1,1249 @@
-<html lang="en" class="scroll-smooth"><head>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ad Web Comic Agency | Premium Digital Solutions</title>
-    <meta name="description" content="MSME-registered Premium Web &amp; PWA Development Agency. Transforming Ideas into Digital Reality.">
-      <meta name="description" content="Ad Web Comic Agency builds futuristic web solutions including static e-commerce sites, automation tools, and AI integrations. Based in Kozhikode, Kerala.">
-    <meta name="keywords" content="Web Design Kozhikode, Static E-commerce Kerala, AI Websites India, Ad Web Comic Agency, React Development, Next.js, TypeScript">
-    <meta name="author" content="Ad Web Comic Agency">
-
-    <meta property="og:title" content="Ad Web Comic Agency - Futuristic Web Solutions">
-    <meta property="og:description" content="Transforming Ideas into Digital Reality with Cutting-Edge Technology">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://adwebcomicagency.vercel.app/og-image.png">
-    <meta property="og:url" content="https://adwebcomicagency.vercel.app/">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ad Web Comic Agency - Futuristic Web Solutions">
-    <meta name="twitter:description" content="We design premium websites, SaaS platforms, and interactive digital experiences that convert and captivate.">
-    <meta name="twitter:image" content="https://adwebcomicagency.vercel.app/og-image.png">
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;⚡&lt;/text&gt;&lt;/svg&gt;">
+    <title>Ad Web Comic Agency | Enterprise Digital Solutions</title>
+    <meta name="description" content="Global-standard web development agency specializing in high-performance static sites, PWAs, and bespoke digital infrastructure.">
+    <meta name="theme-color" content="#000000">
     
-    <!-- Tailwind -->
+    <!-- Open Graph / SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ad Web Comic Agency | Digital Excellence">
+    <meta property="og:description" content="Engineering the future of the web with precision, performance, and premium design.">
+    <meta property="og:image" content="https://adwebcomicagency.vercel.app/og-image.png">
+    
+    <!-- Fonts: Inter (International Standard) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN for single file requirement) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Iconify (Solar Linear Icons) -->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
-    
+
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        
-        /* Custom scrollbar for premium feel - Gold Theme */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #09090b; }
-        ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: #fbbf24; } /* Amber-400 */
-        
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+        :root {
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
         }
         
-        .animate-marquee { animation: marquee 25s linear infinite; }
-        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        body {
+            font-family: var(--font-sans);
+            background-color: #000000;
+            color: #a1a1aa; /* zinc-400 */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-        /* Hide summary marker */
+        /* Premium Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #000000; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+
+        /* Glassmorphism Utilities */
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        
+        .glass-hover:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee { animation: marquee 40s linear infinite; }
+
+        /* Custom UI Elements */
         details > summary { list-style: none; }
         details > summary::-webkit-details-marker { display: none; }
 
-        /* Modal Animation */
+        .gradient-text {
+            background: linear-gradient(to right, #ffffff, #a1a1aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-amber {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+
+        /* Modal Transitions */
         .modal {
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .modal.active {
             opacity: 1;
             visibility: visible;
         }
         .modal-content {
-            transform: scale(0.95);
-            transition: transform 0.3s ease;
+            transform: scale(0.96) translateY(10px);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .modal.active .modal-content {
-            transform: scale(1);
+            transform: scale(1) translateY(0);
         }
     </style>
+     <style>
+      /* Widgetify Core Styles - Responsive & Mobile-First */
+      .widgetify-widget {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: #ffde0a;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        z-index: 1000;
+        border: none;
+        outline: none;
+      }
+
+      .widgetify-widget:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .widgetify-popup {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        width: 400px;
+        max-width: 90vw;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        display: none;
+        flex-direction: column;
+        z-index: 999;
+        overflow: hidden;
+        border: 1px solid #e5e7eb;
+        padding: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+
+      .widgetify-popup.show {
+        display: flex;
+        animation: fadeInUp 0.3s ease;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .widgetify-header {
+        background-color: #f3f4f6;
+        padding: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e5e7eb;
+        border-radius: 10px 10px 0 0;
+        margin: -20px -20px 0 -20px;
+      }
+
+      .widgetify-header h3 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: #374151;
+      }
+
+      .widgetify-close {
+        background: none;
+        border: none;
+        font-size: 18px;
+        color: #6b7280;
+        cursor: pointer;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .widgetify-close:hover {
+        color: #374151;
+      }
+
+      .widgetify-watermark {
+        background-color: #f9fafb;
+        border-top: 1px solid #e5e7eb;
+        padding: 8px 12px;
+        text-align: center;
+        margin: 20px -20px -20px -20px;
+        border-radius: 0 0 10px 10px;
+      }
+
+      .widgetify-watermark a {
+        color: #6b7280;
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: 500;
+      }
+
+      .widgetify-watermark a:hover {
+        color: #374151;
+      }
+
+      /* UPI Gateway Specific Styles */
+      .upi-gateway-title {
+        margin: 16px 0 16px 0;
+        color: #1f2937;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .upi-gateway-qr {
+        width: 200px;
+        height: 200px;
+        border: 2px solid #f3f4f6;
+        border-radius: 8px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .upi-gateway-details {
+        margin: 4px 0;
+        font-size: 14px;
+        color: #374151;
+      }
+
+      .upi-gateway-button {
+        width: 100%;
+        padding: 16px 0;
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+      }
+
+      .upi-gateway-button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+      }
+
+      .upi-gateway-note {
+        margin: 16px 0 0 0;
+        font-size: 11px;
+        color: #9ca3af;
+        text-align: center;
+        line-height: 1.4;
+      }
+
+      /* Responsive Mobile Design */
+      @media (max-width: 480px) {
+        .widgetify-widget {
+          bottom: 15px;
+          right: 15px;
+        }
+        
+        .widgetify-popup {
+          bottom: 85px;
+          right: 15px;
+          max-width: calc(100vw - 30px) !important;
+          margin: 0 !important;
+          border-radius: 8px !important;
+          padding: 16px !important;
+        }
+        
+        .upi-gateway-title {
+          font-size: 18px !important;
+        }
+        
+        .upi-gateway-details {
+          font-size: 13px !important;
+        }
+        
+        .upi-gateway-button {
+          padding: 14px 0 !important;
+          font-size: 15px !important;
+        }
+        
+        .upi-gateway-qr {
+          width: 160px !important;
+          height: 160px !important;
+        }
+        
+        .upi-gateway-note {
+          font-size: 11px !important;
+        }
+      }
+    </style>
+  
+        <style>
+          /* Lead Capture Popup Styles */
+          .lead-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            backdrop-filter: blur(5px);
+          }
+          
+          .lead-popup-overlay.show {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+          }
+          
+          @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+          
+          .lead-popup-container {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            max-width: 420px;
+            width: 90%;
+            margin: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            animation: slideUp 0.3s ease;
+          }
+          
+          @keyframes slideUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          
+          .lead-popup-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #9ca3af;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+          }
+          
+          .lead-popup-close:hover {
+            background: #f3f4f6;
+            color: #374151;
+          }
+          
+          .lead-popup-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1f2937;
+            text-align: center;
+            margin-bottom: 8px;
+            line-height: 1.2;
+          }
+          
+          .lead-popup-subtitle {
+            font-size: 16px;
+            color: #6b7280;
+            text-align: center;
+            margin-bottom: 24px;
+            line-height: 1.4;
+          }
+          
+          .lead-form-field {
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.2s ease;
+            font-family: inherit;
+          }
+          
+          .lead-form-field:focus {
+            border-color: #ffde0a;
+            box-shadow: 0 0 0 3px #ffde0a20;
+          }
+          
+          .lead-form-button {
+            width: 100%;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #ffde0a 0%, #ffde0add 100%);
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 8px;
+          }
+          
+          .lead-form-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px #ffde0a40;
+          }
+          
+          .lead-form-button:active {
+            transform: translateY(0);
+          }
+          
+          .lead-popup-footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+          }
+          
+          .lead-popup-footer a {
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+          }
+          
+          .lead-popup-footer a:hover {
+            color: #374151;
+          }
+          
+          /* Mobile Responsive */
+          @media (max-width: 480px) {
+            .lead-popup-container {
+              padding: 24px;
+              margin: 10px;
+              border-radius: 12px;
+            }
+            
+            .lead-popup-title {
+              font-size: 20px;
+            }
+            
+            .lead-popup-subtitle {
+              font-size: 14px;
+            }
+            
+            .lead-form-field {
+              padding: 14px;
+              font-size: 16px;
+            }
+            
+            .lead-form-button {
+              padding: 14px 20px;
+            }
+          }
+        </style>
+
+        <div id="lead-capture-overlay" class="lead-popup-overlay" onclick="closeLeadPopup(event)">
+          <div class="lead-popup-container" onclick="event.stopPropagation()">
+            <button class="lead-popup-close" onclick="closeLeadPopup()" aria-label="Close popup">×</button>
+            
+            <h2 class="lead-popup-title">Get Your Free Consultation</h2>
+            <p class="lead-popup-subtitle">Leave your details and we&#x27;ll contact you soon</p>
+            
+            <form id="lead-capture-form" onsubmit="submitLeadForm(event)">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Full Name *"
+                required
+                class="lead-form-field"
+              />
+              
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your Phone Number *"
+                required
+                class="lead-form-field"
+              />
+              
+              <input
+                type="text"
+                name="address"
+                placeholder="Your Address"
+                class="lead-form-field"
+              />
+              
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="3"
+                class="lead-form-field"
+                style="resize: vertical; min-height: 80px;"
+              ></textarea>
+              
+              <button type="submit" class="lead-form-button">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.6 6.32A7.85 7.85 0 0 0 12 4.02a7.95 7.95 0 0 0-6.9 12.07L4 20.02l4.05-1.06A8.02 8.02 0 0 0 12 20.02a7.98 7.98 0 0 0 8-7.93c0-2.12-.83-4.12-2.4-5.62V6.32z"/>
+                </svg>
+                Send My Details
+              </button>
+            </form>
+            
+            <div class="lead-popup-footer">
+              <a href="https://widgetify-two.vercel.app" target="_blank">Powered by Widgetify</a>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          // Auto-show popup after delay
+          setTimeout(function() {
+            const popup = document.getElementById('lead-capture-overlay');
+            if (popup && !localStorage.getItem('leadPopupShown')) {
+              popup.classList.add('show');
+            }
+          }, 5000);
+
+          function closeLeadPopup(event) {
+            if (event && event.target !== event.currentTarget) return;
+            const popup = document.getElementById('lead-capture-overlay');
+            popup.classList.remove('show');
+            localStorage.setItem('leadPopupShown', 'true');
+          }
+
+          function submitLeadForm(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+            const address = formData.get('address');
+            const message = formData.get('message');
+            
+            let leadMessage = '🎯 *New Lead Captured!*\n\n';
+            leadMessage += '👤 *Name:* ' + name + '\n';
+            leadMessage += '📱 *Phone:* ' + phone + '\n';
+            
+            if (address) {
+              leadMessage += '🏠 *Address:* ' + address + '\n';
+            }
+            
+            if (message) {
+              leadMessage += '💬 *Message:* ' + message + '\n';
+            }
+            
+            leadMessage += '\n⏰ *Time:* ' + new Date().toLocaleString();
+            leadMessage += '\n\n_Generated via Widgetify Lead Capture_';
+            
+            const whatsappUrl = 'https://wa.me/9656778508?text=' + encodeURIComponent(leadMessage);
+            window.open(whatsappUrl, '_blank');
+            
+            // Show success message and close popup
+            alert('✅ Thank you! Your details have been sent successfully. We will contact you soon!');
+            closeLeadPopup();
+            
+            // Reset form
+            event.target.reset();
+          }
+          
+          // Prevent showing popup if already shown in this session
+          if (localStorage.getItem('leadPopupShown')) {
+            // Optional: Clear after 24 hours
+            const lastShown = localStorage.getItem('leadPopupShownTime');
+            const now = new Date().getTime();
+            if (!lastShown || (now - parseInt(lastShown)) > 24 * 60 * 60 * 1000) {
+              localStorage.removeItem('leadPopupShown');
+            }
+          }
+        </script>
 </head>
-<body class="bg-black text-zinc-400 antialiased selection:bg-amber-500/30 selection:text-amber-200">
+<body class="selection:bg-amber-500/20 selection:text-amber-200">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5 bg-black/50">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="#" class="flex flex-col items-start leading-none group">
-                <span class="text-amber-400 font-bold tracking-tighter text-2xl group-hover:text-amber-300 transition-colors">AD WEB</span>
-                <div class="flex gap-1.5 text-[0.6rem] font-medium text-white tracking-[0.2em] mt-0.5">
-                    <span>COMIC</span>
-                    <span>AGENCY</span>
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 w-full z-50 glass border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <!-- Brand -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-8 h-8 rounded bg-gradient-to-tr from-amber-500 to-amber-700 flex items-center justify-center text-black shadow-[0_0_15px_-3px_rgba(245,158,11,0.3)]">
+                    <iconify-icon icon="solar:bolt-bold" width="20"></iconify-icon>
                 </div>
-            </a>
-            
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#services" class="hover:text-amber-400 transition-colors">Services</a>
-                <a href="#process" class="hover:text-amber-400 transition-colors">Process</a>
-                <a href="#projects" class="hover:text-amber-400 transition-colors">Work</a>
-                <a href="#faq" class="hover:text-amber-400 transition-colors">FAQ</a>
-            </div>
-            
-            <a href="#contact" class="hidden md:flex items-center gap-2 bg-white/5 hover:bg-amber-500/10 text-white hover:text-amber-400 text-xs font-medium py-2.5 px-5 rounded-full border border-white/10 hover:border-amber-500/30 transition-all group">
-                Get Started
-                <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"></i>
-            </a>
-            
-            <!-- Mobile Menu Icon -->
-            <button class="md:hidden text-white hover:text-amber-400 transition-colors">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="relative pt-36 pb-20 md:pt-52 md:pb-32 px-6 overflow-hidden">
-        <!-- Background Effects - Gold -->
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-amber-600/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
-        
-        <div class="max-w-5xl mx-auto text-center relative z-10">
-            <!-- MSME Registered Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-xs font-semibold text-amber-400 mb-8 animate-fade-in shadow-[0_0_15px_-3px_rgba(245,158,11,0.2)]">
-                <span class="relative flex h-2 w-2">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
-                </span>
-                MSME-registered website development agency
-            </div>
-            
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-semibold text-white tracking-tighter leading-[1.1] mb-6">
-                Future Web Solutions <br>
-                <span class="text-zinc-600">Transforming Ideas into <span class="text-amber-400/90">Digital Gold</span>.</span>
-            </h1>
-            
-            <p class="text-base md:text-lg text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                We build future-ready digital experiences with cutting-edge technology. 
-                Founder-operated, ownership-based solutions with no recurring fees.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#services" class="w-full sm:w-auto px-8 py-3.5 bg-amber-500 text-black font-semibold text-sm rounded-lg hover:bg-amber-400 transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
-                    Explore Services
-                </a>
-                <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 bg-white/5 text-white border border-white/10 font-medium text-sm rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
-                    Start Project
-                    <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats & About -->
-    <section class="py-20 border-t border-white/5 bg-zinc-950/50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-2xl md:text-3xl font-semibold text-white tracking-tight mb-4">
-                        Pioneering the Future of <br> <span class="text-amber-400">Web Development</span>
-                    </h2>
-                    <p class="text-zinc-400 leading-relaxed mb-8">
-                        Ad Web Comic Agency is fully founder-operated, ensuring direct communication and meticulous execution without middlemen. We specialize in tailored websites, PWAs, and custom solutions that drive growth.
-                    </p>
-                    
-                    <!-- Stats Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div class="glass-panel p-4 rounded-xl border-t-2 border-t-amber-500/20">
-                            <div class="text-3xl font-semibold text-white mb-1">4+</div>
-                            <div class="text-[10px] text-zinc-500 uppercase tracking-widest font-medium">Projects Completed</div>
-                        </div>
-                        <div class="glass-panel p-4 rounded-xl border-t-2 border-t-amber-500/20">
-                            <div class="text-3xl font-semibold text-white mb-1">100%</div>
-                            <div class="text-[10px] text-zinc-500 uppercase tracking-widest font-medium">Client Satisfaction</div>
-                        </div>
-                        <div class="glass-panel p-4 rounded-xl border-t-2 border-t-amber-500/20">
-                            <div class="text-3xl font-semibold text-white mb-1">24/7</div>
-                            <div class="text-[10px] text-zinc-500 uppercase tracking-widest font-medium">Support Available</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="grid gap-4">
-                    <!-- Vision Card -->
-                    <div class="glass-panel p-8 rounded-2xl border-l-4 border-l-amber-500 relative overflow-hidden group">
-                        <div class="absolute right-0 top-0 w-24 h-24 bg-amber-500/5 rounded-bl-full transition-transform group-hover:scale-150 duration-500"></div>
-                        <div class="flex items-center gap-3 mb-3 text-white font-medium relative z-10">
-                            <i data-lucide="eye" class="w-5 h-5 text-amber-400"></i>
-                            Vision
-                        </div>
-                        <p class="text-sm text-zinc-400 relative z-10">
-                            Empower businesses and creators with future-ready web solutions that deliver full ownership and maximum value.
-                        </p>
-                    </div>
-                    <!-- Mission Card -->
-                    <div class="glass-panel p-8 rounded-2xl border-l-4 border-l-zinc-700 relative overflow-hidden group">
-                        <div class="absolute right-0 top-0 w-24 h-24 bg-white/5 rounded-bl-full transition-transform group-hover:scale-150 duration-500"></div>
-                        <div class="flex items-center gap-3 mb-3 text-white font-medium relative z-10">
-                            <i data-lucide="rocket" class="w-5 h-5 text-zinc-400"></i>
-                            Mission
-                        </div>
-                        <p class="text-sm text-zinc-400 relative z-10">
-                            Simplify digital transformation through one-time investments, custom web experiences, and end-to-end support.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Stack -->
-    <section class="py-12 overflow-hidden border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 mb-8 text-center">
-            <span class="text-[10px] font-semibold text-amber-500/70 uppercase tracking-widest">Powered by modern technologies</span>
-        </div>
-        <div class="relative flex overflow-x-hidden group">
-            <div class="animate-marquee whitespace-nowrap flex items-center gap-12 text-zinc-500 opacity-60 hover:opacity-100 transition-opacity duration-300">
-                <span class="flex items-center gap-2 text-lg font-medium"><iconify-icon icon="logos:nextjs-icon"></iconify-icon> Next.js</span>
-                <span class="flex items-center gap-2 text-lg font-medium"><iconify-icon icon="logos:react"></iconify-icon> React</span>
-                <span class="flex items-center gap-2 text-lg font-medium"><iconify-icon icon="logos:tailwindcss-icon"></iconify-icon> Tailwind</span>
-                <span class="flex items-center gap-2 text-lg font-medium"><iconify-icon icon="logos:typescript-icon"></iconify-icon> TypeScript</span>
-                <span class="flex items-center gap-2 text-lg font-medium"><iconify-icon icon="logos:nodejs-icon"></iconify-icon> Node.js</span>
-                <span class="flex items-center gap-2 text-lg font-medium"><iconify-icon icon="logos:vitejs"></iconify-icon> Vite</span>
-                <span class="flex items-center gap-2 text-lg font-medium"><iconify-icon icon="logos:vue"></iconify-icon> Vue.js</span>
-                <span class="flex items-center gap-2 text-lg font-medium"><iconify-icon icon="simple-icons:bolt" class="text-amber-400"></iconify-icon> Bolt</span>
-                <!-- Duplicate for loop -->
-                <span class="flex items-center gap-2 text-lg font-medium"><iconify-icon icon="logos:nextjs-icon"></iconify-icon> Next.js</span>
-                <span class="flex items-center gap-2 text-lg font-medium"><iconify-icon icon="logos:react"></iconify-icon> React</span>
-                <span class="flex items-center gap-2 text-lg font-medium"><iconify-icon icon="logos:tailwindcss-icon"></iconify-icon> Tailwind</span>
-                <span class="flex items-center gap-2 text-lg font-medium"><iconify-icon icon="logos:typescript-icon"></iconify-icon> TypeScript</span>
-                <span class="flex items-center gap-2 text-lg font-medium"><iconify-icon icon="logos:nodejs-icon"></iconify-icon> Node.js</span>
-                <span class="flex items-center gap-2 text-lg font-medium"><iconify-icon icon="logos:vitejs"></iconify-icon> Vite</span>
-                <span class="flex items-center gap-2 text-lg font-medium"><iconify-icon icon="logos:vue"></iconify-icon> Vue.js</span>
-                <span class="flex items-center gap-2 text-lg font-medium"><iconify-icon icon="simple-icons:bolt" class="text-amber-400"></iconify-icon> Bolt</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-4">Premium Solutions</h2>
-            <p class="text-zinc-400">Select a plan that fits your vision.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            <!-- Basic Website -->
-            <div class="glass-panel p-8 rounded-2xl flex flex-col hover:-translate-y-1 transition-transform duration-300">
-                <div class="mb-4 inline-flex px-3 py-1 rounded-full bg-zinc-800 text-zinc-300 text-[10px] font-semibold w-fit border border-zinc-700">
-                    8 Slots Left This Month
-                </div>
-                <h3 class="text-xl font-semibold text-white mb-2">Basic Website</h3>
-                <p class="text-sm text-zinc-400 mb-6">Perfect for establishing a simple online presence.</p>
-                
-                <ul class="space-y-4 mb-8 flex-1">
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-zinc-500 flex-shrink-0"></i>
-                        1–3 Pages (Home, About, Contact)
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-zinc-500 flex-shrink-0"></i>
-                        Template-based responsive design
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-zinc-500 flex-shrink-0"></i>
-                        Mobile friendly
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-zinc-500 flex-shrink-0"></i>
-                        Domain: 1-year included
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-zinc-500 flex-shrink-0"></i>
-                        Technical Support: 5 months
-                    </li>
-                </ul>
-                <a href="#contact" class="w-full py-3 rounded-lg border border-white/10 hover:bg-white/5 text-white text-sm font-medium transition-colors text-center">Select Plan</a>
-            </div>
-
-            <!-- Custom Static Website (Dominant) -->
-            <div class="glass-panel p-8 rounded-2xl flex flex-col relative border-amber-500/40 shadow-[0_0_40px_-10px_rgba(245,158,11,0.15)] scale-100 lg:scale-105 z-10">
-                <div class="absolute top-0 right-0 p-5">
-                     <i data-lucide="star" class="w-6 h-6 text-amber-400 fill-amber-400"></i>
-                </div>
-                <div class="mb-4 inline-flex px-3 py-1 rounded-full bg-amber-500/10 text-amber-300 text-[10px] font-semibold w-fit border border-amber-500/20">
-                    🔥 Limited Slots Available
-                </div>
-                <h3 class="text-xl font-semibold text-white mb-2">Custom Static Website</h3>
-                <p class="text-sm text-zinc-400 mb-6">Our flagship offering for unique brand identities.</p>
-                
-                <ul class="space-y-4 mb-8 flex-1">
-                    <li class="flex items-start gap-3 text-sm text-white font-medium">
-                        <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
-                        1–3 Custom Pages
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-white font-medium">
-                        <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
-                        Template-free unique design
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-white font-medium">
-                        <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
-                        AI-optimized structure
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-white font-medium">
-                        <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
-                        Domain included &amp; 10-year hosting
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-white font-medium">
-                        <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
-                        6–12 months support
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-white font-medium">
-                        <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
-                        6 months free maintenance
-                    </li>
-                </ul>
-                <a href="#contact" class="w-full py-3 rounded-lg bg-amber-500 text-black text-sm font-semibold hover:bg-amber-400 transition-colors text-center">Get Started</a>
-            </div>
-
-            <!-- Business Management -->
-            <div class="glass-panel p-8 rounded-2xl flex flex-col hover:-translate-y-1 transition-transform duration-300">
-                <div class="mb-4 inline-flex px-3 py-1 rounded-full bg-zinc-800 text-zinc-300 text-[10px] font-semibold w-fit border border-zinc-700">
-                    5 Projects Left
-                </div>
-                <h3 class="text-xl font-semibold text-white mb-2">Business Management</h3>
-                <p class="text-sm text-zinc-400 mb-6">Streamline operations with powerful tools.</p>
-                
-                <ul class="space-y-4 mb-8 flex-1">
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500/70 flex-shrink-0"></i>
-                        Accounting &amp; Inventory tools
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500/70 flex-shrink-0"></i>
-                        GST e-invoice &amp; Easy invoicing
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500/70 flex-shrink-0"></i>
-                        POS integration
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500/70 flex-shrink-0"></i>
-                        OCR technology
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="info" class="w-5 h-5 text-zinc-500 flex-shrink-0"></i>
-                        18% GST applicable
-                    </li>
-                </ul>
-                <a href="#contact" class="w-full py-3 rounded-lg border border-white/10 hover:bg-white/5 text-white text-sm font-medium transition-colors text-center">Select Plan</a>
-            </div>
-
-            <!-- White Label -->
-            <div class="glass-panel p-8 rounded-2xl flex flex-col hover:-translate-y-1 transition-transform duration-300">
-                <div class="mb-4 inline-flex px-3 py-1 rounded-full bg-zinc-800 text-zinc-300 text-[10px] font-semibold w-fit border border-zinc-700">
-                    3 Agency Slots Left
-                </div>
-                <h3 class="text-xl font-semibold text-white mb-2">White-Label Partner</h3>
-                <p class="text-sm text-zinc-400 mb-6">Scale your agency without the overhead.</p>
-                <ul class="space-y-4 mb-8 flex-1">
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500/70 flex-shrink-0"></i>
-                        Custom UI/UX (5-Page Static)
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500/70 flex-shrink-0"></i>
-                        Content Integration &amp; UI Enhancements
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500/70 flex-shrink-0"></i>
-                        Hosting with SSL &amp; Deployment
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500/70 flex-shrink-0"></i>
-                        1 Month Post-Launch Support
-                    </li>
-                </ul>
-                <button onclick="openModal('whitelabel-modal')" class="w-full py-3 rounded-lg border border-white/10 hover:bg-white/5 text-white text-sm font-medium transition-colors text-center">Partner With Us</button>
-            </div>
-
-             <!-- Android App -->
-             <div class="glass-panel p-8 rounded-2xl flex flex-col hover:-translate-y-1 transition-transform duration-300">
-                <div class="mb-4 inline-flex px-3 py-1 rounded-full bg-zinc-800 text-zinc-300 text-[10px] font-semibold w-fit border border-zinc-700">
-                    Book Your Spot
-                </div>
-                <h3 class="text-xl font-semibold text-white mb-2">Android Development</h3>
-                <p class="text-sm text-zinc-400 mb-6">Native performance for mobile users.</p>
-                <ul class="space-y-4 mb-8 flex-1">
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500/70 flex-shrink-0"></i>
-                        Native Android Apps &amp; Custom UI/UX
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500/70 flex-shrink-0"></i>
-                        API Integration &amp; Security
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500/70 flex-shrink-0"></i>
-                        Google Play Deployment
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500/70 flex-shrink-0"></i>
-                        3 Months Support
-                    </li>
-                </ul>
-                <a href="#contact" class="w-full py-3 rounded-lg border border-white/10 hover:bg-white/5 text-white text-sm font-medium transition-colors text-center">Get App</a>
-            </div>
-
-            <!-- Care Kit -->
-            <div class="glass-panel p-8 rounded-2xl flex flex-col hover:-translate-y-1 transition-transform duration-300">
-                <div class="mb-4 inline-flex px-3 py-1 rounded-full bg-zinc-800 text-zinc-300 text-[10px] font-semibold w-fit border border-zinc-700">
-                    Only 7 Spots Available
-                </div>
-                <h3 class="text-xl font-semibold text-white mb-2">Website Care Kit</h3>
-                <p class="text-sm text-zinc-400 mb-6">Peace of mind for your digital asset.</p>
-                <ul class="space-y-4 mb-8 flex-1">
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500/70 flex-shrink-0"></i>
-                        Security &amp; Performance Monitoring
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500/70 flex-shrink-0"></i>
-                        Content Updates (up to 5/mo)
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500/70 flex-shrink-0"></i>
-                        Backups &amp; Bug Fixes
-                    </li>
-                    <li class="flex items-start gap-3 text-sm text-zinc-300">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500/70 flex-shrink-0"></i>
-                        Monthly Reports
-                    </li>
-                </ul>
-                <a href="#contact" class="w-full py-3 rounded-lg border border-white/10 hover:bg-white/5 text-white text-sm font-medium transition-colors text-center">Secure Now</a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Process -->
-    <section id="process" class="py-20 bg-zinc-900/30 border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-semibold text-white tracking-tight mb-4">A Proven Approach</h2>
-                <p class="text-zinc-400">From concept to launch, we handle every step with precision.</p>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-                <!-- Timeline Items -->
-                <div class="flex flex-col items-center text-center group">
-                    <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-500 mb-4 group-hover:bg-amber-500 group-hover:text-black group-hover:border-amber-500 transition-all">
-                        <i data-lucide="search" class="w-5 h-5"></i>
-                    </div>
-                    <span class="text-xs font-medium text-zinc-300 group-hover:text-amber-400 transition-colors">Discovery</span>
-                </div>
-                <div class="flex flex-col items-center text-center group">
-                    <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-500 mb-4 group-hover:bg-amber-500 group-hover:text-black group-hover:border-amber-500 transition-all">
-                        <i data-lucide="pen-tool" class="w-5 h-5"></i>
-                    </div>
-                    <span class="text-xs font-medium text-zinc-300 group-hover:text-amber-400 transition-colors">Wireframe</span>
-                </div>
-                <div class="flex flex-col items-center text-center group">
-                    <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-500 mb-4 group-hover:bg-amber-500 group-hover:text-black group-hover:border-amber-500 transition-all">
-                        <i data-lucide="palette" class="w-5 h-5"></i>
-                    </div>
-                    <span class="text-xs font-medium text-zinc-300 group-hover:text-amber-400 transition-colors">Design</span>
-                </div>
-                <div class="flex flex-col items-center text-center group">
-                    <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-500 mb-4 group-hover:bg-amber-500 group-hover:text-black group-hover:border-amber-500 transition-all">
-                        <i data-lucide="code-2" class="w-5 h-5"></i>
-                    </div>
-                    <span class="text-xs font-medium text-zinc-300 group-hover:text-amber-400 transition-colors">Develop</span>
-                </div>
-                <div class="flex flex-col items-center text-center group">
-                    <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-500 mb-4 group-hover:bg-amber-500 group-hover:text-black group-hover:border-amber-500 transition-all">
-                        <i data-lucide="flask-conical" class="w-5 h-5"></i>
-                    </div>
-                    <span class="text-xs font-medium text-zinc-300 group-hover:text-amber-400 transition-colors">Test</span>
-                </div>
-                <div class="flex flex-col items-center text-center group">
-                    <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-500 mb-4 group-hover:bg-amber-500 group-hover:text-black group-hover:border-amber-500 transition-all">
-                        <i data-lucide="rocket" class="w-5 h-5"></i>
-                    </div>
-                    <span class="text-xs font-medium text-zinc-300 group-hover:text-amber-400 transition-colors">Launch</span>
-                </div>
-                <div class="flex flex-col items-center text-center group">
-                    <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-500 mb-4 group-hover:bg-amber-500 group-hover:text-black group-hover:border-amber-500 transition-all">
-                        <i data-lucide="headphones" class="w-5 h-5"></i>
-                    </div>
-                    <span class="text-xs font-medium text-zinc-300 group-hover:text-amber-400 transition-colors">Support</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-            <div>
-                <h2 class="text-3xl font-semibold text-white tracking-tight mb-2">Showcasing Innovation</h2>
-                <p class="text-zinc-400">Recent projects delivering excellence.</p>
-            </div>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project 1 -->
-            <a href="https://globalbestuae.com/" target="_blank" class="group block glass-panel p-1 rounded-2xl transition-all hover:border-amber-500/30 hover:shadow-[0_0_30px_-10px_rgba(245,158,11,0.2)]">
-                <div class="bg-zinc-900 rounded-xl h-48 flex items-center justify-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-zinc-900 opacity-60 group-hover:opacity-100 transition-opacity"></div>
-                    <span class="relative text-white font-medium text-lg">Global Best UAE</span>
-                </div>
-                <div class="p-5">
-                    <h3 class="text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">Global Best UAE</h3>
-                    <div class="flex gap-2 mt-3">
-                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] uppercase tracking-wider text-zinc-400">Web</span>
-                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] uppercase tracking-wider text-zinc-400">Corporate</span>
-                    </div>
+                <div class="flex flex-col">
+                    <span class="text-white text-sm font-semibold tracking-tight leading-none group-hover:text-zinc-200 transition-colors">AD WEB COMIC</span>
+                    <span class="text-[9px] text-zinc-500 tracking-[0.2em] font-medium uppercase mt-0.5">Agency</span>
                 </div>
             </a>
 
-            <!-- Project 2 -->
-            <a href="https://acecsaudi.com/" target="_blank" class="group block glass-panel p-1 rounded-2xl transition-all hover:border-amber-500/30 hover:shadow-[0_0_30px_-10px_rgba(245,158,11,0.2)]">
-                <div class="bg-zinc-900 rounded-xl h-48 flex items-center justify-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-zinc-900 opacity-60 group-hover:opacity-100 transition-opacity"></div>
-                    <span class="relative text-white font-medium text-lg">ACEC Saudi</span>
-                </div>
-                <div class="p-5">
-                    <h3 class="text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">ACEC Saudi</h3>
-                    <div class="flex gap-2 mt-3">
-                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] uppercase tracking-wider text-zinc-400">Business</span>
-                    </div>
-                </div>
-            </a>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#services" class="text-xs font-medium text-zinc-400 hover:text-white transition-colors">Expertise</a>
+                <a href="#process" class="text-xs font-medium text-zinc-400 hover:text-white transition-colors">Methodology</a>
+                <a href="#projects" class="text-xs font-medium text-zinc-400 hover:text-white transition-colors">Work</a>
+                <a href="#pricing" class="text-xs font-medium text-zinc-400 hover:text-white transition-colors">Investment</a>
+            </nav>
 
-            <!-- Project 3 -->
-            <a href="https://www.welcomeproperties.in/" target="_blank" class="group block glass-panel p-1 rounded-2xl transition-all hover:border-amber-500/30 hover:shadow-[0_0_30px_-10px_rgba(245,158,11,0.2)]">
-                <div class="bg-zinc-900 rounded-xl h-48 flex items-center justify-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-zinc-900 opacity-60 group-hover:opacity-100 transition-opacity"></div>
-                    <span class="relative text-white font-medium text-lg">Welcome Properties</span>
-                </div>
-                <div class="p-5">
-                    <h3 class="text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">Welcome Properties</h3>
-                    <div class="flex gap-2 mt-3">
-                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] uppercase tracking-wider text-zinc-400">Real Estate</span>
-                    </div>
-                </div>
-            </a>
-
-             <!-- Project 4 -->
-             <a href="https://www.idcinteriorstudio.com/" target="_blank" class="group block glass-panel p-1 rounded-2xl transition-all hover:border-amber-500/30 hover:shadow-[0_0_30px_-10px_rgba(245,158,11,0.2)]">
-                <div class="bg-zinc-900 rounded-xl h-48 flex items-center justify-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-zinc-900 opacity-60 group-hover:opacity-100 transition-opacity"></div>
-                    <span class="relative text-white font-medium text-lg">IDC Interior Studio</span>
-                </div>
-                <div class="p-5">
-                    <h3 class="text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">IDC Interior Studio</h3>
-                    <div class="flex gap-2 mt-3">
-                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] uppercase tracking-wider text-zinc-400">Design</span>
-                    </div>
-                </div>
-            </a>
-
-             <!-- Project 5 -->
-             <a href="https://www.nylainteriors.in/" target="_blank" class="group block glass-panel p-1 rounded-2xl transition-all hover:border-amber-500/30 hover:shadow-[0_0_30px_-10px_rgba(245,158,11,0.2)]">
-                <div class="bg-zinc-900 rounded-xl h-48 flex items-center justify-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-zinc-900 opacity-60 group-hover:opacity-100 transition-opacity"></div>
-                    <span class="relative text-white font-medium text-lg">Nyla Interiors</span>
-                </div>
-                <div class="p-5">
-                    <h3 class="text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">Nyla Interiors</h3>
-                    <div class="flex gap-2 mt-3">
-                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] uppercase tracking-wider text-zinc-400">Interiors</span>
-                    </div>
-                </div>
-            </a>
-
-             <!-- Project 6 -->
-             <a href="https://welcomemart.shop/" target="_blank" class="group block glass-panel p-1 rounded-2xl transition-all hover:border-amber-500/30 hover:shadow-[0_0_30px_-10px_rgba(245,158,11,0.2)]">
-                <div class="bg-zinc-900 rounded-xl h-48 flex items-center justify-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-zinc-900 opacity-60 group-hover:opacity-100 transition-opacity"></div>
-                    <span class="relative text-white font-medium text-lg">Welcome Mart</span>
-                </div>
-                <div class="p-5">
-                    <h3 class="text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">Welcome Mart</h3>
-                    <div class="flex gap-2 mt-3">
-                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] uppercase tracking-wider text-zinc-400">E-Commerce</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="py-20 bg-zinc-900/20">
-        <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-3xl font-semibold text-white tracking-tight mb-12 text-center">Frequently Asked Questions</h2>
-            
-            <div class="space-y-4">
-                <details class="group glass-panel rounded-lg open:bg-white/5 transition-all">
-                    <summary class="flex justify-between items-center cursor-pointer p-6 font-medium text-white select-none">
-                        What services do you offer?
-                        <i data-lucide="chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></i>
-                    </summary>
-                    <div class="px-6 pb-6 text-sm text-zinc-400 leading-relaxed">
-                        We offer Custom Websites, Progressive Web Apps (PWA), Android App Development, Business Management Solutions, and White-Label services for agencies.
-                    </div>
-                </details>
-
-                <details class="group glass-panel rounded-lg open:bg-white/5 transition-all">
-                    <summary class="flex justify-between items-center cursor-pointer p-6 font-medium text-white select-none">
-                        Do I fully own the website after completion?
-                        <i data-lucide="chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></i>
-                    </summary>
-                    <div class="px-6 pb-6 text-sm text-zinc-400 leading-relaxed">
-                        Yes. Unlike many agencies, we provide full ownership of your digital assets with no mandatory recurring fees for the code itself.
-                    </div>
-                </details>
-
-                <details class="group glass-panel rounded-lg open:bg-white/5 transition-all">
-                    <summary class="flex justify-between items-center cursor-pointer p-6 font-medium text-white select-none">
-                        How long does it take to build a website?
-                        <i data-lucide="chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></i>
-                    </summary>
-                    <div class="px-6 pb-6 text-sm text-zinc-400 leading-relaxed">
-                        Timelines vary by complexity. A Basic Website takes about 3-5 days, while Custom Static Websites can take 1-2 weeks. Complex apps require a custom timeline.
-                    </div>
-                </details>
-
-                <details class="group glass-panel rounded-lg open:bg-white/5 transition-all">
-                    <summary class="flex justify-between items-center cursor-pointer p-6 font-medium text-white select-none">
-                        Do you provide ongoing technical support?
-                        <i data-lucide="chevron-down" class="text-zinc-500 group-open:rotate-180 transition-transform"></i>
-                    </summary>
-                    <div class="px-6 pb-6 text-sm text-zinc-400 leading-relaxed">
-                        Yes. All plans come with a specific period of free support (3-12 months). We also offer a dedicated Website Care Kit for long-term peace of mind.
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-24 px-6">
-        <div class="max-w-6xl mx-auto glass-panel p-8 md:p-12 rounded-3xl border border-white/10 relative overflow-hidden">
-            <!-- Glow effect -->
-            <div class="absolute -top-24 -right-24 w-96 h-96 bg-amber-600/10 rounded-full blur-[100px] pointer-events-none"></div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-4">Ready to Transform Your <br> Digital Presence?</h2>
-                    <p class="text-zinc-400 mb-8">Fill out the form, and we'll get back to you within 24 hours.</p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-amber-500 border border-white/5">
-                                <i data-lucide="phone" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <div class="text-[10px] text-zinc-500 uppercase tracking-wide">Phone</div>
-                                <div class="text-white font-medium">+91 9656778508</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-amber-500 border border-white/5">
-                                <i data-lucide="mail" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <div class="text-[10px] text-zinc-500 uppercase tracking-wide">Email</div>
-                                <div class="text-white font-medium">adwebcomicagency@gmail.com</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <form class="space-y-4">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input type="text" placeholder="Your Name" class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500/50 transition-colors">
-                        <input type="email" placeholder="Your Email" class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500/50 transition-colors">
-                    </div>
-                    
-                    <div class="relative">
-                        <select class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-zinc-400 focus:outline-none focus:border-amber-500/50 appearance-none">
-                            <option>Select Service</option>
-                            <option>Custom Static Website</option>
-                            <option>Basic Website</option>
-                            <option>Business Solutions</option>
-                            <option>Mobile App</option>
-                            <option>White Label</option>
-                        </select>
-                        <i data-lucide="chevron-down" class="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-500 w-4 h-4 pointer-events-none"></i>
-                    </div>
-
-                    <textarea rows="4" placeholder="Tell us about your project..." class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500/50 transition-colors resize-none"></textarea>
-                    
-                    <button type="submit" class="w-full py-4 bg-amber-500 text-black font-semibold rounded-lg hover:bg-amber-400 transition-colors flex items-center justify-center gap-2">
-                        Send Message
-                        <i data-lucide="send" class="w-4 h-4"></i>
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <!-- Currency Selector -->
+                <div class="relative group z-50">
+                    <button class="flex items-center gap-2 text-xs font-medium text-zinc-400 hover:text-white transition-colors py-2">
+                        <iconify-icon icon="solar:globe-linear" width="16" class="text-amber-500"></iconify-icon>
+                        <span id="region-label">IND (₹)</span>
+                        <iconify-icon icon="solar:alt-arrow-down-linear" width="12" class="opacity-50"></iconify-icon>
                     </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="border-t border-white/5 bg-black pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
-                <div>
-                     <!-- Logo repeated in footer -->
-                    <div class="flex flex-col items-start leading-none mb-3">
-                        <span class="text-amber-400 font-bold tracking-tighter text-xl">AD WEB</span>
-                        <div class="flex gap-1 text-[0.5rem] font-medium text-white tracking-[0.2em] mt-0.5">
-                            <span>COMIC</span>
-                            <span>AGENCY</span>
+                    <!-- Dropdown -->
+                    <div class="absolute right-0 top-full mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                        <div class="glass bg-[#0a0a0a] rounded-xl border border-white/10 shadow-2xl overflow-hidden p-1 flex flex-col gap-0.5">
+                            <button onclick="changeRegion('IN')" class="flex items-center justify-between w-full px-3 py-2 text-[11px] font-medium text-zinc-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-left">
+                                <span>India</span>
+                                <span class="text-amber-500/50">INR</span>
+                            </button>
+                            <button onclick="changeRegion('AE')" class="flex items-center justify-between w-full px-3 py-2 text-[11px] font-medium text-zinc-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-left">
+                                <span>United Arab Emirates</span>
+                                <span class="text-amber-500/50">AED</span>
+                            </button>
+                            <button onclick="changeRegion('SA')" class="flex items-center justify-between w-full px-3 py-2 text-[11px] font-medium text-zinc-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-left">
+                                <span>Saudi Arabia</span>
+                                <span class="text-amber-500/50">SAR</span>
+                            </button>
+                            <button onclick="changeRegion('KW')" class="flex items-center justify-between w-full px-3 py-2 text-[11px] font-medium text-zinc-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-left">
+                                <span>Kuwait</span>
+                                <span class="text-amber-500/50">KWD</span>
+                            </button>
+                            <button onclick="changeRegion('GLOBAL')" class="flex items-center justify-between w-full px-3 py-2 text-[11px] font-medium text-zinc-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-left">
+                                <span>Global (USD)</span>
+                                <span class="text-amber-500/50">USD</span>
+                            </button>
                         </div>
                     </div>
-                    <p class="text-sm text-zinc-500">Transforming Ideas into Digital Reality</p>
-                    <p class="text-xs text-amber-500/80 mt-2 font-medium">MSME Registered Agency</p>
                 </div>
-                <div class="flex flex-wrap gap-6 text-sm text-zinc-400 items-center">
-                    <button onclick="openModal('privacy-modal')" class="hover:text-amber-400 transition-colors">Privacy Policy</button>
-                    <button onclick="openModal('terms-modal')" class="hover:text-amber-400 transition-colors">Terms of Service</button>
-                    <button onclick="openModal('refund-modal')" class="hover:text-amber-400 transition-colors">Refund Policy</button>
-                    <button onclick="openModal('whitelabel-modal')" class="hover:text-amber-400 transition-colors">White Label Partner</button>
-                    <a href="https://www.instagram.com/_adwebcomicagency._/" target="_blank" class="text-white hover:text-amber-400 transition-colors ml-4 p-2 bg-white/5 rounded-full hover:bg-white/10">
-                        <i data-lucide="instagram" class="w-5 h-5"></i>
-                    </a>
-                </div>
+
+                <a href="#contact" class="hidden md:flex items-center gap-2 bg-white text-black hover:bg-zinc-200 text-xs font-semibold px-4 py-2 rounded-full transition-all">
+                    Start Project
+                    <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
+                </a>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="md:hidden text-white p-1" onclick="openModal('mobile-menu')">
+                    <iconify-icon icon="solar:hamburger-menu-linear" width="24"></iconify-icon>
+                </button>
             </div>
-            
-            <div class="border-t border-white/5 pt-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-xs text-zinc-600">
-                    © 2026 Ad Web Comic Agency. All rights reserved.
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden">
+            <!-- Ambient Background -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-900/10 via-black to-black -z-10 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white,transparent)] -z-10"></div>
+
+            <div class="max-w-5xl mx-auto text-center relative z-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-amber-500/20 mb-8 animate-fade-in-up">
+                    <span class="flex h-1.5 w-1.5 rounded-full bg-amber-500"></span>
+                    <span class="text-[10px] uppercase tracking-widest font-semibold text-zinc-300">MSME Recognized Entity</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white mb-6 leading-[1.1]">
+                    Digital excellence for <br class="hidden md:block">
+                    <span class="text-zinc-500">global brands.</span>
+                </h1>
+                
+                <p class="text-base md:text-lg text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                    We engineer high-performance digital infrastructure. 
+                    From bespoke static architecture to scalable applications, 
+                    we deliver ownership-based solutions with zero fluff.
                 </p>
-                <div class="text-xs text-zinc-600 flex flex-col md:flex-row items-center gap-1 md:gap-4">
-                    <span>MSME (UDYAM) registered service provider.</span>
-                    <a href="https://udyamassist.gov.in/verification-urn" target="_blank" class="text-zinc-500 hover:text-amber-400 transition-colors decoration-zinc-700 underline underline-offset-2">
-                        UDYAM Registration No: UDYAM-KL-08-0101744
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#pricing" class="w-full sm:w-auto px-8 py-3.5 bg-amber-500 hover:bg-amber-400 text-black font-semibold text-sm rounded-lg transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_-5px_rgba(245,158,11,0.3)]">
+                        View Pricing
+                    </a>
+                    <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 glass hover:bg-white/5 text-white border border-white/10 font-medium text-sm rounded-lg transition-colors flex items-center justify-center gap-2">
+                        View Portfolio
                     </a>
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
 
-    <!-- MODALS -->
-
-    <!-- Privacy Policy Modal -->
-    <div id="privacy-modal" class="modal fixed inset-0 bg-black/80 backdrop-blur-sm z-[60] flex items-center justify-center p-4">
-        <div class="modal-content max-w-2xl w-full bg-[#09090b] border border-white/10 rounded-2xl shadow-2xl flex flex-col max-h-[80vh]">
-            <div class="flex items-center justify-between p-6 border-b border-white/5 bg-white/5 backdrop-blur-md sticky top-0 z-10 rounded-t-2xl">
-                <h3 class="text-xl font-semibold text-white">Privacy Policy</h3>
-                <button onclick="closeModal('privacy-modal')" class="text-zinc-400 hover:text-white transition-colors">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
+        <!-- Tech Stack Marquee -->
+        <section class="py-12 border-y border-white/5 bg-zinc-900/20 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 mb-8 flex justify-center">
+                <span class="text-[10px] font-semibold text-zinc-600 uppercase tracking-widest">Powered by Next-Gen Technologies</span>
             </div>
-            <div class="p-8 overflow-y-auto space-y-6 text-sm text-zinc-400 leading-relaxed custom-scrollbar">
+            <div class="relative flex overflow-x-hidden group mask-linear-fade">
+                <div class="animate-marquee whitespace-nowrap flex items-center gap-16 text-zinc-600 hover:text-zinc-400 transition-colors duration-500">
+                    <!-- Tech Items Repeated -->
+                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:nextdotjs" width="20"></iconify-icon> <span class="text-sm font-medium">Next.js</span></div>
+                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:react" width="20"></iconify-icon> <span class="text-sm font-medium">React</span></div>
+                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:typescript" width="20"></iconify-icon> <span class="text-sm font-medium">TypeScript</span></div>
+                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:tailwindcss" width="20"></iconify-icon> <span class="text-sm font-medium">Tailwind</span></div>
+                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:nodedotjs" width="20"></iconify-icon> <span class="text-sm font-medium">Node.js</span></div>
+                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:amazonaws" width="20"></iconify-icon> <span class="text-sm font-medium">AWS</span></div>
+                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:googlecloud" width="20"></iconify-icon> <span class="text-sm font-medium">Google Cloud</span></div>
+                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:supabase" width="20"></iconify-icon> <span class="text-sm font-medium">Supabase</span></div>
+                     <!-- Duplicate for Loop -->
+                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:nextdotjs" width="20"></iconify-icon> <span class="text-sm font-medium">Next.js</span></div>
+                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:react" width="20"></iconify-icon> <span class="text-sm font-medium">React</span></div>
+                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:typescript" width="20"></iconify-icon> <span class="text-sm font-medium">TypeScript</span></div>
+                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:tailwindcss" width="20"></iconify-icon> <span class="text-sm font-medium">Tailwind</span></div>
+                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:nodedotjs" width="20"></iconify-icon> <span class="text-sm font-medium">Node.js</span></div>
+                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:amazonaws" width="20"></iconify-icon> <span class="text-sm font-medium">AWS</span></div>
+                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:googlecloud" width="20"></iconify-icon> <span class="text-sm font-medium">Google Cloud</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <h2 class="text-3xl font-medium text-white tracking-tight mb-3">Our Expertise</h2>
+                    <p class="text-zinc-400 max-w-md text-sm leading-relaxed">
+                        We don't just build websites; we architect digital assets that appreciate in value. 
+                        Choose a solution tailored to your growth trajectory.
+                    </p>
+                </div>
+                <a href="#contact" class="text-amber-500 text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all">
+                    Consult an Expert <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Service 1: Static (Flagship) -->
+                <div class="md:col-span-2 glass p-8 rounded-2xl relative overflow-hidden group hover:border-amber-500/30 transition-colors duration-500">
+                    <div class="absolute top-0 right-0 p-8 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
+                        <iconify-icon icon="solar:code-circle-linear" width="48" class="text-amber-500"></iconify-icon>
+                    </div>
+                    <div class="relative z-10">
+                        <span class="inline-block px-3 py-1 rounded bg-amber-500/10 text-amber-500 text-[10px] font-bold uppercase tracking-widest mb-4 border border-amber-500/20">Flagship Service</span>
+                        <h3 class="text-2xl font-medium text-white mb-2">Bespoke Static Architecture</h3>
+                        <p class="text-sm text-zinc-400 mb-8 max-w-lg">
+                            For brands that demand speed and security. We hand-code unique, template-free websites using static site generation (SSG). The result is a site that loads instantly, ranks higher, and is virtually unhackable.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="flex items-center gap-3 text-sm text-zinc-300">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-amber-500"></iconify-icon>
+                                <span>Zero Load Time</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-zinc-300">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-amber-500"></iconify-icon>
+                                <span>100% Ownership</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-zinc-300">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-amber-500"></iconify-icon>
+                                <span>Custom Structure</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-zinc-300">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-amber-500"></iconify-icon>
+                                <span>SEO Native</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center gap-2 text-white border-b border-amber-500 pb-0.5 hover:text-amber-400 transition-colors text-sm font-medium">
+                            Request Proposal
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: PWA -->
+                <div class="glass p-8 rounded-2xl relative overflow-hidden group hover:border-white/20 transition-colors">
+                    <div class="w-10 h-10 rounded-lg bg-zinc-900 flex items-center justify-center mb-6 text-white border border-white/5">
+                        <iconify-icon icon="solar:smartphone-linear" width="20"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">Web & Mobile Apps</h3>
+                    <p class="text-sm text-zinc-400 mb-6 leading-relaxed">
+                        Progressive Web Apps (PWA) and Native Android solutions. Bridges the gap between web reach and native performance.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-xs text-zinc-500">
+                            <iconify-icon icon="solar:arrow-right-linear" class="text-white"></iconify-icon> Offline Capability
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-zinc-500">
+                            <iconify-icon icon="solar:arrow-right-linear" class="text-white"></iconify-icon> Push Notifications
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-zinc-500">
+                            <iconify-icon icon="solar:arrow-right-linear" class="text-white"></iconify-icon> Play Store Launch
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: SaaS / Business -->
+                <div class="glass p-8 rounded-2xl relative overflow-hidden group hover:border-white/20 transition-colors">
+                    <div class="w-10 h-10 rounded-lg bg-zinc-900 flex items-center justify-center mb-6 text-white border border-white/5">
+                        <iconify-icon icon="solar:graph-up-linear" width="20"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">Business OS</h3>
+                    <p class="text-sm text-zinc-400 mb-6 leading-relaxed">
+                        Internal tools to streamline operations. Accounting, Inventory, GST Invoicing, and POS systems integrated into your workflow.
+                    </p>
+                    <a href="#contact" class="text-xs text-white border-b border-white/20 pb-0.5 hover:border-white transition-colors">Explore Solutions</a>
+                </div>
+
+                <!-- Service 4: White Label -->
+                <div class="md:col-span-2 glass p-8 rounded-2xl relative overflow-hidden group hover:border-white/20 transition-colors flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-1">
+                        <span class="text-amber-500 text-[10px] font-bold uppercase tracking-widest mb-2 block">For Agencies</span>
+                        <h3 class="text-xl font-medium text-white mb-2">White-Label Partnership</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed">
+                            Scale your agency without increasing overhead. We act as your silent production house, delivering premium code under your brand with strict NDA compliance.
+                        </p>
+                    </div>
+                    <div class="flex gap-4">
+                        <button onclick="openModal('whitelabel-modal')" class="px-6 py-3 rounded-lg bg-white text-black text-sm font-medium hover:bg-zinc-200 transition-colors">
+                            Partner With Us
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Architecture -->
+        <section id="pricing" class="py-24 bg-zinc-900/10 border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl font-medium text-white tracking-tight mb-3">Investment Plans</h2>
+                    <p class="text-zinc-400 text-sm">
+                        Transparent pricing for ownership-based deliverables. <br>
+                        <span class="text-amber-500">Note:</span> Prices displayed in <span id="currency-display" class="font-semibold text-white">INR (₹)</span>.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+                    
+                    <!-- Starter -->
+                    <div class="glass p-8 rounded-2xl flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
+                        <div class="mb-4">
+                            <h3 class="text-base font-medium text-zinc-300">Starter</h3>
+                            <div class="mt-4 flex items-baseline gap-1">
+                                <span class="text-2xl font-semibold text-white price-value" data-inr="22,000" data-aed="1,200" data-sar="1,250" data-kwd="100" data-usd="299">₹22,000</span>
+                                <span class="text-xs text-zinc-500 font-medium">+</span>
+                            </div>
+                            <p class="text-xs text-zinc-500 mt-2">One-time payment</p>
+                        </div>
+                        <div class="w-full h-px bg-white/5 my-6"></div>
+                        <ul class="space-y-3 mb-8 flex-1">
+                            <li class="flex items-start gap-3 text-xs text-zinc-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 text-sm"></iconify-icon>
+                                5-Page Static Site
+                            </li>
+                            <li class="flex items-start gap-3 text-xs text-zinc-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 text-sm"></iconify-icon>
+                                Responsive Layout
+                            </li>
+                            <li class="flex items-start gap-3 text-xs text-zinc-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 text-sm"></iconify-icon>
+                                Basic SEO Setup
+                            </li>
+                            <li class="flex items-start gap-3 text-xs text-zinc-400">
+                                <iconify-icon icon="solar:shield-check-linear" class="text-zinc-500 text-sm"></iconify-icon>
+                                3 Months Support
+                            </li>
+                        </ul>
+                        <a href="#contact" class="w-full block text-center py-2.5 rounded-lg border border-white/10 text-xs font-medium text-zinc-300 hover:bg-white/5 transition-colors">Select Plan</a>
+                    </div>
+
+                    <!-- Growth (Featured) -->
+                    <div class="glass p-8 rounded-2xl flex flex-col h-full relative border-amber-500/40 bg-gradient-to-b from-amber-500/5 to-transparent transform md:-translate-y-4">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-3 py-1 bg-amber-500 text-black text-[10px] font-bold uppercase tracking-widest rounded-full">
+                            Recommended
+                        </div>
+                        <div class="mb-4 mt-2">
+                            <h3 class="text-base font-medium text-amber-400">Growth</h3>
+                            <div class="mt-4 flex items-baseline gap-1">
+                                <span class="text-2xl font-semibold text-white">Custom</span>
+                            </div>
+                            <p class="text-xs text-zinc-400 mt-2">Tailored Quote</p>
+                        </div>
+                        <div class="w-full h-px bg-amber-500/20 my-6"></div>
+                        <ul class="space-y-3 mb-8 flex-1">
+                            <li class="flex items-start gap-3 text-xs text-white">
+                                <iconify-icon icon="solar:check-circle-bold" class="text-amber-500 text-sm"></iconify-icon>
+                                Bespoke UI/UX Design
+                            </li>
+                            <li class="flex items-start gap-3 text-xs text-white">
+                                <iconify-icon icon="solar:check-circle-bold" class="text-amber-500 text-sm"></iconify-icon>
+                                Advanced Animations
+                            </li>
+                            <li class="flex items-start gap-3 text-xs text-white">
+                                <iconify-icon icon="solar:check-circle-bold" class="text-amber-500 text-sm"></iconify-icon>
+                                CMS Integration
+                            </li>
+                            <li class="flex items-start gap-3 text-xs text-white">
+                                <iconify-icon icon="solar:check-circle-bold" class="text-amber-500 text-sm"></iconify-icon>
+                                6 Months Support
+                            </li>
+                        </ul>
+                        <a href="#contact" class="w-full block text-center py-3 rounded-lg bg-amber-500 text-black text-xs font-bold hover:bg-amber-400 transition-colors shadow-lg shadow-amber-900/20">Get Quote</a>
+                    </div>
+
+                    <!-- Enterprise -->
+                    <div class="glass p-8 rounded-2xl flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
+                        <div class="mb-4">
+                            <h3 class="text-base font-medium text-zinc-300">Enterprise</h3>
+                            <div class="mt-4 flex items-baseline gap-1">
+                                <span class="text-2xl font-semibold text-white price-value" data-inr="65,000" data-aed="3,500" data-sar="3,600" data-kwd="300" data-usd="899">₹65,000</span>
+                                <span class="text-xs text-zinc-500 font-medium">+</span>
+                            </div>
+                            <p class="text-xs text-zinc-500 mt-2">Project based</p>
+                        </div>
+                        <div class="w-full h-px bg-white/5 my-6"></div>
+                        <ul class="space-y-3 mb-8 flex-1">
+                            <li class="flex items-start gap-3 text-xs text-zinc-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 text-sm"></iconify-icon>
+                                Web + Mobile App
+                            </li>
+                            <li class="flex items-start gap-3 text-xs text-zinc-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 text-sm"></iconify-icon>
+                                Full Backend Logic
+                            </li>
+                            <li class="flex items-start gap-3 text-xs text-zinc-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 text-sm"></iconify-icon>
+                                Custom APIs
+                            </li>
+                            <li class="flex items-start gap-3 text-xs text-zinc-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 text-sm"></iconify-icon>
+                                12 Months Priority Support
+                            </li>
+                        </ul>
+                        <a href="#contact" class="w-full block text-center py-2.5 rounded-lg border border-white/10 text-xs font-medium text-zinc-300 hover:bg-white/5 transition-colors">Contact Sales</a>
+                    </div>
+
+                    <!-- Care Kit -->
+                    <div class="glass p-8 rounded-2xl flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
+                        <div class="mb-4">
+                            <h3 class="text-base font-medium text-zinc-300">Maintenance</h3>
+                            <div class="mt-4 flex items-baseline gap-1">
+                                <span class="text-2xl font-semibold text-white price-value" data-inr="6,000" data-aed="300" data-sar="350" data-kwd="25" data-usd="99">₹6,000</span>
+                                <span class="text-xs text-zinc-500 font-medium">/yr</span>
+                            </div>
+                            <p class="text-xs text-zinc-500 mt-2">Annual contract</p>
+                        </div>
+                        <div class="w-full h-px bg-white/5 my-6"></div>
+                        <ul class="space-y-3 mb-8 flex-1">
+                            <li class="flex items-start gap-3 text-xs text-zinc-400">
+                                <iconify-icon icon="solar:server-linear" class="text-zinc-500 text-sm"></iconify-icon>
+                                Hosting & SSL
+                            </li>
+                            <li class="flex items-start gap-3 text-xs text-zinc-400">
+                                <iconify-icon icon="solar:shield-warning-linear" class="text-zinc-500 text-sm"></iconify-icon>
+                                Security Patching
+                            </li>
+                            <li class="flex items-start gap-3 text-xs text-zinc-400">
+                                <iconify-icon icon="solar:refresh-circle-linear" class="text-zinc-500 text-sm"></iconify-icon>
+                                5 Content Updates/mo
+                            </li>
+                        </ul>
+                        <a href="#contact" class="w-full block text-center py-2.5 rounded-lg border border-white/10 text-xs font-medium text-zinc-300 hover:bg-white/5 transition-colors">Subscribe</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
+            <h2 class="text-3xl font-medium text-white tracking-tight mb-12">Recent Deliverables</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Item -->
+                <a href="https://globalbestuae.com/" target="_blank" class="group block">
+                    <div class="relative aspect-video bg-zinc-900 rounded-xl overflow-hidden border border-white/5 mb-4">
+                        <div class="absolute inset-0 bg-zinc-800 group-hover:bg-zinc-700 transition-colors flex items-center justify-center">
+                            <span class="text-zinc-500 group-hover:text-white transition-colors font-medium">Global Best UAE</span>
+                        </div>
+                        <!-- Overlay on hover -->
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <iconify-icon icon="solar:arrow-right-up-linear" width="32" class="text-white"></iconify-icon>
+                        </div>
+                    </div>
+                    <h3 class="text-base font-medium text-white group-hover:text-amber-400 transition-colors">Global Best UAE</h3>
+                    <p class="text-xs text-zinc-500 mt-1">Corporate • Web Development</p>
+                </a>
+
+                <!-- Project Item -->
+                <a href="https://acecsaudi.com/" target="_blank" class="group block">
+                    <div class="relative aspect-video bg-zinc-900 rounded-xl overflow-hidden border border-white/5 mb-4">
+                        <div class="absolute inset-0 bg-zinc-800 group-hover:bg-zinc-700 transition-colors flex items-center justify-center">
+                            <span class="text-zinc-500 group-hover:text-white transition-colors font-medium">ACEC Saudi</span>
+                        </div>
+                         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <iconify-icon icon="solar:arrow-right-up-linear" width="32" class="text-white"></iconify-icon>
+                        </div>
+                    </div>
+                    <h3 class="text-base font-medium text-white group-hover:text-amber-400 transition-colors">ACEC Saudi</h3>
+                    <p class="text-xs text-zinc-500 mt-1">Business • Static Architecture</p>
+                </a>
+
+                <!-- Project Item -->
+                <a href="https://welcomemart.shop/" target="_blank" class="group block">
+                    <div class="relative aspect-video bg-zinc-900 rounded-xl overflow-hidden border border-white/5 mb-4">
+                        <div class="absolute inset-0 bg-zinc-800 group-hover:bg-zinc-700 transition-colors flex items-center justify-center">
+                            <span class="text-zinc-500 group-hover:text-white transition-colors font-medium">Welcome Mart</span>
+                        </div>
+                         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <iconify-icon icon="solar:arrow-right-up-linear" width="32" class="text-white"></iconify-icon>
+                        </div>
+                    </div>
+                    <h3 class="text-base font-medium text-white group-hover:text-amber-400 transition-colors">Welcome Mart</h3>
+                    <p class="text-xs text-zinc-500 mt-1">E-Commerce • PWA</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact / Footer Area -->
+        <section id="contact" class="pt-24 pb-12 border-t border-white/5 bg-zinc-950">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="glass p-8 md:p-12 rounded-3xl border border-white/10 relative overflow-hidden mb-20">
+                    <div class="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-[128px] pointer-events-none -mr-20 -mt-20"></div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
+                        <div>
+                            <h2 class="text-3xl font-medium text-white tracking-tight mb-4">Initialize Project</h2>
+                            <p class="text-zinc-400 mb-8 text-sm">Brief us on your requirements. Our team typically responds within 4 business hours.</p>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-4 group">
+                                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-zinc-400 group-hover:text-white group-hover:bg-amber-500 transition-all">
+                                        <iconify-icon icon="solar:phone-linear" width="20"></iconify-icon>
+                                    </div>
+                                    <div>
+                                        <div class="text-[10px] text-zinc-500 uppercase tracking-wide">Inquiries</div>
+                                        <div class="text-white text-sm font-medium">+91 9656778508</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 group">
+                                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-zinc-400 group-hover:text-white group-hover:bg-amber-500 transition-all">
+                                        <iconify-icon icon="solar:letter-linear" width="20"></iconify-icon>
+                                    </div>
+                                    <div>
+                                        <div class="text-[10px] text-zinc-500 uppercase tracking-wide">Email</div>
+                                        <div class="text-white text-sm font-medium">adwebcomicagency@gmail.com</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form class="space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <input type="text" placeholder="Name" class="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500/50 transition-colors">
+                                <input type="email" placeholder="Email" class="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500/50 transition-colors">
+                            </div>
+                            <div class="relative">
+                                <select class="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-sm text-zinc-400 focus:outline-none focus:border-amber-500/50 appearance-none">
+                                    <option>Select Service Requirement</option>
+                                    <option>Static Website Development</option>
+                                    <option>Mobile Application</option>
+                                    <option>Business Software</option>
+                                    <option>White Label Partnership</option>
+                                </select>
+                                <iconify-icon icon="solar:alt-arrow-down-linear" class="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-500 pointer-events-none"></iconify-icon>
+                            </div>
+                            <textarea rows="4" placeholder="Project details..." class="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500/50 transition-colors resize-none"></textarea>
+                            <button type="submit" class="w-full py-3 bg-white text-black font-semibold text-sm rounded-lg hover:bg-zinc-200 transition-colors">Send Request</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/5 pt-8">
+                    <div class="flex flex-col items-center md:items-start">
+                        <span class="text-white font-bold tracking-tighter text-lg">AD WEB COMIC</span>
+                        <p class="text-xs text-zinc-500 mt-1">© 2026 Ad Web Comic Agency. All rights reserved.</p>
+                        <p class="text-[10px] text-zinc-600 mt-1">UDYAM-KL-08-0101744</p>
+                    </div>
+                    <div class="flex gap-6">
+                        <button onclick="openModal('privacy-modal')" class="text-xs text-zinc-500 hover:text-white transition-colors">Privacy Policy</button>
+                        <button onclick="openModal('terms-modal')" class="text-xs text-zinc-500 hover:text-white transition-colors">Terms of Service</button>
+                        <button onclick="openModal('refund-modal')" class="text-xs text-zinc-500 hover:text-white transition-colors">Refund Policy</button>
+                    </div>
+                    <a href="https://www.instagram.com/_adwebcomicagency._/" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 transition-all">
+                        <iconify-icon icon="solar:camera-linear" width="20"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    
+    <!-- Privacy Modal -->
+    <div id="privacy-modal" class="modal fixed inset-0 z-[60] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal('privacy-modal')"></div>
+        <div class="modal-content relative w-full max-w-2xl bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
+            <div class="p-6 border-b border-white/5 flex justify-between items-center bg-white/5 backdrop-blur">
+                <h3 class="text-lg font-medium text-white">Privacy Policy</h3>
+                <button onclick="closeModal('privacy-modal')" class="text-zinc-500 hover:text-white"><iconify-icon icon="solar:close-circle-linear" width="24"></iconify-icon></button>
+            </div>
+            <div class="p-8 overflow-y-auto space-y-6 text-sm text-zinc-400 leading-relaxed">
                 <p><strong>Effective Date:</strong> January 1, 2024</p>
-                <p>Ad Web Comic Agency ("we", "us", or "our") respects your privacy and is committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website or use our services.</p>
-                
-                <h4 class="text-white font-medium text-base">1. Information We Collect</h4>
-                <p>We may collect, use, store and transfer different kinds of personal data about you which we have grouped together follows: Identity Data (name), Contact Data (email, phone number), and Technical Data (IP address, browser type).</p>
-
-                <h4 class="text-white font-medium text-base">2. How We Use Your Data</h4>
-                <p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal data to perform the contract we are about to enter into or have entered into with you, and to manage our relationship with you.</p>
-
-                <h4 class="text-white font-medium text-base">3. Data Security</h4>
-                <p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed.</p>
-                
-                <h4 class="text-white font-medium text-base">4. Third-Party Links</h4>
-                <p>This website may include links to third-party websites, plug-ins and applications. Clicking on those links or enabling those connections may allow third parties to collect or share data about you.</p>
-
-                <h4 class="text-white font-medium text-base">5. Contact Us</h4>
-                <p>If you have any questions about this privacy policy or our privacy practices, please contact us at adwebcomicagency@gmail.com.</p>
-            </div>
-            <div class="p-6 border-t border-white/5 bg-zinc-900/50 rounded-b-2xl">
-                <button onclick="closeModal('privacy-modal')" class="w-full py-3 bg-white/10 text-white rounded-lg hover:bg-white/15 transition-colors font-medium">Understood</button>
+                <p>Ad Web Comic Agency is committed to protecting your personal data. We collect minimal information required to provide our services.</p>
+                <h4 class="text-white font-medium">Data Collection</h4>
+                <p>We collect Identity Data (name) and Contact Data (email, phone) solely for communication and invoicing.</p>
+                <h4 class="text-white font-medium">Data Usage</h4>
+                <p>Your data is never sold. It is used exclusively to fulfill service contracts and comply with local tax regulations.</p>
             </div>
         </div>
     </div>
 
-    <!-- Terms of Service Modal -->
-    <div id="terms-modal" class="modal fixed inset-0 bg-black/80 backdrop-blur-sm z-[60] flex items-center justify-center p-4">
-        <div class="modal-content max-w-2xl w-full bg-[#09090b] border border-white/10 rounded-2xl shadow-2xl flex flex-col max-h-[80vh]">
-            <div class="flex items-center justify-between p-6 border-b border-white/5 bg-white/5 backdrop-blur-md sticky top-0 z-10 rounded-t-2xl">
-                <h3 class="text-xl font-semibold text-white">Terms of Service</h3>
-                <button onclick="closeModal('terms-modal')" class="text-zinc-400 hover:text-white transition-colors">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
+    <!-- White Label Modal -->
+    <div id="whitelabel-modal" class="modal fixed inset-0 z-[60] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal('whitelabel-modal')"></div>
+        <div class="modal-content relative w-full max-w-2xl bg-[#0a0a0a] border border-amber-500/20 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
+            <div class="p-6 border-b border-white/5 flex justify-between items-center bg-white/5 backdrop-blur">
+                <h3 class="text-lg font-medium text-white">Agency Partnership Program</h3>
+                <button onclick="closeModal('whitelabel-modal')" class="text-zinc-500 hover:text-white"><iconify-icon icon="solar:close-circle-linear" width="24"></iconify-icon></button>
             </div>
-            <div class="p-8 overflow-y-auto space-y-6 text-sm text-zinc-400 leading-relaxed custom-scrollbar">
-                <p>By accessing our website and using our services, you agree to be bound by the following terms and conditions.</p>
-                
-                <h4 class="text-white font-medium text-base">1. Project Terms &amp; Payments</h4>
-                <p>A non-refundable advance payment of 50% is required to commence work on any project. The remaining 50% is due upon project completion, prior to final deployment or handover of credentials.</p>
-
-                <h4 class="text-white font-medium text-base">2. Ownership &amp; Rights</h4>
-                <p>Upon full payment, the client receives full ownership of the final website code and design. Ad Web Comic Agency retains the right to display the project in our portfolio unless a Non-Disclosure Agreement (NDA) is signed.</p>
-
-                <h4 class="text-white font-medium text-base">3. Client Responsibilities</h4>
-                <p>The client is responsible for providing all text, images, and other content necessary for the project in a timely manner. Delays in providing content will result in a corresponding delay in the project timeline.</p>
-                
-                <h4 class="text-white font-medium text-base">4. Support &amp; Maintenance</h4>
-                <p>We provide free technical support for the period specified in your plan (ranging from 3 to 12 months). This covers bug fixes and minor text updates. Major structural changes or new feature additions are billed separately.</p>
-
-                <h4 class="text-white font-medium text-base">5. Liability</h4>
-                <p>Ad Web Comic Agency is not liable for any direct, indirect, or consequential loss or damage arising under these terms and conditions or in connection with our website, whether arising in tort, contract, or otherwise.</p>
-            </div>
-            <div class="p-6 border-t border-white/5 bg-zinc-900/50 rounded-b-2xl">
-                <button onclick="closeModal('terms-modal')" class="w-full py-3 bg-white/10 text-white rounded-lg hover:bg-white/15 transition-colors font-medium">Accept Terms</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Refund Policy Modal -->
-    <div id="refund-modal" class="modal fixed inset-0 bg-black/80 backdrop-blur-sm z-[60] flex items-center justify-center p-4">
-        <div class="modal-content max-w-2xl w-full bg-[#09090b] border border-white/10 rounded-2xl shadow-2xl flex flex-col max-h-[80vh]">
-            <div class="flex items-center justify-between p-6 border-b border-white/5 bg-white/5 backdrop-blur-md sticky top-0 z-10 rounded-t-2xl">
-                <h3 class="text-xl font-semibold text-white">Refund Policy</h3>
-                <button onclick="closeModal('refund-modal')" class="text-zinc-400 hover:text-white transition-colors">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
-            </div>
-            <div class="p-8 overflow-y-auto space-y-6 text-sm text-zinc-400 leading-relaxed custom-scrollbar">
-                <p>We strive to deliver the highest quality digital solutions. However, due to the nature of custom service-based work, our refund policy is strictly defined as follows:</p>
-                
-                <h4 class="text-white font-medium text-base">1. Cancellation Before Work Begins</h4>
-                <p>If you cancel your project within 24 hours of payment and before the design/development process has officially started, you are eligible for a 90% refund of the advance paid (10% deduction for processing fees).</p>
-
-                <h4 class="text-white font-medium text-base">2. Cancellation During Development</h4>
-                <p>Once the design or development phase has commenced, the advance payment is non-refundable. This covers the time, resources, and opportunity cost allocated to your project.</p>
-
-                <h4 class="text-white font-medium text-base">3. Agency Cancellation</h4>
-                <p>In the unlikely event that Ad Web Comic Agency cancels the project without cause, a full 100% refund of all monies paid will be issued to the client within 7 business days.</p>
-                
-                <h4 class="text-white font-medium text-base">4. Project Rejection</h4>
-                <p>We offer multiple revision rounds during the design phase to ensure satisfaction. Rejection of the final product does not warrant a refund if the work aligns with the approved scope and design wireframes.</p>
-            </div>
-            <div class="p-6 border-t border-white/5 bg-zinc-900/50 rounded-b-2xl">
-                <button onclick="closeModal('refund-modal')" class="w-full py-3 bg-white/10 text-white rounded-lg hover:bg-white/15 transition-colors font-medium">Close</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- White Label Partner Modal -->
-    <div id="whitelabel-modal" class="modal fixed inset-0 bg-black/80 backdrop-blur-sm z-[60] flex items-center justify-center p-4">
-        <div class="modal-content max-w-2xl w-full bg-[#09090b] border border-amber-500/20 rounded-2xl shadow-2xl flex flex-col max-h-[80vh]">
-            <div class="flex items-center justify-between p-6 border-b border-white/5 bg-white/5 backdrop-blur-md sticky top-0 z-10 rounded-t-2xl">
-                <div class="flex items-center gap-3">
-                    <h3 class="text-xl font-semibold text-white">White Label Partner Program</h3>
-                    <span class="px-2 py-0.5 rounded bg-amber-500/10 border border-amber-500/20 text-amber-400 text-[10px] font-bold uppercase tracking-wider">For Agencies</span>
-                </div>
-                <button onclick="closeModal('whitelabel-modal')" class="text-zinc-400 hover:text-white transition-colors">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
-            </div>
-            <div class="p-8 overflow-y-auto space-y-6 text-sm text-zinc-400 leading-relaxed custom-scrollbar">
-                <p class="text-lg text-white font-medium">Scale your agency without the overhead. We build, you sell.</p>
-                <p>Our White Label service allows marketing agencies, freelancers, and consultants to offer premium web development services under their own brand name. We remain completely invisible to your clients.</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-                    <div class="bg-white/5 p-4 rounded-lg border border-white/5">
-                        <i data-lucide="shield-check" class="w-5 h-5 text-amber-500 mb-2"></i>
-                        <h5 class="text-white font-medium mb-1">Strict NDA</h5>
-                        <p class="text-xs text-zinc-500">We sign a Non-Disclosure Agreement ensuring we never contact your clients directly.</p>
+            <div class="p-8 overflow-y-auto space-y-6 text-sm text-zinc-400 leading-relaxed">
+                <p class="text-base text-white">Expand your service offerings without expanding your team.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-4 rounded border border-white/10 bg-white/5">
+                        <h4 class="text-white font-medium mb-1">Invisible Partner</h4>
+                        <p class="text-xs text-zinc-500">We work under strict NDA. Your client never knows we exist.</p>
                     </div>
-                    <div class="bg-white/5 p-4 rounded-lg border border-white/5">
-                        <i data-lucide="coins" class="w-5 h-5 text-amber-500 mb-2"></i>
-                        <h5 class="text-white font-medium mb-1">Wholesale Pricing</h5>
-                        <p class="text-xs text-zinc-500">Access exclusive partner rates, allowing you to mark up services for healthy margins.</p>
-                    </div>
-                    <div class="bg-white/5 p-4 rounded-lg border border-white/5">
-                        <i data-lucide="zap" class="w-5 h-5 text-amber-500 mb-2"></i>
-                        <h5 class="text-white font-medium mb-1">Fast Turnaround</h5>
-                        <p class="text-xs text-zinc-500">Priority development slots to ensure you meet your client deadlines.</p>
-                    </div>
-                    <div class="bg-white/5 p-4 rounded-lg border border-white/5">
-                        <i data-lucide="code" class="w-5 h-5 text-amber-500 mb-2"></i>
-                        <h5 class="text-white font-medium mb-1">Clean Handoff</h5>
-                        <p class="text-xs text-zinc-500">Unbranded code and documentation ready for you to present as your own.</p>
+                    <div class="p-4 rounded border border-white/10 bg-white/5">
+                        <h4 class="text-white font-medium mb-1">Wholesale Rates</h4>
+                        <p class="text-xs text-zinc-500">Partner-only pricing allowing for significant markup margins.</p>
                     </div>
                 </div>
+                <div class="pt-4">
+                    <a href="#contact" onclick="closeModal('whitelabel-modal')" class="w-full block text-center py-3 bg-amber-500 text-black font-medium rounded-lg hover:bg-amber-400 transition-colors">Apply for Partnership</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                <h4 class="text-white font-medium text-base">How it works:</h4>
-                <ol class="list-decimal pl-4 space-y-2 text-zinc-400 marker:text-amber-500">
-                    <li>You close the deal with your client.</li>
-                    <li>You send us the requirements and assets.</li>
-                    <li>We build the solution (Web/App) strictly following your guidelines.</li>
-                    <li>We transfer the final product to you for delivery.</li>
+    <!-- Refund Modal -->
+    <div id="refund-modal" class="modal fixed inset-0 z-[60] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal('refund-modal')"></div>
+        <div class="modal-content relative w-full max-w-2xl bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
+            <div class="p-6 border-b border-white/5 flex justify-between items-center bg-white/5 backdrop-blur">
+                <h3 class="text-lg font-medium text-white">Refund Policy</h3>
+                <button onclick="closeModal('refund-modal')" class="text-zinc-500 hover:text-white"><iconify-icon icon="solar:close-circle-linear" width="24"></iconify-icon></button>
+            </div>
+            <div class="p-8 overflow-y-auto space-y-6 text-sm text-zinc-400 leading-relaxed">
+                <p>Due to the custom nature of our code and design work, our refund policy is as follows:</p>
+                <ul class="list-disc pl-4 space-y-2">
+                    <li><strong>Pre-Development:</strong> 90% refund if cancelled within 24 hours of booking.</li>
+                    <li><strong>During Development:</strong> No refunds on advance payments once the project timeline has started.</li>
+                    <li><strong>Agency Fault:</strong> 100% refund if we fail to deliver the agreed scope.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div id="terms-modal" class="modal fixed inset-0 z-[60] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal('terms-modal')"></div>
+        <div class="modal-content relative w-full max-w-2xl bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
+            <div class="p-6 border-b border-white/5 flex justify-between items-center bg-white/5 backdrop-blur">
+                <h3 class="text-lg font-medium text-white">Terms of Service</h3>
+                <button onclick="closeModal('terms-modal')" class="text-zinc-500 hover:text-white"><iconify-icon icon="solar:close-circle-linear" width="24"></iconify-icon></button>
+            </div>
+            <div class="p-8 overflow-y-auto space-y-6 text-sm text-zinc-400 leading-relaxed">
+                <p>By engaging with Ad Web Comic Agency, you agree to:</p>
+                <ol class="list-decimal pl-4 space-y-2">
+                    <li><strong>Payments:</strong> 50% advance is mandatory to commence work. Balance is due upon completion.</li>
+                    <li><strong>Content:</strong> Client is responsible for providing text and images on time.</li>
+                    <li><strong>Ownership:</strong> Code ownership transfers to client only after full payment.</li>
                 </ol>
             </div>
-            <div class="p-6 border-t border-white/5 bg-zinc-900/50 rounded-b-2xl flex gap-4">
-                <button onclick="closeModal('whitelabel-modal')" class="w-full py-3 bg-white/10 text-white rounded-lg hover:bg-white/15 transition-colors font-medium">Close</button>
-                <a href="#contact" onclick="closeModal('whitelabel-modal')" class="w-full py-3 bg-amber-500 text-black rounded-lg hover:bg-amber-400 transition-colors font-semibold flex items-center justify-center gap-2">Apply Now</a>
-            </div>
         </div>
     </div>
 
-    <!-- Initialize Lucide Icons & Modal Script -->
+    <!-- Mobile Menu Modal -->
+    <div id="mobile-menu" class="modal fixed inset-0 z-[60] flex items-start justify-center p-0 md:hidden">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="closeModal('mobile-menu')"></div>
+        <div class="modal-content relative w-full bg-[#0a0a0a] border-b border-white/10 shadow-2xl overflow-hidden flex flex-col pt-20 pb-8 px-6">
+            <button onclick="closeModal('mobile-menu')" class="absolute top-6 right-6 text-zinc-500 hover:text-white"><iconify-icon icon="solar:close-circle-linear" width="32"></iconify-icon></button>
+            <nav class="flex flex-col gap-6 text-lg font-medium text-white">
+                <a href="#services" onclick="closeModal('mobile-menu')">Expertise</a>
+                <a href="#pricing" onclick="closeModal('mobile-menu')">Investment</a>
+                <a href="#projects" onclick="closeModal('mobile-menu')">Work</a>
+                <a href="#contact" onclick="closeModal('mobile-menu')" class="text-amber-500">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Logic -->
     <script>
-        lucide.createIcons();
-
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            }
+        // Modal Logic
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+            document.body.style.overflow = '';
         }
 
-        function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.classList.remove('active');
-                document.body.style.overflow = ''; // Restore background scrolling
-            }
+        // Region/Currency Logic
+        const currencies = {
+            'IN': { label: 'IND (₹)', sym: '₹', rates: [22000, 65000, 6000] },
+            'AE': { label: 'UAE (AED)', sym: 'AED ', rates: [1200, 3500, 300] },
+            'SA': { label: 'KSA (SAR)', sym: 'SAR ', rates: [1250, 3600, 350] },
+            'KW': { label: 'KWT (KWD)', sym: 'KWD ', rates: [100, 300, 25] },
+            'GLOBAL': { label: 'USA (USD)', sym: '$', rates: [299, 899, 99] }
+        };
+
+        function changeRegion(code) {
+            const config = currencies[code];
+            document.getElementById('region-label').innerText = config.label;
+            document.getElementById('currency-display').innerText = config.label;
+            
+            // Update prices based on data attributes or the array
+            const prices = document.querySelectorAll('.price-value');
+            
+            // Starter
+            prices[0].innerText = config.sym + config.rates[0].toLocaleString();
+            // Enterprise
+            prices[1].innerText = config.sym + config.rates[1].toLocaleString();
+            // Maintenance
+            prices[2].innerText = config.sym + config.rates[2].toLocaleString();
         }
 
-        // Close modal when clicking outside content
-        document.querySelectorAll('.modal').forEach(modal => {
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    closeModal(modal.id);
-                }
-            });
-        });
-
-        // Close on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                document.querySelectorAll('.modal.active').forEach(modal => {
-                    closeModal(modal.id);
-                });
-            }
-        });
+        // Close dropdown on click outside logic is handled by CSS hover for desktop, 
+        // specific logic for mobile would require JS if strictly needed, but hover covers mostly.
     </script>
-    <script type="module" src="/src/main.tsx"></script>
-    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async="" type="text/javascript"></script>
-
-</body></html>
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+</body>
+</html>
