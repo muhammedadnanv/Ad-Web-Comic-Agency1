@@ -1,1999 +1,715 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description" content="Global-standard web development agency specializing in high-performance static sites, PWAs, and bespoke digital infrastructure.">
-    <meta name="theme-color" content="#000000">
-    <!-- AEO (Answer Engine Optimization) for ChatGPT / Gemini / Claude: FAQ + Speakable + About Page -->
-<!-- Put this inside <head> -->
- <meta name="description" content="Ad Web Comic Agency builds high-performance, conversion-focused websites for startups, brands, and global businesses from Ulliyeri, Kerala." />
-  <meta name="keywords" content="website development agency Ulliyeri, Kerala web design, Ad Web Comic Agency, high-performance websites, ecommerce development India" />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <link rel="canonical" href="https://adwebcomicagency.vercel.app/" />
-    <meta name="description" content="Ad Web Comic Agency is a website development agency in Kerala building high-performance, SEO-focused, conversion-driven websites for businesses across Kochi, Calicut, Malappuram, Kannur, Thrissur, Trivandrum, and all over Kerala." />
-  <meta name="keywords" content="website development agency Kerala, web design Kerala, ecommerce website Kerala, SEO website developer Kerala, website company Kochi, web design Calicut, website developer Malappuram, business website Kerala, Ad Web Comic Agency" />
-  <meta name="author" content="Ad Web Comic Agency" />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ho-Yo | Streetwear Tees</title>
+  <meta
+    name="description"
+    content="Ho-Yo is a bold streetwear t-shirt brand. Discover oversized tees, graphic prints, and minimal basics. Order instantly on WhatsApp."
+  />
   <meta name="theme-color" content="#0a0a0a" />
-  <meta name="format-detection" content="telephone=no" />
-  <link rel="canonical" href="https://adwebcomicagency.vercel.app/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg: #050505;
+      --card: #0e0e0e;
+      --text: #f8f8f8;
+      --muted: #b7b7b7;
+      --neon: #4cff87;
+      --accent: #8b5cf6;
+      --border: #1f1f1f;
+      --shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+      --radius: 18px;
+    }
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Website Development Agency in Kerala | Ad Web Comic Agency" />
-  <meta property="og:description" content="We build high-performance websites for businesses across Kerala with strong SEO, fast speed, and conversion-focused structure." />
-  <meta property="og:url" content="https://adwebcomicagency.vercel.app/" />
-  <meta property="og:site_name" content="Ad Web Comic Agency" />
-  <meta property="og:locale" content="en_IN" />
-  <meta property="og:image" content="https://adwebcomicagency.vercel.app/og-image.jpg" />
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Website Development Agency in Kerala | Ad Web Comic Agency" />
-  <meta name="twitter:description" content="SEO-focused, high-performance website development agency serving businesses across Kerala." />
-  <meta name="twitter:image" content="https://adwebcomicagency.vercel.app/og-image.jpg" />
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 20% 10%, #191919 0%, #050505 45%, #020202 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
 
-  <link rel="icon" href="/favicon.ico" />
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://adwebcomicagency.vercel.app/#business",
-        "name": "Ad Web Comic Agency",
-        "url": "https://adwebcomicagency.vercel.app/",
-        "image": "https://adwebcomicagency.vercel.app/og-image.jpg",
-        "description": "Ad Web Comic Agency is a Kerala-based website development agency building high-performance, SEO-focused, conversion-driven websites for startups, brands, and local businesses.",
-        "areaServed": [
-          { "@type": "State", "name": "Kerala" },
-          { "@type": "City", "name": "Kochi" },
-          { "@type": "City", "name": "Kozhikode" },
-          { "@type": "City", "name": "Malappuram" },
-          { "@type": "City", "name": "Kannur" },
-          { "@type": "City", "name": "Thrissur" },
-          { "@type": "City", "name": "Thiruvananthapuram" },
-          { "@type": "City", "name": "Palakkad" },
-          { "@type": "City", "name": "Kottayam" },
-          { "@type": "City", "name": "Alappuzha" }
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "Kerala",
-          "addressCountry": "IN"
-        },
-        "serviceType": [
-          "Website Development",
-          "Web Design",
-          "Landing Page Development",
-          "Ecommerce Website Development",
-          "SEO Website Development",
-          "Business Website Design",
-          "Website Redesign",
-          "Performance Optimization"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://adwebcomicagency.vercel.app/#website",
-        "url": "https://adwebcomicagency.vercel.app/",
-        "name": "Ad Web Comic Agency",
-        "publisher": {
-          "@id": "https://adwebcomicagency.vercel.app/#business"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://adwebcomicagency.vercel.app/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Do you provide website development services across Kerala?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Ad Web Comic Agency provides website development services for businesses across Kerala including Kochi, Kozhikode, Malappuram, Kannur, Thrissur, and Thiruvananthapuram."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you build SEO-friendly business websites in Kerala?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We build SEO-friendly, mobile-optimized, high-performance websites designed to improve search visibility and conversions for Kerala businesses."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you build ecommerce websites for Kerala brands?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We create ecommerce websites for Kerala brands with strong product presentation, smooth checkout, and conversion-focused user experience."
-            }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
-  <!-- Open Graph -->
-  <meta property="og:title" content="Ad Web Comic Agency" />
-  <meta property="og:description" content="We engineer websites that sell while you sleep." />
-  <meta property="og:url" content="https://adwebcomicagency.vercel.app/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://adwebcomicagency.vercel.app/og-image.jpg" />
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ad Web Comic Agency" />
-  <meta name="twitter:description" content="High-performance websites for modern brands." />
-  <meta name="twitter:image" content="https://adwebcomicagency.vercel.app/og-image.jpg" />
+    .container {
+      width: min(1120px, 92vw);
+      margin-inline: auto;
+    }
 
-  <link rel="icon" href="/favicon.ico" />
+    .section {
+      padding: 4rem 0;
+    }
 
-  <!-- Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Ad Web Comic Agency",
-    "url": "https://adwebcomicagency.vercel.app/",
-    "description": "High-performance website development agency in Kerala",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Ulliyeri",
-      "addressRegion": "Kerala",
-      "addressCountry": "IN"
-    },
-    "serviceType": ["Website Development","Web Design","Ecommerce Development"]
-  }
-  </script>
+    .section-title {
+      font-size: clamp(1.5rem, 4vw, 2.3rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.8rem;
+    }
 
-<!-- AEO Meta (lightweight, safe) -->
-<meta name="description" content="Ad Web Comic Agency builds high-performance websites and e-commerce stores for businesses across Bangalore, Kochi, and Kozhikode." />
+    .section-sub {
+      color: var(--muted);
+      max-width: 62ch;
+      margin-bottom: 2rem;
+    }
 
-<!-- AEO: FAQPage (best for AI answers + featured snippets) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What does Ad Web Comic Agency do?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ad Web Comic Agency builds high-performance websites, landing pages, and conversion-focused e-commerce stores designed for speed, SEO, and business growth."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which locations do you serve?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ad Web Comic Agency serves clients across Bangalore, Kochi, and Kozhikode, and also works remotely with businesses across India."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you build e-commerce websites?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We develop modern e-commerce websites optimized for mobile experience, fast loading speed, and conversions."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What makes your websites different?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our websites are engineered for performance and clarity, with strong technical foundations and conversion-driven layouts that generate inquiries and sales."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I contact Ad Web Comic Agency?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Visit our official website to contact us and share your project requirements, timeline, and goals."
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(5, 5, 5, 0.8);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.95rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-weight: 900;
+      font-size: 1.2rem;
+      letter-spacing: 0.02em;
+    }
+
+    .badge {
+      background: linear-gradient(135deg, var(--neon), #9cffbc);
+      color: #02160a;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 0.2rem 0.45rem;
+      border-radius: 999px;
+    }
+
+    .nav-links {
+      display: none;
+      gap: 1rem;
+      color: #d7d7d7;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      border-radius: 999px;
+      padding: 0.9rem 1.2rem;
+      border: 1px solid transparent;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--neon), #2de273);
+      color: #04220f;
+      box-shadow: 0 8px 28px rgba(76, 255, 135, 0.27);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(76, 255, 135, 0.36);
+    }
+
+    .btn-outline {
+      border-color: #3f3f3f;
+      color: #f4f4f4;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 3.2rem 0 2rem;
+    }
+
+    .hero-wrap {
+      display: grid;
+      gap: 1.4rem;
+      align-items: center;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(2rem, 7vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      font-weight: 900;
+    }
+
+    .hero-copy p {
+      color: #cbcbcb;
+      max-width: 56ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .quick-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .quick-stats span {
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      color: #d8d8d8;
+      padding: 0.42rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+    }
+
+    .hero-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.65rem;
+    }
+
+    .hero-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      min-height: 170px;
+      background: #0f0f0f;
+      animation: float 4.4s ease-in-out infinite;
+    }
+
+    .hero-card:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .collections {
+      display: grid;
+      gap: 0.9rem;
+      grid-template-columns: 1fr;
+    }
+
+    .chip {
+      border: 1px solid #2d2d2d;
+      border-radius: 14px;
+      padding: 1rem;
+      background: linear-gradient(140deg, rgba(139, 92, 246, 0.17), rgba(76, 255, 135, 0.12));
+    }
+
+    .chip h3 {
+      font-size: 1.03rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .chip p {
+      color: #d4d4d4;
+      font-size: 0.92rem;
+    }
+
+    .product-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+
+    .product-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, #121212, #0a0a0a);
+      overflow: hidden;
+      transition: transform 220ms ease, border-color 220ms ease;
+      box-shadow: var(--shadow);
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(76, 255, 135, 0.42);
+    }
+
+    .product-media {
+      aspect-ratio: 4 / 4;
+      overflow: hidden;
+    }
+
+    .product-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 260ms ease;
+    }
+
+    .product-card:hover .product-media img {
+      transform: scale(1.05);
+    }
+
+    .product-content {
+      padding: 1rem;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .product-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .price {
+      font-weight: 800;
+      color: var(--neon);
+    }
+
+    .product-desc {
+      color: #c9c9c9;
+      font-size: 0.9rem;
+    }
+
+    .product-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.7rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .size-select {
+      border: 1px solid #343434;
+      background: #131313;
+      color: #f6f6f6;
+      border-radius: 12px;
+      padding: 0.45rem 0.55rem;
+      font-weight: 600;
+      font-size: 0.86rem;
+      min-width: 110px;
+    }
+
+    .about-box,
+    .faq,
+    .review-grid {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #0c0c0c;
+      padding: 1.15rem;
+    }
+
+    .about-box p {
+      color: #cfcfcf;
+      margin-bottom: 0.8rem;
+    }
+
+    .review-grid {
+      display: grid;
+      gap: 0.85rem;
+      grid-template-columns: 1fr;
+      background: transparent;
+      border: none;
+      padding: 0;
+    }
+
+    .review {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      background: #0d0d0d;
+    }
+
+    .review p {
+      color: #d0d0d0;
+      margin: 0.45rem 0 0.6rem;
+      font-size: 0.93rem;
+    }
+
+    .review strong {
+      font-size: 0.9rem;
+      color: #f9f9f9;
+    }
+
+    .faq details {
+      border-bottom: 1px solid #262626;
+      padding: 0.75rem 0;
+    }
+
+    .faq details:last-child {
+      border-bottom: none;
+    }
+
+    .faq summary {
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .faq p {
+      margin-top: 0.45rem;
+      color: #c5c5c5;
+      font-size: 0.92rem;
+      max-width: 70ch;
+    }
+
+    .sticky-wa {
+      position: fixed;
+      right: 0.9rem;
+      bottom: 0.95rem;
+      z-index: 120;
+    }
+
+    .sticky-wa .btn {
+      padding-inline: 1rem;
+      font-size: 0.88rem;
+    }
+
+    footer {
+      border-top: 1px solid #181818;
+      padding: 1.4rem 0 5rem;
+      color: #a8a8a8;
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(16px);
+      animation: reveal 0.7s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.15s; }
+    .delay-2 { animation-delay: 0.3s; }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
-  ]
-}
-</script>
 
-<!-- AEO: WebPage + About + mainEntity (helps AI systems understand the page clearly) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "name": "Ad Web Comic Agency — Web Development",
-  "description": "Ad Web Comic Agency builds high-performance websites and conversion-focused e-commerce stores for businesses across Bangalore, Kochi, and Kozhikode.",
-  "inLanguage": "en",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "Ad Web Comic Agency",
-    "areaServed": ["Bangalore", "Kochi", "Kozhikode"],
-    "knowsAbout": [
-      "Website Development",
-      "E-commerce Development",
-      "Landing Pages",
-      "Performance Optimization",
-      "Technical SEO"
-    ]
-  }
-}
-</script>
-
-<!-- AEO: Speakable (useful for voice assistants; also helps extraction) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Ad Web Comic Agency",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": [".aeo-summary", ".aeo-faq"]
-  }
-}
-</script>
-    <!-- ========================================= -->
-<!-- BASIC SEO META -->
-<!-- ========================================= -->
-
-<title>Ad Web Comic Agency | Digital Infrastructure for Global Brands</title>
-    <!-- Primary SEO -->
-<title>Ad Web Comic Agency | Web Development in Bangalore, Kochi & Kozhikode</title>
-<meta name="description" content="Ad Web Comic Agency builds high-performance, scalable websites for startups and businesses across Bangalore, Kochi, and Kozhikode. Modern web development, conversion-focused e-commerce, and premium digital experiences.">
-<link rel="canonical" href="https://adwebcomicagency.vercel.app/">
-
-<!-- Geo + Indexing -->
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="geo.region" content="IN-KA, IN-KL">
-<meta name="geo.placename" content="Bangalore, Kochi, Kozhikode">
-
-<!-- Open Graph / Social Preview -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Ad Web Comic Agency">
-<meta property="og:title" content="Ad Web Comic Agency | Bangalore • Kochi • Kozhikode">
-<meta property="og:description" content="Premium web development agency serving Bangalore, Kochi, and Kozhikode with fast, scalable websites and conversion-driven e-commerce stores.">
-<meta property="og:url" content="https://adwebcomicagency.vercel.app/">
-<meta property="og:image" content="https://adwebcomicagency.vercel.app/og-image.jpg">
-<meta property="og:image:alt" content="Ad Web Comic Agency — Web Development in Bangalore, Kochi & Kozhikode">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ad Web Comic Agency | Bangalore • Kochi • Kozhikode">
-<meta name="twitter:description" content="High-performance websites & e-commerce stores for businesses in Bangalore, Kochi, and Kozhikode.">
-<meta name="twitter:image" content="https://adwebcomicagency.vercel.app/og-image.jpg">
-
-<!-- LocalBusiness Schema (Multi-city service area) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Ad Web Comic Agency",
-  "url": "https://adwebcomicagency.vercel.app/",
-  "image": "https://adwebcomicagency.vercel.app/og-image.jpg",
-  "description": "Ad Web Comic Agency builds high-performance, scalable websites and conversion-focused e-commerce stores for businesses across Bangalore, Kochi, and Kozhikode.",
-  "areaServed": [
-    {
-      "@type": "City",
-      "name": "Bangalore",
-      "address": { "@type": "PostalAddress", "addressRegion": "Karnataka", "addressCountry": "IN" }
-    },
-    {
-      "@type": "City",
-      "name": "Kochi",
-      "address": { "@type": "PostalAddress", "addressRegion": "Kerala", "addressCountry": "IN" }
-    },
-    {
-      "@type": "City",
-      "name": "Kozhikode",
-      "address": { "@type": "PostalAddress", "addressRegion": "Kerala", "addressCountry": "IN" }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
     }
-  ],
-  "serviceType": [
-    "Website Development",
-    "E-commerce Development",
-    "Landing Page Design",
-    "SEO-Friendly Website Builds",
-    "Performance Optimization"
-  ],
-  "sameAs": [
-    "https://adwebcomicagency.vercel.app/"
-  ]
-}
-</script>
 
-<meta name="description" content="Ad Web Comic Agency is an MSME-recognized digital infrastructure firm engineering high-performance, scalable websites and applications using Next.js, React, and modern cloud architecture.">
+    @media (min-width: 700px) {
+      .hero-wrap {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
 
-<meta name="keywords" content="scalable website development, high-performance website development, bespoke static architecture, conversion-focused web development, MSME recognized web development company, Next.js development agency, React development services, TypeScript web solutions, enterprise web applications, PWA development company, white-label web development partner, digital infrastructure for startups, SEO-native website architecture, custom web application development, premium website development company India">
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-<meta name="author" content="Ad Web Comic Agency">
-<meta name="robots" content="index, follow">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
+      .collections {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
 
-<!-- ========================================= -->
-<!-- FAVICON SETUP (Using Official Logo) -->
-<!-- ========================================= -->
-
-<link rel="icon" type="image/png" sizes="32x32" href="https://adwebcomicagency.vercel.app/logo.png">
-<link rel="icon" type="image/png" sizes="192x192" href="https://adwebcomicagency.vercel.app/logo.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://adwebcomicagency.vercel.app/logo.png">
-
-
-<!-- ========================================= -->
-<!-- OPEN GRAPH (Facebook, LinkedIn, WhatsApp) -->
-<!-- ========================================= -->
-
-<meta property="og:title" content="Ad Web Comic Agency – Digital Excellence for Global Brands">
-<meta property="og:description" content="We engineer high-performance digital infrastructure. From bespoke static architecture to scalable applications, we deliver ownership-based solutions with zero fluff.">
-<meta property="og:image" content="https://adwebcomicagency.vercel.app/logo.png">
-<meta property="og:url" content="https://adwebcomicagency.vercel.app/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Ad Web Comic Agency">
-
-
-<!-- ========================================= -->
-<!-- TWITTER / X CARD -->
-<!-- ========================================= -->
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ad Web Comic Agency – Scalable Digital Infrastructure">
-<meta name="twitter:description" content="High-performance, ownership-based websites and applications engineered for serious global brands.">
-<meta name="twitter:image" content="https://adwebcomicagency.vercel.app/logo.png">
-
-
-<!-- ========================================= -->
-<!-- BRAND POSITIONING STRUCTURED DATA -->
-<!-- ========================================= -->
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Ad Web Comic Agency",
-  "url": "https://adwebcomicagency.vercel.app/",
-  "logo": "https://adwebcomicagency.vercel.app/logo.png",
-  "description": "MSME-recognized digital infrastructure firm delivering bespoke static architecture, scalable web applications, and ownership-based digital systems for global brands.",
-  "areaServed": "Global",
-  "foundingDate": "2026"
-}
-</script>
-
-    
-    <!-- Open Graph / SEO -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Ad Web Comic Agency | Digital Excellence">
-    <meta property="og:description" content="Engineering the future of the web with precision, performance, and premium design.">
-    <meta property="og:image" content="https://dwebcomicagency.vercel.app/og-image.png">
-    
-    <!-- Fonts: Inter (International Standard) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS (CDN for single file requirement) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Iconify (Solar Linear Icons) -->
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-
-    <style>
-        :root {
-            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-        }
-        
-        body {
-            font-family: var(--font-sans);
-            background-color: #000000;
-            color: #a1a1aa; /* zinc-400 */
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* Premium Scrollbar */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #000000; }
-        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
-
-        /* Glassmorphism Utilities */
-        .glass {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-        }
-        
-        .glass-hover:hover {
-            background: rgba(255, 255, 255, 0.04);
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        /* Animations */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        .animate-float { animation: float 6s ease-in-out infinite; }
-
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-marquee { animation: marquee 40s linear infinite; }
-
-        /* Custom UI Elements */
-        details > summary { list-style: none; }
-        details > summary::-webkit-details-marker { display: none; }
-
-        .gradient-text {
-            background: linear-gradient(to right, #ffffff, #a1a1aa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .gradient-amber {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-        }
-
-        /* Modal Transitions */
-        .modal {
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .modal.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        .modal-content {
-            transform: scale(0.96) translateY(10px);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .modal.active .modal-content {
-            transform: scale(1) translateY(0);
-        }
-    </style>
-    <style>
-          .sticky-banner {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: #ccac00;
-            color: white;
-            padding: 12px 20px;
-            z-index: 9999;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            transform: translateY(0);
-            transition: transform 0.3s ease;
-          }
-
-          .sticky-banner.hidden {
-            transform: translateY(-100%);
-          }
-
-          .banner-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-          }
-
-          .banner-text {
-            font-size: 14px;
-            font-weight: 500;
-          }
-
-          .banner-action {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 6px 12px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            transition: background 0.2s;
-          }
-
-          .banner-action:hover {
-            background: rgba(255, 255, 255, 0.3);
-          }
-
-          .banner-close {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-            padding: 0;
-            width: 20px;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0.8;
-          }
-
-          .banner-close:hover {
-            opacity: 1;
-          }
-
-          @media (max-width: 640px) {
-            .sticky-banner {
-              padding: 10px 15px;
-            }
-            
-            .banner-content {
-              gap: 10px;
-            }
-            
-            .banner-text {
-              font-size: 13px;
-            }
-            
-            .banner-action {
-              font-size: 13px;
-              padding: 5px 10px;
-            }
-          }
-
-          /* Adjust body padding to prevent content overlap */
-          body {
-            padding-top: 50px;
-          }
-        </style>
-
-        <div id="sticky-banner" class="sticky-banner">
-          <div class="banner-content">
-            <span class="banner-text"> EID OFFER: Get 20% OFF on All Services</span>
-            
-              <a href="https:&#x2F;&#x2F;api.whatsapp.com&#x2F;send&#x2F;?phone&#x3D;919656778508" class="banner-action">contact now</a>
-            
-            
-              <button class="banner-close" onclick="closeBanner()" aria-label="Close banner">×</button>
-            
-          </div>
-        </div>
-
-        
-          <div class="widgetify-watermark" style="position: fixed; top: 60px; right: 10px; z-index: 10000; font-size: 10px; opacity: 0.7;">
-            <a href="https://widgetify-two.vercel.app" target="_blank">Powered by Widgetify</a>
-          </div>
-
-        <script>
-          window.closeBanner = function() {
-            const banner = document.getElementById('sticky-banner');
-            banner.classList.add('hidden');
-            
-            // Adjust body padding
-            setTimeout(() => {
-              document.body.style.paddingTop = '0';
-            }, 300);
-            
-            // Store dismissed state
-            localStorage.setItem('widgetify-banner-dismissed', 'true');
-          };
-
-          // Check if banner was previously dismissed
-          if (localStorage.getItem('widgetify-banner-dismissed') === 'true') {
-            document.getElementById('sticky-banner').classList.add('hidden');
-            document.body.style.paddingTop = '0';
-          }
-        </script>
-      
-    <style>
-      /* Widgetify Core Styles - Responsive & Mobile-First */
-      .widgetify-widget {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 60px;
-        height: 60px;
-        background-color: #ccac00;
-        border-radius: 50%;
+    @media (min-width: 920px) {
+      .nav-links {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        z-index: 1000;
-        border: none;
-        outline: none;
       }
 
-      .widgetify-widget:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      .product-grid {
+        grid-template-columns: repeat(3, 1fr);
       }
 
-      .widgetify-popup {
-        position: fixed;
-        bottom: 90px;
-        right: 20px;
-        width: 400px;
-        max-width: 90vw;
-        background-color: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        display: none;
-        flex-direction: column;
-        z-index: 999;
-        overflow: hidden;
-        border: 1px solid #e5e7eb;
-        padding: 20px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      .hero {
+        padding-top: 4.3rem;
       }
-
-      .widgetify-popup.show {
-        display: flex;
-        animation: fadeInUp 0.3s ease;
-      }
-
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .widgetify-header {
-        background-color: #f3f4f6;
-        padding: 12px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #e5e7eb;
-        border-radius: 10px 10px 0 0;
-        margin: -20px -20px 0 -20px;
-      }
-
-      .widgetify-header h3 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: 600;
-        color: #374151;
-      }
-
-      .widgetify-close {
-        background: none;
-        border: none;
-        font-size: 18px;
-        color: #6b7280;
-        cursor: pointer;
-        padding: 0;
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .widgetify-close:hover {
-        color: #374151;
-      }
-
-      .widgetify-watermark {
-        background-color: #f9fafb;
-        border-top: 1px solid #e5e7eb;
-        padding: 8px 12px;
-        text-align: center;
-        margin: 20px -20px -20px -20px;
-        border-radius: 0 0 10px 10px;
-      }
-
-      .widgetify-watermark a {
-        color: #6b7280;
-        text-decoration: none;
-        font-size: 10px;
-        font-weight: 500;
-      }
-
-      .widgetify-watermark a:hover {
-        color: #374151;
-      }
-
-      /* UPI Gateway Specific Styles */
-      .upi-gateway-title {
-        margin: 16px 0 16px 0;
-        color: #1f2937;
-        font-size: 20px;
-        font-weight: 600;
-        text-align: center;
-      }
-
-      .upi-gateway-qr {
-        width: 200px;
-        height: 200px;
-        border: 2px solid #f3f4f6;
-        border-radius: 8px;
-        display: block;
-        margin: 0 auto;
-      }
-
-      .upi-gateway-details {
-        margin: 4px 0;
-        font-size: 14px;
-        color: #374151;
-      }
-
-      .upi-gateway-button {
-        width: 100%;
-        padding: 16px 0;
-        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-        color: white;
-        font-size: 16px;
-        font-weight: 600;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
-      }
-
-      .upi-gateway-button:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
-      }
-
-      .upi-gateway-note {
-        margin: 16px 0 0 0;
-        font-size: 11px;
-        color: #9ca3af;
-        text-align: center;
-        line-height: 1.4;
-      }
-
-      /* Responsive Mobile Design */
-      @media (max-width: 480px) {
-        .widgetify-widget {
-          bottom: 15px;
-          right: 15px;
-        }
-        
-        .widgetify-popup {
-          bottom: 85px;
-          right: 15px;
-          max-width: calc(100vw - 30px) !important;
-          margin: 0 !important;
-          border-radius: 8px !important;
-          padding: 16px !important;
-        }
-        
-        .upi-gateway-title {
-          font-size: 18px !important;
-        }
-        
-        .upi-gateway-details {
-          font-size: 13px !important;
-        }
-        
-        .upi-gateway-button {
-          padding: 14px 0 !important;
-          font-size: 15px !important;
-        }
-        
-        .upi-gateway-qr {
-          width: 160px !important;
-          height: 160px !important;
-        }
-        
-        .upi-gateway-note {
-          font-size: 11px !important;
-        }
-      }
-    </style>
-  
-        <div id="widgetify-whatsapp" class="widgetify-widget" onclick="toggleWidgetifyPopup()" aria-label="Open WhatsApp Chat">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.6 6.32A7.85 7.85 0 0 0 12 4.02a7.95 7.95 0 0 0-6.9 12.07L4 20.02l4.05-1.06A8.02 8.02 0 0 0 12 20.02a7.98 7.98 0 0 0 8-7.93c0-2.12-.83-4.12-2.4-5.62V6.32zm-5.6 12.2c-1.18 0-2.33-.32-3.33-.92l-.24-.14-2.47.65.66-2.41-.16-.25a6.63 6.63 0 0 1-1.02-3.52 6.57 6.57 0 0 1 11.29-4.57 6.45 6.45 0 0 1 2 4.55 6.57 6.57 0 0 1-6.57 6.57l-.16.04zm3.6-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.06-.31-.1-.44.1-.13.2-.5.64-.61.77-.11.13-.23.15-.42.05-.2-.1-.84-.31-1.6-.99-.59-.52-.99-1.17-1.1-1.37-.12-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.07-.13.03-.24-.02-.34-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33-.11 0-.24-.02-.37-.02-.13 0-.34.05-.52.25-.18.2-.68.67-.68 1.62 0 .96.7 1.88.8 2 .1.14 1.4 2.16 3.42 3.02.48.2.85.33 1.14.43.48.15.91.13 1.26.08.38-.06 1.17-.48 1.33-.94.17-.46.17-.86.12-.94-.05-.08-.18-.12-.37-.21z" fill="white"/>
-          </svg>
-        </div>
-
-        <div id="widgetify-popup" class="widgetify-popup" role="dialog" aria-labelledby="chat-title">
-          <div class="widgetify-header">
-            <h3 id="chat-title">WhatsApp Chat</h3>
-            <button class="widgetify-close" onclick="toggleWidgetifyPopup()" aria-label="Close chat">×</button>
-          </div>
-          <div class="widgetify-content">
-            <div style="background-color: #f3f4f6; padding: 8px; border-radius: 8px; margin-bottom: 8px; max-width: 80%;">
-              <p style="margin: 0; font-size: 12px; color: #374151;">Hello,</p>
-            </div>
-          </div>
-          <div style="padding: 12px; border-top: 1px solid #e5e7eb; background-color: #f9fafb; border-radius: 0 0 10px 10px;">
-            <div style="display: flex; gap: 8px;">
-              <input type="text" placeholder="Type a message..." style="flex-grow: 1; font-size: 12px; padding: 8px; border: 1px solid #d1d5db; border-radius: 6px; outline: none;">
-              <button onclick="window.open('https://wa.me/9656778508?text=Hello%2C')" style="background-color: #ccac00; color: white; padding: 8px; border: none; border-radius: 6px; cursor: pointer;" aria-label="Send message on WhatsApp">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="widgetify-watermark">
-            <a href="https://widgetify-two.vercel.app" target="_blank">Powered by Widgetify</a>
-          </div>
-        </div>
-
-        <script>
-          function toggleWidgetifyPopup() {
-            const popup = document.getElementById('widgetify-popup');
-            popup.classList.toggle('show');
-          }
-        </script>
-     <style>
-      /* Widgetify Core Styles - Responsive & Mobile-First */
-      .widgetify-widget {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 60px;
-        height: 60px;
-        background-color: #ffde0a;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        z-index: 1000;
-        border: none;
-        outline: none;
-      }
-
-      .widgetify-widget:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      .widgetify-popup {
-        position: fixed;
-        bottom: 90px;
-        right: 20px;
-        width: 400px;
-        max-width: 90vw;
-        background-color: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        display: none;
-        flex-direction: column;
-        z-index: 999;
-        overflow: hidden;
-        border: 1px solid #e5e7eb;
-        padding: 20px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      }
-
-      .widgetify-popup.show {
-        display: flex;
-        animation: fadeInUp 0.3s ease;
-      }
-
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .widgetify-header {
-        background-color: #f3f4f6;
-        padding: 12px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #e5e7eb;
-        border-radius: 10px 10px 0 0;
-        margin: -20px -20px 0 -20px;
-      }
-
-      .widgetify-header h3 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: 600;
-        color: #374151;
-      }
-
-      .widgetify-close {
-        background: none;
-        border: none;
-        font-size: 18px;
-        color: #6b7280;
-        cursor: pointer;
-        padding: 0;
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .widgetify-close:hover {
-        color: #374151;
-      }
-
-      .widgetify-watermark {
-        background-color: #f9fafb;
-        border-top: 1px solid #e5e7eb;
-        padding: 8px 12px;
-        text-align: center;
-        margin: 20px -20px -20px -20px;
-        border-radius: 0 0 10px 10px;
-      }
-
-      .widgetify-watermark a {
-        color: #6b7280;
-        text-decoration: none;
-        font-size: 10px;
-        font-weight: 500;
-      }
-
-      .widgetify-watermark a:hover {
-        color: #374151;
-      }
-
-      /* UPI Gateway Specific Styles */
-      .upi-gateway-title {
-        margin: 16px 0 16px 0;
-        color: #1f2937;
-        font-size: 20px;
-        font-weight: 600;
-        text-align: center;
-      }
-
-      .upi-gateway-qr {
-        width: 200px;
-        height: 200px;
-        border: 2px solid #f3f4f6;
-        border-radius: 8px;
-        display: block;
-        margin: 0 auto;
-      }
-
-      .upi-gateway-details {
-        margin: 4px 0;
-        font-size: 14px;
-        color: #374151;
-      }
-
-      .upi-gateway-button {
-        width: 100%;
-        padding: 16px 0;
-        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-        color: white;
-        font-size: 16px;
-        font-weight: 600;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
-      }
-
-      .upi-gateway-button:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
-      }
-
-      .upi-gateway-note {
-        margin: 16px 0 0 0;
-        font-size: 11px;
-        color: #9ca3af;
-        text-align: center;
-        line-height: 1.4;
-      }
-
-      /* Responsive Mobile Design */
-      @media (max-width: 480px) {
-        .widgetify-widget {
-          bottom: 15px;
-          right: 15px;
-        }
-        
-        .widgetify-popup {
-          bottom: 85px;
-          right: 15px;
-          max-width: calc(100vw - 30px) !important;
-          margin: 0 !important;
-          border-radius: 8px !important;
-          padding: 16px !important;
-        }
-        
-        .upi-gateway-title {
-          font-size: 18px !important;
-        }
-        
-        .upi-gateway-details {
-          font-size: 13px !important;
-        }
-        
-        .upi-gateway-button {
-          padding: 14px 0 !important;
-          font-size: 15px !important;
-        }
-        
-        .upi-gateway-qr {
-          width: 160px !important;
-          height: 160px !important;
-        }
-        
-        .upi-gateway-note {
-          font-size: 11px !important;
-        }
-      }
-    </style>
-  
-        <style>
-          /* Lead Capture Popup Styles */
-          .lead-popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 10000;
-            backdrop-filter: blur(5px);
-          }
-          
-          .lead-popup-overlay.show {
-            display: flex;
-            animation: fadeIn 0.3s ease;
-          }
-          
-          @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-          }
-          
-          .lead-popup-container {
-            background: white;
-            border-radius: 16px;
-            padding: 32px;
-            max-width: 420px;
-            width: 90%;
-            margin: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            position: relative;
-            animation: slideUp 0.3s ease;
-          }
-          
-          @keyframes slideUp {
-            from {
-              opacity: 0;
-              transform: translateY(30px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-          
-          .lead-popup-close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: #9ca3af;
-            cursor: pointer;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease;
-          }
-          
-          .lead-popup-close:hover {
-            background: #f3f4f6;
-            color: #374151;
-          }
-          
-          .lead-popup-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1f2937;
-            text-align: center;
-            margin-bottom: 8px;
-            line-height: 1.2;
-          }
-          
-          .lead-popup-subtitle {
-            font-size: 16px;
-            color: #6b7280;
-            text-align: center;
-            margin-bottom: 24px;
-            line-height: 1.4;
-          }
-          
-          .lead-form-field {
-            width: 100%;
-            padding: 16px;
-            margin-bottom: 16px;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            font-size: 16px;
-            outline: none;
-            transition: all 0.2s ease;
-            font-family: inherit;
-          }
-          
-          .lead-form-field:focus {
-            border-color: #ffde0a;
-            box-shadow: 0 0 0 3px #ffde0a20;
-          }
-          
-          .lead-form-button {
-            width: 100%;
-            padding: 16px 24px;
-            background: linear-gradient(135deg, #ffde0a 0%, #ffde0add 100%);
-            color: white;
-            font-size: 16px;
-            font-weight: 600;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 8px;
-          }
-          
-          .lead-form-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px #ffde0a40;
-          }
-          
-          .lead-form-button:active {
-            transform: translateY(0);
-          }
-          
-          .lead-popup-footer {
-            text-align: center;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #e5e7eb;
-          }
-          
-          .lead-popup-footer a {
-            color: #6b7280;
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: 500;
-          }
-          
-          .lead-popup-footer a:hover {
-            color: #374151;
-          }
-          
-          /* Mobile Responsive */
-          @media (max-width: 480px) {
-            .lead-popup-container {
-              padding: 24px;
-              margin: 10px;
-              border-radius: 12px;
-            }
-            
-            .lead-popup-title {
-              font-size: 20px;
-            }
-            
-            .lead-popup-subtitle {
-              font-size: 14px;
-            }
-            
-            .lead-form-field {
-              padding: 14px;
-              font-size: 16px;
-            }
-            
-            .lead-form-button {
-              padding: 14px 20px;
-            }
-          }
-        </style>
-
-        <div id="lead-capture-overlay" class="lead-popup-overlay" onclick="closeLeadPopup(event)">
-          <div class="lead-popup-container" onclick="event.stopPropagation()">
-            <button class="lead-popup-close" onclick="closeLeadPopup()" aria-label="Close popup">×</button>
-            
-            <h2 class="lead-popup-title">Get Your Free Consultation</h2>
-            <p class="lead-popup-subtitle">Leave your details and we&#x27;ll contact you soon</p>
-            
-            <form id="lead-capture-form" onsubmit="submitLeadForm(event)">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Full Name *"
-                required
-                class="lead-form-field"
-              />
-              
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Your Phone Number *"
-                required
-                class="lead-form-field"
-              />
-              
-              <input
-                type="text"
-                name="address"
-                placeholder="Your Address"
-                class="lead-form-field"
-              />
-              
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                rows="3"
-                class="lead-form-field"
-                style="resize: vertical; min-height: 80px;"
-              ></textarea>
-              
-              <button type="submit" class="lead-form-button">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.6 6.32A7.85 7.85 0 0 0 12 4.02a7.95 7.95 0 0 0-6.9 12.07L4 20.02l4.05-1.06A8.02 8.02 0 0 0 12 20.02a7.98 7.98 0 0 0 8-7.93c0-2.12-.83-4.12-2.4-5.62V6.32z"/>
-                </svg>
-                Send My Details
-              </button>
-            </form>
-            
-            <div class="lead-popup-footer">
-              <a href="https://widgetify-two.vercel.app" target="_blank">Powered by Widgetify</a>
-            </div>
-          </div>
-        </div>
-
-        <script>
-          // Auto-show popup after delay
-          setTimeout(function() {
-            const popup = document.getElementById('lead-capture-overlay');
-            if (popup && !localStorage.getItem('leadPopupShown')) {
-              popup.classList.add('show');
-            }
-          }, 5000);
-
-          function closeLeadPopup(event) {
-            if (event && event.target !== event.currentTarget) return;
-            const popup = document.getElementById('lead-capture-overlay');
-            popup.classList.remove('show');
-            localStorage.setItem('leadPopupShown', 'true');
-          }
-
-          function submitLeadForm(event) {
-            event.preventDefault();
-            
-            const formData = new FormData(event.target);
-            const name = formData.get('name');
-            const phone = formData.get('phone');
-            const address = formData.get('address');
-            const message = formData.get('message');
-            
-            let leadMessage = '🎯 *New Lead Captured!*\n\n';
-            leadMessage += '👤 *Name:* ' + name + '\n';
-            leadMessage += '📱 *Phone:* ' + phone + '\n';
-            
-            if (address) {
-              leadMessage += '🏠 *Address:* ' + address + '\n';
-            }
-            
-            if (message) {
-              leadMessage += '💬 *Message:* ' + message + '\n';
-            }
-            
-            leadMessage += '\n⏰ *Time:* ' + new Date().toLocaleString();
-            leadMessage += '\n\n_Generated via Widgetify Lead Capture_';
-            
-            const whatsappUrl = 'https://wa.me/9656778508?text=' + encodeURIComponent(leadMessage);
-            window.open(whatsappUrl, '_blank');
-            
-            // Show success message and close popup
-            alert('✅ Thank you! Your details have been sent successfully. We will contact you soon!');
-            closeLeadPopup();
-            
-            // Reset form
-            event.target.reset();
-          }
-          
-          // Prevent showing popup if already shown in this session
-          if (localStorage.getItem('leadPopupShown')) {
-            // Optional: Clear after 24 hours
-            const lastShown = localStorage.getItem('leadPopupShownTime');
-            const now = new Date().getTime();
-            if (!lastShown || (now - parseInt(lastShown)) > 24 * 60 * 60 * 1000) {
-              localStorage.removeItem('leadPopupShown');
-            }
-          }
-        </script>
+    }
+  </style>
 </head>
-<body class="selection:bg-amber-500/20 selection:text-amber-200">
-
-    <!-- Header / Navigation -->
-    <header class="fixed top-0 w-full z-50 glass border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <!-- Brand -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-8 h-8 rounded bg-gradient-to-tr from-amber-500 to-amber-700 flex items-center justify-center text-black shadow-[0_0_15px_-3px_rgba(245,158,11,0.3)]">
-                    <iconify-icon icon="solar:bolt-bold" width="20"></iconify-icon>
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-white text-sm font-semibold tracking-tight leading-none group-hover:text-zinc-200 transition-colors">AD WEB COMIC</span>
-                    <span class="text-[9px] text-zinc-500 tracking-[0.2em] font-medium uppercase mt-0.5">Agency</span>
-                </div>
-            </a>
-
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center gap-8">
-                <a href="#services" class="text-xs font-medium text-zinc-400 hover:text-white transition-colors">Expertise</a>
-                <a href="#process" class="text-xs font-medium text-zinc-400 hover:text-white transition-colors">Methodology</a>
-                <a href="#projects" class="text-xs font-medium text-zinc-400 hover:text-white transition-colors">Work</a>
-                <a href="#pricing" class="text-xs font-medium text-zinc-400 hover:text-white transition-colors">Investment</a>
-            </nav>
-
-            <!-- Actions -->
-            <div class="flex items-center gap-4">
-                <!-- Currency Selector -->
-                <div class="relative group z-50">
-                    <button class="flex items-center gap-2 text-xs font-medium text-zinc-400 hover:text-white transition-colors py-2">
-                        <iconify-icon icon="solar:globe-linear" width="16" class="text-amber-500"></iconify-icon>
-                        <span id="region-label">IND (₹)</span>
-                        <iconify-icon icon="solar:alt-arrow-down-linear" width="12" class="opacity-50"></iconify-icon>
-                    </button>
-                    <!-- Dropdown -->
-                    <div class="absolute right-0 top-full mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
-                        <div class="glass bg-[#0a0a0a] rounded-xl border border-white/10 shadow-2xl overflow-hidden p-1 flex flex-col gap-0.5">
-                            <button onclick="changeRegion('IN')" class="flex items-center justify-between w-full px-3 py-2 text-[11px] font-medium text-zinc-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-left">
-                                <span>India</span>
-                                <span class="text-amber-500/50">INR</span>
-                            </button>
-                            <button onclick="changeRegion('AE')" class="flex items-center justify-between w-full px-3 py-2 text-[11px] font-medium text-zinc-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-left">
-                                <span>United Arab Emirates</span>
-                                <span class="text-amber-500/50">AED</span>
-                            </button>
-                            <button onclick="changeRegion('SA')" class="flex items-center justify-between w-full px-3 py-2 text-[11px] font-medium text-zinc-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-left">
-                                <span>Saudi Arabia</span>
-                                <span class="text-amber-500/50">SAR</span>
-                            </button>
-                            <button onclick="changeRegion('KW')" class="flex items-center justify-between w-full px-3 py-2 text-[11px] font-medium text-zinc-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-left">
-                                <span>Kuwait</span>
-                                <span class="text-amber-500/50">KWD</span>
-                            </button>
-                            <button onclick="changeRegion('GLOBAL')" class="flex items-center justify-between w-full px-3 py-2 text-[11px] font-medium text-zinc-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-left">
-                                <span>Global (USD)</span>
-                                <span class="text-amber-500/50">USD</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="#contact" class="hidden md:flex items-center gap-2 bg-white text-black hover:bg-zinc-200 text-xs font-semibold px-4 py-2 rounded-full transition-all">
-                    Start Project
-                    <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
-                </a>
-                
-                <!-- Mobile Menu Toggle -->
-                <button class="md:hidden text-white p-1" onclick="openModal('mobile-menu')">
-                    <iconify-icon icon="solar:hamburger-menu-linear" width="24"></iconify-icon>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden">
-            <!-- Ambient Background -->
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-900/10 via-black to-black -z-10 pointer-events-none"></div>
-            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white,transparent)] -z-10"></div>
-
-            <div class="max-w-5xl mx-auto text-center relative z-10">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-amber-500/20 mb-8 animate-fade-in-up">
-                    <span class="flex h-1.5 w-1.5 rounded-full bg-amber-500"></span>
-                    <span class="text-[10px] uppercase tracking-widest font-semibold text-zinc-300">MSME Recognized Entity</span>
-                </div>
-                
-                <h1 class="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white mb-6 leading-[1.1]">
-                    Digital excellence for <br class="hidden md:block">
-                    <span class="text-zinc-500">global brands.</span>
-                </h1>
-                
-                <p class="text-base md:text-lg text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-                    We engineer high-performance digital infrastructure. 
-                    From bespoke static architecture to scalable applications, 
-                    we deliver ownership-based solutions with zero fluff.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#pricing" class="w-full sm:w-auto px-8 py-3.5 bg-amber-500 hover:bg-amber-400 text-black font-semibold text-sm rounded-lg transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_-5px_rgba(245,158,11,0.3)]">
-                        View Pricing
-                    </a>
-                    <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 glass hover:bg-white/5 text-white border border-white/10 font-medium text-sm rounded-lg transition-colors flex items-center justify-center gap-2">
-                        View Portfolio
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tech Stack Marquee -->
-        <section class="py-12 border-y border-white/5 bg-zinc-900/20 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-6 mb-8 flex justify-center">
-                <span class="text-[10px] font-semibold text-zinc-600 uppercase tracking-widest">Powered by Next-Gen Technologies</span>
-            </div>
-            <div class="relative flex overflow-x-hidden group mask-linear-fade">
-                <div class="animate-marquee whitespace-nowrap flex items-center gap-16 text-zinc-600 hover:text-zinc-400 transition-colors duration-500">
-                    <!-- Tech Items Repeated -->
-                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:nextdotjs" width="20"></iconify-icon> <span class="text-sm font-medium">Next.js</span></div>
-                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:react" width="20"></iconify-icon> <span class="text-sm font-medium">React</span></div>
-                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:typescript" width="20"></iconify-icon> <span class="text-sm font-medium">TypeScript</span></div>
-                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:tailwindcss" width="20"></iconify-icon> <span class="text-sm font-medium">Tailwind</span></div>
-                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:nodedotjs" width="20"></iconify-icon> <span class="text-sm font-medium">Node.js</span></div>
-                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:amazonaws" width="20"></iconify-icon> <span class="text-sm font-medium">AWS</span></div>
-                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:googlecloud" width="20"></iconify-icon> <span class="text-sm font-medium">Google Cloud</span></div>
-                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:supabase" width="20"></iconify-icon> <span class="text-sm font-medium">Supabase</span></div>
-                     <!-- Duplicate for Loop -->
-                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:nextdotjs" width="20"></iconify-icon> <span class="text-sm font-medium">Next.js</span></div>
-                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:react" width="20"></iconify-icon> <span class="text-sm font-medium">React</span></div>
-                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:typescript" width="20"></iconify-icon> <span class="text-sm font-medium">TypeScript</span></div>
-                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:tailwindcss" width="20"></iconify-icon> <span class="text-sm font-medium">Tailwind</span></div>
-                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:nodedotjs" width="20"></iconify-icon> <span class="text-sm font-medium">Node.js</span></div>
-                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:amazonaws" width="20"></iconify-icon> <span class="text-sm font-medium">AWS</span></div>
-                    <div class="flex items-center gap-2"><iconify-icon icon="simple-icons:googlecloud" width="20"></iconify-icon> <span class="text-sm font-medium">Google Cloud</span></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-                <div>
-                    <h2 class="text-3xl font-medium text-white tracking-tight mb-3">Our Expertise</h2>
-                    <p class="text-zinc-400 max-w-md text-sm leading-relaxed">
-                        We don't just build websites; we architect digital assets that appreciate in value. 
-                        Choose a solution tailored to your growth trajectory.
-                    </p>
-                </div>
-                <a href="#contact" class="text-amber-500 text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all">
-                    Consult an Expert <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
-                </a>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Service 1: Static (Flagship) -->
-                <div class="md:col-span-2 glass p-8 rounded-2xl relative overflow-hidden group hover:border-amber-500/30 transition-colors duration-500">
-                    <div class="absolute top-0 right-0 p-8 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
-                        <iconify-icon icon="solar:code-circle-linear" width="48" class="text-amber-500"></iconify-icon>
-                    </div>
-                    <div class="relative z-10">
-                        <span class="inline-block px-3 py-1 rounded bg-amber-500/10 text-amber-500 text-[10px] font-bold uppercase tracking-widest mb-4 border border-amber-500/20">Flagship Service</span>
-                        <h3 class="text-2xl font-medium text-white mb-2">Bespoke Static Architecture</h3>
-                        <p class="text-sm text-zinc-400 mb-8 max-w-lg">
-                            For brands that demand speed and security. We hand-code unique, template-free websites using static site generation (SSG). The result is a site that loads instantly, ranks higher, and is virtually unhackable.
-                        </p>
-                        <div class="grid grid-cols-2 gap-4 mb-8">
-                            <div class="flex items-center gap-3 text-sm text-zinc-300">
-                                <iconify-icon icon="solar:check-circle-linear" class="text-amber-500"></iconify-icon>
-                                <span>Zero Load Time</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-sm text-zinc-300">
-                                <iconify-icon icon="solar:check-circle-linear" class="text-amber-500"></iconify-icon>
-                                <span>100% Ownership</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-sm text-zinc-300">
-                                <iconify-icon icon="solar:check-circle-linear" class="text-amber-500"></iconify-icon>
-                                <span>Custom Structure</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-sm text-zinc-300">
-                                <iconify-icon icon="solar:check-circle-linear" class="text-amber-500"></iconify-icon>
-                                <span>SEO Native</span>
-                            </div>
-                        </div>
-                        <a href="#contact" class="inline-flex items-center gap-2 text-white border-b border-amber-500 pb-0.5 hover:text-amber-400 transition-colors text-sm font-medium">
-                            Request Proposal
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Service 2: PWA -->
-                <div class="glass p-8 rounded-2xl relative overflow-hidden group hover:border-white/20 transition-colors">
-                    <div class="w-10 h-10 rounded-lg bg-zinc-900 flex items-center justify-center mb-6 text-white border border-white/5">
-                        <iconify-icon icon="solar:smartphone-linear" width="20"></iconify-icon>
-                    </div>
-                    <h3 class="text-lg font-medium text-white mb-2">Web & Mobile Apps</h3>
-                    <p class="text-sm text-zinc-400 mb-6 leading-relaxed">
-                        Progressive Web Apps (PWA) and Native Android solutions. Bridges the gap between web reach and native performance.
-                    </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center gap-2 text-xs text-zinc-500">
-                            <iconify-icon icon="solar:arrow-right-linear" class="text-white"></iconify-icon> Offline Capability
-                        </li>
-                        <li class="flex items-center gap-2 text-xs text-zinc-500">
-                            <iconify-icon icon="solar:arrow-right-linear" class="text-white"></iconify-icon> Push Notifications
-                        </li>
-                        <li class="flex items-center gap-2 text-xs text-zinc-500">
-                            <iconify-icon icon="solar:arrow-right-linear" class="text-white"></iconify-icon> Play Store Launch
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Service 3: SaaS / Business -->
-                <div class="glass p-8 rounded-2xl relative overflow-hidden group hover:border-white/20 transition-colors">
-                    <div class="w-10 h-10 rounded-lg bg-zinc-900 flex items-center justify-center mb-6 text-white border border-white/5">
-                        <iconify-icon icon="solar:graph-up-linear" width="20"></iconify-icon>
-                    </div>
-                    <h3 class="text-lg font-medium text-white mb-2">Business OS</h3>
-                    <p class="text-sm text-zinc-400 mb-6 leading-relaxed">
-                        Internal tools to streamline operations. Accounting, Inventory, GST Invoicing, and POS systems integrated into your workflow.
-                    </p>
-                    <a href="#contact" class="text-xs text-white border-b border-white/20 pb-0.5 hover:border-white transition-colors">Explore Solutions</a>
-                </div>
-
-                <!-- Service 4: White Label -->
-                <div class="md:col-span-2 glass p-8 rounded-2xl relative overflow-hidden group hover:border-white/20 transition-colors flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-1">
-                        <span class="text-amber-500 text-[10px] font-bold uppercase tracking-widest mb-2 block">For Agencies</span>
-                        <h3 class="text-xl font-medium text-white mb-2">White-Label Partnership</h3>
-                        <p class="text-sm text-zinc-400 leading-relaxed">
-                            Scale your agency without increasing overhead. We act as your silent production house, delivering premium code under your brand with strict NDA compliance.
-                        </p>
-                    </div>
-                    <div class="flex gap-4">
-                        <button onclick="openModal('whitelabel-modal')" class="px-6 py-3 rounded-lg bg-white text-black text-sm font-medium hover:bg-zinc-200 transition-colors">
-                            Partner With Us
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Architecture -->
-        <section id="pricing" class="py-24 bg-zinc-900/10 border-t border-white/5">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <h2 class="text-3xl font-medium text-white tracking-tight mb-3">Investment Plans</h2>
-                    <p class="text-zinc-400 text-sm">
-                        Transparent pricing for ownership-based deliverables. <br>
-                        <span class="text-amber-500">Note:</span> Prices displayed in <span id="currency-display" class="font-semibold text-white">INR (₹)</span>.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
-                    
-                    <!-- Starter -->
-                    <div class="glass p-8 rounded-2xl flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
-                        <div class="mb-4">
-                            <h3 class="text-base font-medium text-zinc-300">Starter</h3>
-                            <div class="mt-4 flex items-baseline gap-1">
-                                <span class="text-2xl font-semibold text-white price-value" data-inr="22,000" data-aed="1,200" data-sar="1,250" data-kwd="100" data-usd="299">₹22,000</span>
-                                <span class="text-xs text-zinc-500 font-medium">+</span>
-                            </div>
-                            <p class="text-xs text-zinc-500 mt-2">One-time payment</p>
-                        </div>
-                        <div class="w-full h-px bg-white/5 my-6"></div>
-                        <ul class="space-y-3 mb-8 flex-1">
-                            <li class="flex items-start gap-3 text-xs text-zinc-400">
-                                <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 text-sm"></iconify-icon>
-                                5-Page Static Site
-                            </li>
-                            <li class="flex items-start gap-3 text-xs text-zinc-400">
-                                <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 text-sm"></iconify-icon>
-                                Responsive Layout
-                            </li>
-                            <li class="flex items-start gap-3 text-xs text-zinc-400">
-                                <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 text-sm"></iconify-icon>
-                                Basic SEO Setup
-                            </li>
-                            <li class="flex items-start gap-3 text-xs text-zinc-400">
-                                <iconify-icon icon="solar:shield-check-linear" class="text-zinc-500 text-sm"></iconify-icon>
-                                3 Months Support
-                            </li>
-                        </ul>
-                        <a href="#contact" class="w-full block text-center py-2.5 rounded-lg border border-white/10 text-xs font-medium text-zinc-300 hover:bg-white/5 transition-colors">Select Plan</a>
-                    </div>
-
-                    <!-- Growth (Featured) -->
-                    <div class="glass p-8 rounded-2xl flex flex-col h-full relative border-amber-500/40 bg-gradient-to-b from-amber-500/5 to-transparent transform md:-translate-y-4">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-3 py-1 bg-amber-500 text-black text-[10px] font-bold uppercase tracking-widest rounded-full">
-                            Recommended
-                        </div>
-                        <div class="mb-4 mt-2">
-                            <h3 class="text-base font-medium text-amber-400">Growth</h3>
-                            <div class="mt-4 flex items-baseline gap-1">
-                                <span class="text-2xl font-semibold text-white">Custom</span>
-                            </div>
-                            <p class="text-xs text-zinc-400 mt-2">Tailored Quote</p>
-                        </div>
-                        <div class="w-full h-px bg-amber-500/20 my-6"></div>
-                        <ul class="space-y-3 mb-8 flex-1">
-                            <li class="flex items-start gap-3 text-xs text-white">
-                                <iconify-icon icon="solar:check-circle-bold" class="text-amber-500 text-sm"></iconify-icon>
-                                Bespoke UI/UX Design
-                            </li>
-                            <li class="flex items-start gap-3 text-xs text-white">
-                                <iconify-icon icon="solar:check-circle-bold" class="text-amber-500 text-sm"></iconify-icon>
-                                Advanced Animations
-                            </li>
-                            <li class="flex items-start gap-3 text-xs text-white">
-                                <iconify-icon icon="solar:check-circle-bold" class="text-amber-500 text-sm"></iconify-icon>
-                                CMS Integration
-                            </li>
-                            <li class="flex items-start gap-3 text-xs text-white">
-                                <iconify-icon icon="solar:check-circle-bold" class="text-amber-500 text-sm"></iconify-icon>
-                                6 Months Support
-                            </li>
-                        </ul>
-                        <a href="#contact" class="w-full block text-center py-3 rounded-lg bg-amber-500 text-black text-xs font-bold hover:bg-amber-400 transition-colors shadow-lg shadow-amber-900/20">Get Quote</a>
-                    </div>
-
-                    <!-- Enterprise -->
-                    <div class="glass p-8 rounded-2xl flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
-                        <div class="mb-4">
-                            <h3 class="text-base font-medium text-zinc-300">Enterprise</h3>
-                            <div class="mt-4 flex items-baseline gap-1">
-                                <span class="text-2xl font-semibold text-white price-value" data-inr="65,000" data-aed="3,500" data-sar="3,600" data-kwd="300" data-usd="899">₹65,000</span>
-                                <span class="text-xs text-zinc-500 font-medium">+</span>
-                            </div>
-                            <p class="text-xs text-zinc-500 mt-2">Project based</p>
-                        </div>
-                        <div class="w-full h-px bg-white/5 my-6"></div>
-                        <ul class="space-y-3 mb-8 flex-1">
-                            <li class="flex items-start gap-3 text-xs text-zinc-400">
-                                <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 text-sm"></iconify-icon>
-                                Web + Mobile App
-                            </li>
-                            <li class="flex items-start gap-3 text-xs text-zinc-400">
-                                <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 text-sm"></iconify-icon>
-                                Full Backend Logic
-                            </li>
-                            <li class="flex items-start gap-3 text-xs text-zinc-400">
-                                <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 text-sm"></iconify-icon>
-                                Custom APIs
-                            </li>
-                            <li class="flex items-start gap-3 text-xs text-zinc-400">
-                                <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 text-sm"></iconify-icon>
-                                12 Months Priority Support
-                            </li>
-                        </ul>
-                        <a href="#contact" class="w-full block text-center py-2.5 rounded-lg border border-white/10 text-xs font-medium text-zinc-300 hover:bg-white/5 transition-colors">Contact Sales</a>
-                    </div>
-
-                    <!-- Care Kit -->
-                    <div class="glass p-8 rounded-2xl flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
-                        <div class="mb-4">
-                            <h3 class="text-base font-medium text-zinc-300">Maintenance</h3>
-                            <div class="mt-4 flex items-baseline gap-1">
-                                <span class="text-2xl font-semibold text-white price-value" data-inr="6,000" data-aed="300" data-sar="350" data-kwd="25" data-usd="99">₹6,000</span>
-                                <span class="text-xs text-zinc-500 font-medium">/yr</span>
-                            </div>
-                            <p class="text-xs text-zinc-500 mt-2">Annual contract</p>
-                        </div>
-                        <div class="w-full h-px bg-white/5 my-6"></div>
-                        <ul class="space-y-3 mb-8 flex-1">
-                            <li class="flex items-start gap-3 text-xs text-zinc-400">
-                                <iconify-icon icon="solar:server-linear" class="text-zinc-500 text-sm"></iconify-icon>
-                                Hosting & SSL
-                            </li>
-                            <li class="flex items-start gap-3 text-xs text-zinc-400">
-                                <iconify-icon icon="solar:shield-warning-linear" class="text-zinc-500 text-sm"></iconify-icon>
-                                Security Patching
-                            </li>
-                            <li class="flex items-start gap-3 text-xs text-zinc-400">
-                                <iconify-icon icon="solar:refresh-circle-linear" class="text-zinc-500 text-sm"></iconify-icon>
-                                5 Content Updates/mo
-                            </li>
-                        </ul>
-                        <a href="#contact" class="w-full block text-center py-2.5 rounded-lg border border-white/10 text-xs font-medium text-zinc-300 hover:bg-white/5 transition-colors">Subscribe</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
-            <h2 class="text-3xl font-medium text-white tracking-tight mb-12">Recent Deliverables</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Item -->
-                <a href="https://globalbestuae.com/" target="_blank" class="group block">
-                    <div class="relative aspect-video bg-zinc-900 rounded-xl overflow-hidden border border-white/5 mb-4">
-                        <div class="absolute inset-0 bg-zinc-800 group-hover:bg-zinc-700 transition-colors flex items-center justify-center">
-                            <span class="text-zinc-500 group-hover:text-white transition-colors font-medium">Global Best UAE</span>
-                        </div>
-                        <!-- Overlay on hover -->
-                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <iconify-icon icon="solar:arrow-right-up-linear" width="32" class="text-white"></iconify-icon>
-                        </div>
-                    </div>
-                    <h3 class="text-base font-medium text-white group-hover:text-amber-400 transition-colors">Global Best UAE</h3>
-                    <p class="text-xs text-zinc-500 mt-1">Corporate • Web Development</p>
-                </a>
-
-                <!-- Project Item -->
-                <a href="https://acecsaudi.com/" target="_blank" class="group block">
-                    <div class="relative aspect-video bg-zinc-900 rounded-xl overflow-hidden border border-white/5 mb-4">
-                        <div class="absolute inset-0 bg-zinc-800 group-hover:bg-zinc-700 transition-colors flex items-center justify-center">
-                            <span class="text-zinc-500 group-hover:text-white transition-colors font-medium">ACEC Saudi</span>
-                        </div>
-                         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <iconify-icon icon="solar:arrow-right-up-linear" width="32" class="text-white"></iconify-icon>
-                        </div>
-                    </div>
-                    <h3 class="text-base font-medium text-white group-hover:text-amber-400 transition-colors">ACEC Saudi</h3>
-                    <p class="text-xs text-zinc-500 mt-1">Business • Static Architecture</p>
-                </a>
-
-                <!-- Project Item -->
-                <a href="https://welcomemart.shop/" target="_blank" class="group block">
-                    <div class="relative aspect-video bg-zinc-900 rounded-xl overflow-hidden border border-white/5 mb-4">
-                        <div class="absolute inset-0 bg-zinc-800 group-hover:bg-zinc-700 transition-colors flex items-center justify-center">
-                            <span class="text-zinc-500 group-hover:text-white transition-colors font-medium">Welcome Mart</span>
-                        </div>
-                         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <iconify-icon icon="solar:arrow-right-up-linear" width="32" class="text-white"></iconify-icon>
-                        </div>
-                    </div>
-                    <h3 class="text-base font-medium text-white group-hover:text-amber-400 transition-colors">Welcome Mart</h3>
-                    <p class="text-xs text-zinc-500 mt-1">E-Commerce • PWA</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- Contact / Footer Area -->
-        <section id="contact" class="pt-24 pb-12 border-t border-white/5 bg-zinc-950">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="glass p-8 md:p-12 rounded-3xl border border-white/10 relative overflow-hidden mb-20">
-                    <div class="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-[128px] pointer-events-none -mr-20 -mt-20"></div>
-                    
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
-                        <div>
-                            <h2 class="text-3xl font-medium text-white tracking-tight mb-4">Initialize Project</h2>
-                            <p class="text-zinc-400 mb-8 text-sm">Brief us on your requirements. Our team typically responds within 4 business hours.</p>
-                            
-                            <div class="space-y-6">
-                                <div class="flex items-center gap-4 group">
-                                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-zinc-400 group-hover:text-white group-hover:bg-amber-500 transition-all">
-                                        <iconify-icon icon="solar:phone-linear" width="20"></iconify-icon>
-                                    </div>
-                                    <div>
-                                        <div class="text-[10px] text-zinc-500 uppercase tracking-wide">Inquiries</div>
-                                        <div class="text-white text-sm font-medium">+91 9656778508</div>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-4 group">
-                                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-zinc-400 group-hover:text-white group-hover:bg-amber-500 transition-all">
-                                        <iconify-icon icon="solar:letter-linear" width="20"></iconify-icon>
-                                    </div>
-                                    <div>
-                                        <div class="text-[10px] text-zinc-500 uppercase tracking-wide">Email</div>
-                                        <div class="text-white text-sm font-medium">adwebcomicagency@gmail.com</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <form class="space-y-4">
-                            <div class="grid grid-cols-2 gap-4">
-                                <input type="text" placeholder="Name" class="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500/50 transition-colors">
-                                <input type="email" placeholder="Email" class="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500/50 transition-colors">
-                            </div>
-                            <div class="relative">
-                                <select class="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-sm text-zinc-400 focus:outline-none focus:border-amber-500/50 appearance-none">
-                                    <option>Select Service Requirement</option>
-                                    <option>Static Website Development</option>
-                                    <option>Mobile Application</option>
-                                    <option>Business Software</option>
-                                    <option>White Label Partnership</option>
-                                </select>
-                                <iconify-icon icon="solar:alt-arrow-down-linear" class="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-500 pointer-events-none"></iconify-icon>
-                            </div>
-                            <textarea rows="4" placeholder="Project details..." class="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500/50 transition-colors resize-none"></textarea>
-                            <button type="submit" class="w-full py-3 bg-white text-black font-semibold text-sm rounded-lg hover:bg-zinc-200 transition-colors">Send Request</button>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/5 pt-8">
-                    <div class="flex flex-col items-center md:items-start space-y-1">
-    
-    <span class="text-white font-semibold tracking-widest text-lg">
-        AD WEB COMIC
-    </span>
-
-    <p class="text-[11px] text-zinc-500 tracking-wide">
-        © 2026 Ad Web Comic Agency
-    </p>
-
-    <p class="text-[10px] text-zinc-600 tracking-wide">
-        UDYAM-KL-08-0101744
-    </p>
-
-    <p class="text-[11px] text-zinc-500 tracking-wide">
-        Bangalore • Kochi • Kozhikode
-    </p>
-
-</div>
-                    <div class="flex gap-6">
-                        <button onclick="openModal('privacy-modal')" class="text-xs text-zinc-500 hover:text-white transition-colors">Privacy Policy</button>
-                        <button onclick="openModal('terms-modal')" class="text-xs text-zinc-500 hover:text-white transition-colors">Terms of Service</button>
-                        <button onclick="openModal('refund-modal')" class="text-xs text-zinc-500 hover:text-white transition-colors">Refund Policy</button>
-                    </div>
-                    <a href="https://www.instagram.com/_adwebcomicagency._/" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 transition-all">
-                        <iconify-icon icon="solar:camera-linear" width="20"></iconify-icon>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Modals -->
-    
-    <!-- Privacy Modal -->
-    <div id="privacy-modal" class="modal fixed inset-0 z-[60] flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal('privacy-modal')"></div>
-        <div class="modal-content relative w-full max-w-2xl bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
-            <div class="p-6 border-b border-white/5 flex justify-between items-center bg-white/5 backdrop-blur">
-                <h3 class="text-lg font-medium text-white">Privacy Policy</h3>
-                <button onclick="closeModal('privacy-modal')" class="text-zinc-500 hover:text-white"><iconify-icon icon="solar:close-circle-linear" width="24"></iconify-icon></button>
-            </div>
-            <div class="p-8 overflow-y-auto space-y-6 text-sm text-zinc-400 leading-relaxed">
-                <p><strong>Effective Date:</strong> January 1, 2024</p>
-                <p>Ad Web Comic Agency is committed to protecting your personal data. We collect minimal information required to provide our services.</p>
-                <h4 class="text-white font-medium">Data Collection</h4>
-                <p>We collect Identity Data (name) and Contact Data (email, phone) solely for communication and invoicing.</p>
-                <h4 class="text-white font-medium">Data Usage</h4>
-                <p>Your data is never sold. It is used exclusively to fulfill service contracts and comply with local tax regulations.</p>
-            </div>
-        </div>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#top">HO-YO <span class="badge">STREET</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#products">Products</a>
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-outline" href="https://wa.me/919876543210?text=Hey%20Ho-Yo%2C%20I%20want%20to%20order%20a%20t-shirt." target="_blank" rel="noopener noreferrer">WhatsApp</a>
     </div>
+  </header>
 
-    <!-- White Label Modal -->
-    <div id="whitelabel-modal" class="modal fixed inset-0 z-[60] flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal('whitelabel-modal')"></div>
-        <div class="modal-content relative w-full max-w-2xl bg-[#0a0a0a] border border-amber-500/20 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
-            <div class="p-6 border-b border-white/5 flex justify-between items-center bg-white/5 backdrop-blur">
-                <h3 class="text-lg font-medium text-white">Agency Partnership Program</h3>
-                <button onclick="closeModal('whitelabel-modal')" class="text-zinc-500 hover:text-white"><iconify-icon icon="solar:close-circle-linear" width="24"></iconify-icon></button>
-            </div>
-            <div class="p-8 overflow-y-auto space-y-6 text-sm text-zinc-400 leading-relaxed">
-                <p class="text-base text-white">Expand your service offerings without expanding your team.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="p-4 rounded border border-white/10 bg-white/5">
-                        <h4 class="text-white font-medium mb-1">Invisible Partner</h4>
-                        <p class="text-xs text-zinc-500">We work under strict NDA. Your client never knows we exist.</p>
-                    </div>
-                    <div class="p-4 rounded border border-white/10 bg-white/5">
-                        <h4 class="text-white font-medium mb-1">Wholesale Rates</h4>
-                        <p class="text-xs text-zinc-500">Partner-only pricing allowing for significant markup margins.</p>
-                    </div>
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-wrap">
+        <div class="hero-copy fade-in">
+          <h1>Wear your vibe. Own the street. <span style="color: var(--neon);">Ho-Yo.</span></h1>
+          <p>
+            Ho-Yo brings statement t-shirts for Gen-Z wardrobes—oversized silhouettes, clean cuts, and bold graphics.
+            Skip carts and checkouts: order directly on WhatsApp in seconds.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="https://wa.me/919876543210?text=Hey%20Ho-Yo%2C%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+            <a class="btn btn-outline" href="#products">Explore Drops</a>
+          </div>
+          <div class="quick-stats">
+            <span>🔥 Fast Replies</span>
+            <span>🚚 Pan-India Delivery</span>
+            <span>💸 COD / UPI</span>
+          </div>
+        </div>
+        <div class="hero-gallery fade-in delay-1" aria-label="Featured t-shirt visuals">
+          <article class="hero-card"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80" alt="Black oversized t-shirt model" loading="eager" /></article>
+          <article class="hero-card"><img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=700&q=80" alt="Streetwear graphic t-shirt look" loading="lazy" /></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="collections" class="section">
+      <div class="container">
+        <h2 class="section-title">Collections</h2>
+        <p class="section-sub">Designed for everyday flex. Pick your lane and order instantly through WhatsApp.</p>
+        <div class="collections">
+          <article class="chip"><h3>Oversized Tees</h3><p>Relaxed fit, dropped shoulders, heavyweight cotton feel.</p></article>
+          <article class="chip"><h3>Graphic Prints</h3><p>Bold back prints and front accents inspired by urban art culture.</p></article>
+          <article class="chip"><h3>Minimal Basics</h3><p>Clean monochrome staples with premium finish and effortless styling.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <div class="container">
+        <h2 class="section-title">Featured T-Shirts</h2>
+        <p class="section-sub">Select a size, tap buy, and your order details auto-fill in WhatsApp.</p>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">The Ho-Yo Story</h2>
+        <div class="about-box">
+          <p>
+            Ho-Yo started as a campus streetwear idea and grew into a community-first t-shirt label focused on bold design,
+            comfort, and self-expression. We design every drop for people who want to stand out without trying too hard.
+          </p>
+          <p>
+            Our no-friction shopping model is simple: browse, DM on WhatsApp, confirm size and address, then pay via COD or UPI.
+            No complicated checkout flow. Just fast conversations and faster style upgrades.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Loved by the Community</h2>
+        <p class="section-sub">Social proof from Ho-Yo buyers who wear the brand on repeat.</p>
+        <div class="review-grid">
+          <article class="review">
+            <strong>⭐️⭐️⭐️⭐️⭐️ — Aarya M.</strong>
+            <p>“The oversized fit is perfect and the fabric feels premium. Ordered on WhatsApp and got confirmed in 3 minutes.”</p>
+          </article>
+          <article class="review">
+            <strong>⭐️⭐️⭐️⭐️⭐️ — Keshav R.</strong>
+            <p>“Graphics are insane. Delivery updates came directly on chat—super smooth process.”</p>
+          </article>
+          <article class="review">
+            <strong>⭐️⭐️⭐️⭐️⭐️ — Sanya P.</strong>
+            <p>“Minimal basics go with everything. COD made the first order easy and stress-free.”</p>
+          </article>
+          <article class="review">
+            <strong>⭐️⭐️⭐️⭐️⭐️ — Dev N.</strong>
+            <p>“Finally a youth brand with clean style + fast support. Will order again.”</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <h2 class="section-title">FAQ</h2>
+        <div class="faq">
+          <details open>
+            <summary>How do I place an order?</summary>
+            <p>Select a t-shirt and size, then tap “Buy via WhatsApp.” We receive the product, size, and price instantly in chat to confirm your order.</p>
+          </details>
+          <details>
+            <summary>How does delivery work?</summary>
+            <p>After WhatsApp confirmation, we dispatch across India. Standard delivery usually takes 3–7 business days depending on your location.</p>
+          </details>
+          <details>
+            <summary>What payment options are available?</summary>
+            <p>You can pay through Cash on Delivery or UPI after the order is confirmed on WhatsApp.</p>
+          </details>
+          <details>
+            <summary>Can I exchange if size does not fit?</summary>
+            <p>Yes. Message us within 48 hours of delivery and we will guide you through the easy exchange steps.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-wa">
+    <a class="btn btn-primary" href="https://wa.me/919876543210?text=Hey%20Ho-Yo%2C%20I%20need%20help%20choosing%20a%20t-shirt." target="_blank" rel="noopener noreferrer">💬 Chat to Order</a>
+  </div>
+
+  <footer>
+    <div class="container">© 2026 Ho-Yo. Streetwear made to move with you.</div>
+  </footer>
+
+  <script>
+    const WHATSAPP_NUMBER = "919876543210";
+
+    const products = [
+      {
+        name: "Night Riot Oversized Tee",
+        price: 1299,
+        category: "Oversized Tees",
+        description: "Heavy cotton oversized black tee with reflective print.",
+        sizes: ["S", "M", "L", "XL"],
+        image:
+          "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        name: "Neon Pulse Graphic Tee",
+        price: 1499,
+        category: "Graphic Prints",
+        description: "Front + back neon print for high-impact street looks.",
+        sizes: ["M", "L", "XL"],
+        image:
+          "https://images.unsplash.com/photo-1527719327859-c6ce80353573?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        name: "Core White Minimal Tee",
+        price: 999,
+        category: "Minimal Basics",
+        description: "Ultra-clean everyday essential in soft premium cotton.",
+        sizes: ["S", "M", "L", "XL", "XXL"],
+        image:
+          "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        name: "Asphalt Box Fit Tee",
+        price: 1199,
+        category: "Oversized Tees",
+        description: "Boxy fit charcoal tee with subtle chest embroidery.",
+        sizes: ["S", "M", "L", "XL"],
+        image:
+          "https://images.unsplash.com/photo-1622445275463-afa2ab738c34?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        name: "Rebel Ink Print Tee",
+        price: 1399,
+        category: "Graphic Prints",
+        description: "Statement back art inspired by underground comic culture.",
+        sizes: ["M", "L", "XL", "XXL"],
+        image:
+          "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        name: "Mono Sand Basic Tee",
+        price: 1099,
+        category: "Minimal Basics",
+        description: "Clean neutral-toned tee with elevated tailored drape.",
+        sizes: ["S", "M", "L", "XL"],
+        image:
+          "https://images.unsplash.com/photo-1548883354-94bcfe321c55?auto=format&fit=crop&w=900&q=80"
+      }
+    ];
+
+    const productGrid = document.getElementById("product-grid");
+
+    const formatPrice = (value) => `₹${value.toLocaleString("en-IN")}`;
+
+    const getWhatsAppLink = (productName, size, price) => {
+      const message = `Hey Ho-Yo! I want to order:%0AProduct: ${productName}%0ASize: ${size}%0APrice: ${formatPrice(price)}%0APlease share confirmation details.`;
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    };
+
+    const renderProducts = () => {
+      productGrid.innerHTML = products
+        .map((product, index) => {
+          const sizeOptions = product.sizes
+            .map((size) => `<option value="${size}">${size}</option>`)
+            .join("");
+
+          return `
+            <article class="product-card fade-in ${index > 2 ? "delay-2" : "delay-1"}">
+              <figure class="product-media">
+                <img src="${product.image}" alt="${product.name}" loading="lazy" />
+              </figure>
+              <div class="product-content">
+                <div class="product-top">
+                  <h3>${product.name}</h3>
+                  <span class="price">${formatPrice(product.price)}</span>
                 </div>
-                <div class="pt-4">
-                    <a href="#contact" onclick="closeModal('whitelabel-modal')" class="w-full block text-center py-3 bg-amber-500 text-black font-medium rounded-lg hover:bg-amber-400 transition-colors">Apply for Partnership</a>
+                <p class="product-desc">${product.description}</p>
+                <div class="product-meta">
+                  <select class="size-select" aria-label="Select size for ${product.name}">
+                    ${sizeOptions}
+                  </select>
+                  <a class="btn btn-primary buy-btn" data-name="${product.name}" data-price="${product.price}" href="#" target="_blank" rel="noopener noreferrer">Buy via WhatsApp</a>
                 </div>
-            </div>
-        </div>
-    </div>
+              </div>
+            </article>
+          `;
+        })
+        .join("");
 
-    <!-- Refund Modal -->
-    <div id="refund-modal" class="modal fixed inset-0 z-[60] flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal('refund-modal')"></div>
-        <div class="modal-content relative w-full max-w-2xl bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
-            <div class="p-6 border-b border-white/5 flex justify-between items-center bg-white/5 backdrop-blur">
-                <h3 class="text-lg font-medium text-white">Refund Policy</h3>
-                <button onclick="closeModal('refund-modal')" class="text-zinc-500 hover:text-white"><iconify-icon icon="solar:close-circle-linear" width="24"></iconify-icon></button>
-            </div>
-            <div class="p-8 overflow-y-auto space-y-6 text-sm text-zinc-400 leading-relaxed">
-                <p>Due to the custom nature of our code and design work, our refund policy is as follows:</p>
-                <ul class="list-disc pl-4 space-y-2">
-                    <li><strong>Pre-Development:</strong> 90% refund if cancelled within 24 hours of booking.</li>
-                    <li><strong>During Development:</strong> No refunds on advance payments once the project timeline has started.</li>
-                    <li><strong>Agency Fault:</strong> 100% refund if we fail to deliver the agreed scope.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+      const buyButtons = productGrid.querySelectorAll(".buy-btn");
+      buyButtons.forEach((button) => {
+        const select = button.closest(".product-meta").querySelector(".size-select");
 
-    <!-- Terms Modal -->
-    <div id="terms-modal" class="modal fixed inset-0 z-[60] flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal('terms-modal')"></div>
-        <div class="modal-content relative w-full max-w-2xl bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
-            <div class="p-6 border-b border-white/5 flex justify-between items-center bg-white/5 backdrop-blur">
-                <h3 class="text-lg font-medium text-white">Terms of Service</h3>
-                <button onclick="closeModal('terms-modal')" class="text-zinc-500 hover:text-white"><iconify-icon icon="solar:close-circle-linear" width="24"></iconify-icon></button>
-            </div>
-            <div class="p-8 overflow-y-auto space-y-6 text-sm text-zinc-400 leading-relaxed">
-                <p>By engaging with Ad Web Comic Agency, you agree to:</p>
-                <ol class="list-decimal pl-4 space-y-2">
-                    <li><strong>Payments:</strong> 50% advance is mandatory to commence work. Balance is due upon completion.</li>
-                    <li><strong>Content:</strong> Client is responsible for providing text and images on time.</li>
-                    <li><strong>Ownership:</strong> Code ownership transfers to client only after full payment.</li>
-                </ol>
-            </div>
-        </div>
-    </div>
-
-    <!-- Mobile Menu Modal -->
-    <div id="mobile-menu" class="modal fixed inset-0 z-[60] flex items-start justify-center p-0 md:hidden">
-        <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="closeModal('mobile-menu')"></div>
-        <div class="modal-content relative w-full bg-[#0a0a0a] border-b border-white/10 shadow-2xl overflow-hidden flex flex-col pt-20 pb-8 px-6">
-            <button onclick="closeModal('mobile-menu')" class="absolute top-6 right-6 text-zinc-500 hover:text-white"><iconify-icon icon="solar:close-circle-linear" width="32"></iconify-icon></button>
-            <nav class="flex flex-col gap-6 text-lg font-medium text-white">
-                <a href="#services" onclick="closeModal('mobile-menu')">Expertise</a>
-                <a href="#pricing" onclick="closeModal('mobile-menu')">Investment</a>
-                <a href="#projects" onclick="closeModal('mobile-menu')">Work</a>
-                <a href="#contact" onclick="closeModal('mobile-menu')" class="text-amber-500">Contact Us</a>
-            </nav>
-        </div>
-    </div>
-
-    <!-- Logic -->
-    <script>
-        // Modal Logic
-        function openModal(id) {
-            document.getElementById(id).classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeModal(id) {
-            document.getElementById(id).classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // Region/Currency Logic
-        const currencies = {
-            'IN': { label: 'IND (₹)', sym: '₹', rates: [22000, 65000, 6000] },
-            'AE': { label: 'UAE (AED)', sym: 'AED ', rates: [1200, 3500, 300] },
-            'SA': { label: 'KSA (SAR)', sym: 'SAR ', rates: [1250, 3600, 350] },
-            'KW': { label: 'KWT (KWD)', sym: 'KWD ', rates: [100, 300, 25] },
-            'GLOBAL': { label: 'USA (USD)', sym: '$', rates: [299, 899, 99] }
+        const setLink = () => {
+          const selectedSize = select.value;
+          button.href = getWhatsAppLink(button.dataset.name, selectedSize, Number(button.dataset.price));
         };
 
-        function changeRegion(code) {
-            const config = currencies[code];
-            document.getElementById('region-label').innerText = config.label;
-            document.getElementById('currency-display').innerText = config.label;
-            
-            // Update prices based on data attributes or the array
-            const prices = document.querySelectorAll('.price-value');
-            
-            // Starter
-            prices[0].innerText = config.sym + config.rates[0].toLocaleString();
-            // Enterprise
-            prices[1].innerText = config.sym + config.rates[1].toLocaleString();
-            // Maintenance
-            prices[2].innerText = config.sym + config.rates[2].toLocaleString();
-        }
+        setLink();
+        select.addEventListener("change", setLink);
+      });
+    };
 
-        // Close dropdown on click outside logic is handled by CSS hover for desktop, 
-        // specific logic for mobile would require JS if strictly needed, but hover covers mostly.
-    </script>
-    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+    renderProducts();
+  </script>
 </body>
 </html>
